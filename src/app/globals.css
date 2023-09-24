@@ -1,8 +1,13 @@
 :root {
 
-  --text-heading: #fff;
+  --text-main: #fff;
   --text-primary: #A7A4AD;
+
   --bg-primary: #000;
+  --bg-lite: #151515;
+  --bg-lite-1: rgba(167, 164, 173, 0.20);
+
+  --border-lite-1: 1px solid rgba(167, 164, 173, 0.50);
 }
 
 * {
@@ -24,4 +29,8 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+li {
+  list-style-type: none;
 }
