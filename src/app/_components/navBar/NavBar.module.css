@@ -1,5 +1,5 @@
 .navBar {
-  background: transparent;
+  background: var(--bg-primary-lite);
   color: var(--text-main);
   display: flex;
   justify-content: space-between;
