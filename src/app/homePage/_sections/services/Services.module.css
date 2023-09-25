@@ -1,0 +1,150 @@
+.services {
+  display: flex;
+  justify-content: space-between;
+  padding: 168px 120px 168px 90px;
+  background:
+    url(../../../_assets/png/dark-grid-bg.png),
+    linear-gradient(96deg, #000 12.18%, rgba(0, 0, 0, 0.00) 117.05%);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: 100% 70%;
+
+}
+
+.content {
+  color: var(--text-primary);
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.content h1 {
+  font-size: 38px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-top: 40px;
+}
+
+.content hr {
+  width: 100px;
+  margin: 40px 0;
+}
+
+.servicesSteps {
+  display: flex;
+}
+
+.heading {
+  color: var(--text-main);
+  font-size: 24px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.logo {
+  width: 24px;
+  margin-left: 22px;
+}
+
+.unselected {
+  color: var(--text-primary);
+  margin-top: 20px;
+}
+
+.lense {
+  width: 380px;
+  height: 360px;
+}
+
+@media (max-width:992px) {
+
+  .services {
+    padding: 120px 120px 120px 50px;
+    background-size: 120% 65%;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .content h1 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 24px;
+  }
+
+  .content hr {
+    width: 50px;
+    margin: 25px 0;
+  }
+
+  .steps {
+    height: 89px;
+  }
+
+  .heading {
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 20px;
+  }
+
+  .logo {
+    width: 16px;
+    margin-left: 15px;
+  }
+
+  .unselected {
+    margin-top: 15px;
+  }
+
+  .lense {
+    width: 238px;
+    height: 225px;
+  }
+
+}
+
+@media (max-width:550px) {
+
+  .services {
+    background-image: url(../../../_assets/png/dark-grid-bg-mobile.png);
+    flex-direction: column-reverse;
+    background-position: center top;
+    background-size: 80% 60%;
+    padding: 80px 0px 70px 30px;
+  }
+
+  .imageWraper {
+    text-align: center;
+  }
+
+  .title {
+    margin-top: 95px;
+  }
+
+  .content h1 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 20px;
+  }
+
+  .content hr {
+    margin: 20px 0;
+  }
+
+  .heading {
+    font-size: 14px;
+  }
+
+  .unselected {
+    margin-top: 12px;
+  }
+
+  .logo {
+    margin-left: 30px;
+  }
+}
