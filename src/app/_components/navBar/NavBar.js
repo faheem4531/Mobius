@@ -6,6 +6,7 @@ import Logo from "@/app/_assets/svg/logo.svg";
 import Close from "@/app/_assets/svg/close.svg";
 import Menu from "@/app/_assets/svg/menu.svg";
 import { useState } from 'react';
+import Link from 'next/link';
 
 const NavBar = () => {
   const [mobileState, setMobileState] = useState(false);
@@ -32,10 +33,21 @@ const NavBar = () => {
       }
 
       <ul className={`${styles.linksList} ${styles.displayNone} ${mobileState && styles.displayBlock}`}>
-        <li className={styles.link}>Home</li>
-        <li className={styles.link}>Case Studies</li>
-        <li className={styles.link}>Carrers</li>
-        <li className={`${!mobileState && styles.btn} ${mobileState && styles.link}`}>Get in Touch</li>
+        <Link href="/">
+          <li className={styles.link}>Home</li>
+        </Link>
+        <Link href="/">
+          <li className={styles.link}>Case Studies</li>
+        </Link>
+        <Link href="/">
+          <li className={styles.link}>Carrers</li>
+        </Link>
+        <Link href="/connectUs">
+          <li
+            className={`${!mobileState && styles.btn} ${mobileState && styles.link}`}>
+            Get in Touch
+          </li>
+        </Link>
       </ul>
       {mobileState && <p className={styles.copyrights} >All rights reserved.
         <br />

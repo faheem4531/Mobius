@@ -13,6 +13,7 @@
   --bg-lite-4: #222;
 
   --border-lite-1: 1px solid rgba(167, 164, 173, 0.50);
+  --border-lite-2: 1px solid #161718;
 
   --bg-gradient: 180deg, rgba(0, 0, 0, 0.00) 0.33%, rgba(0, 0, 0, 0.91) 37.58%, #000 45.19%, rgba(0, 0, 0, 0.81) 64.37%, rgba(0, 0, 0, 0.00) 99.67%;
 }
@@ -46,4 +47,10 @@ li {
 
 button {
   cursor: pointer;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
 }
