@@ -39,7 +39,7 @@ const NavBar = () => {
         <Link href="/">
           <li className={styles.link}>Case Studies</li>
         </Link>
-        <Link href="/">
+        <Link href="/carrers">
           <li className={styles.link}>Carrers</li>
         </Link>
         <Link href="/connectUs">
