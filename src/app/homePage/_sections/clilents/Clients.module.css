@@ -1,0 +1,71 @@
+.clients {
+  padding: 120px 0 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clients h3,
+.reviewContainer h3 {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.clients h1,
+.reviewContainer h1 {
+  font-size: 38px;
+  font-weight: 600;
+  margin: 35px 0 70px;
+  color: var(--text-main);
+}
+
+.logoWrap {
+  width: 246px;
+  height: 166px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-lite-3);
+  margin-right: 10px;
+}
+
+.reviewContainer {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.reviewCardWraper {
+  display: flex;
+}
+
+/* Review Card  */
+
+.review {
+  width: 350px;
+  padding: 25px 30px;
+  text-align: start;
+  border-radius: 6px;
+  border: var(--border-lite-3);
+  background: linear-gradient(var(--bg-gradient-1));
+}
+
+.review h2 {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.review span {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.review p {
+  font-size: 16px;
+  padding: 25px 0;
+  font-weight: 300;
+  line-height: 115.682%;
+  color: var(--text-main);
+}

@@ -14,8 +14,10 @@
 
   --border-lite-1: 1px solid rgba(167, 164, 173, 0.50);
   --border-lite-2: 1px solid #161718;
+  --border-lite-3: 1px solid #262728;
 
   --bg-gradient: 180deg, rgba(0, 0, 0, 0.00) 0.33%, rgba(0, 0, 0, 0.91) 37.58%, #000 45.19%, rgba(0, 0, 0, 0.81) 64.37%, rgba(0, 0, 0, 0.00) 99.67%;
+  --bg-gradient-1: 1deg, rgba(33, 30, 30, 0.25) 0.52%, rgba(66, 65, 67, 0.25) 99.53%;
 }
 
 * {
