@@ -70,7 +70,11 @@ const Clients = () => {
         <h3>Testimonial</h3>
         <h1>What they say about us</h1>
         <div className={styles.reviewCardWraper}>
-          <Review />
+          <div className={styles.innerWrapper}>
+            <Review name="Angelina Molnar" />
+            <Review name="Cehan alee" />
+            <Review name="Hale Allon" />
+          </div>
         </div>
       </div>
     </div>

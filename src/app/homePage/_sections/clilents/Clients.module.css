@@ -36,7 +36,19 @@
 }
 
 .reviewCardWraper {
+  width: 100vw;
+  overflow-x: scroll;
+}
+
+.innerWrapper {
   display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 0 30px;
+}
+
+.reviewCardWraper::-webkit-scrollbar {
+  width: 0;
 }
 
 /* Review Card  */
@@ -65,7 +77,119 @@
 .review p {
   font-size: 16px;
   padding: 25px 0;
+  width: 286px;
   font-weight: 300;
-  line-height: 115.682%;
+  line-height: 120%;
   color: var(--text-main);
+}
+
+/* @media (min-width:992px)and (max-width:1100px) {
+
+  .review {
+    width: 300px;
+    padding: 20px 20px;
+  }
+} */
+
+@media (max-width:992px) {
+
+  .clients {
+    padding: 70px 0;
+  }
+
+  .clients h3,
+  .reviewContainer h3 {
+    font-size: 16px;
+  }
+
+  .clients h1,
+  .reviewContainer h1 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 30px 0;
+  }
+
+  .logoWrap {
+    width: 128px;
+    height: 84px;
+    margin-right: 5px;
+    border-radius: 7px;
+  }
+
+  .logo {
+    width: 55%;
+  }
+
+  .reviewContainer {
+    margin-top: 70px;
+  }
+
+  .innerWrapper {
+    gap: 0 20px;
+  }
+
+  .review {
+    width: 230px;
+    padding: 17px 20px;
+    border-radius: 4px;
+  }
+
+  .review h2 {
+    font-size: 11px;
+    margin-bottom: 0px;
+  }
+
+  .review span {
+    font-size: 7px;
+  }
+
+  .review p {
+    font-size: 10px;
+    padding: 15px 0 5px;
+    width: 185px;
+  }
+
+}
+
+@media (max-width:550px) {
+
+  .clients {
+    padding: 50px 0;
+  }
+
+
+  .clients h1,
+  .reviewContainer h1 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 20px 0;
+  }
+
+  .logoWrap {
+    width: 103px;
+    height: 70px;
+    margin-right: 3px;
+    border-radius: 5px;
+  }
+
+  .logo {
+    width: 50%;
+  }
+
+  .reviewContainer {
+    margin-top: 55px;
+  }
+
+  .innerWrapper {
+    gap: 0 20px;
+  }
+
+  .review {
+    width: 210px;
+    padding: 17px;
+  }
+
+  .review p {
+    padding: 10px 0;
+  }
 }
