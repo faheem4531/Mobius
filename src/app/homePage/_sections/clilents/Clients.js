@@ -9,50 +9,55 @@ import Fonestar from "@/app/_assets/clients/fonestar.svg";
 import FormulaZ from "@/app/_assets/clients/formulaZ.svg";
 import Houduo from "@/app/_assets/clients/houduo.svg";
 import PillPuncher from "@/app/_assets/clients/pill-puncher.svg";
+import Luna from "@/app/_assets/clients/luna.svg";
+import Avancus from "@/app/_assets/clients/avancus.svg";
+import Metaleon from "@/app/_assets/clients/metaleon-society.svg";
+import LightOne from "@/app/_assets/clients/light-one.svg";
 
 const Clients_data = [
   {
-    url: "https://www.behance.net/gallery/179199227/Sony/modules/1012195441",
+    id: 'Sony',
     logo: Sony
   },
   {
-    url: "https://www.behance.net/gallery/178830637/Elevate-Beauty-3d-Animation-Fashion/modules/1010063989",
+    id: 'Luna',
+    logo: Luna
+  },
+  {
+    id: 'Elevant',
     logo: Elevant
   },
   {
-    url: "https://www.behance.net/gallery/179258677/Fonestar/modules/1012553863",
+    id: 'Fonestar',
     logo: Fonestar
   },
   {
-    url: "https://www.behance.net/gallery/179175939/Formula-Z/modules/1013175477",
+    id: 'FormulaZ',
     logo: FormulaZ
   },
   {
-    url: "https://www.behance.net/gallery/179280385/Houduo/modules/1012668957",
+    id: 'Houduo',
     logo: Houduo
   },
   {
-    url: "https://www.behance.net/gallery/179264673/Pill-Puncher/modules/1018790321",
+    id: 'PillPuncher',
     logo: PillPuncher
   },
+  {
+    id: 'Avancus',
+    logo: Avancus
+  },
+  {
+    id: 'Metaleon',
+    logo: Metaleon
+  },
+  {
+    id: 'LightOne',
+    logo: LightOne
+  },
+
 ]
 
-export const ClientsCard = ({ url, logo }) => {
-  return (
-    <Link
-      href={url}
-      target="_blank"
-    >
-      <div className={styles.logoWrap}>
-        <Image
-          className={styles.logo}
-          src={logo}
-          alt="icon"
-        />
-      </div>
-    </Link>
-  )
-}
 
 const Clients = () => {
   return (
@@ -62,7 +67,13 @@ const Clients = () => {
       <Marquee>
         {
           Clients_data.map((items) => {
-            return <ClientsCard url={items.url} logo={items.logo} />
+            return <div className={styles.logoWrap} key={items.id}>
+              <Image
+                className={styles.logo}
+                src={items.logo}
+                alt="icon"
+              />
+            </div>
           })
         }
       </Marquee>
