@@ -1,0 +1,172 @@
+.footer {
+  background: var(--bg-lite-2);
+  padding: 60px 90px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.details {
+  display: flex;
+  color: var(--text-lite-1);
+  font-size: 20px;
+  gap: 0 70px;
+}
+
+.getInTouch h3 {
+  color: var(--text-main);
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.getInTouch hr {
+  width: 50px;
+  margin: 10px 0 45px;
+}
+
+.getInTouch p {
+  line-height: 125%;
+}
+
+.callUs {
+  margin-top: 30px;
+}
+
+.addresX {
+  display: none;
+}
+
+.email {
+  border-radius: 4px;
+  padding: 18px 14px;
+  font-size: 16px;
+  color: var(--text-main);
+  background-color: var(--bg-lite-3);
+  width: 100%;
+  margin: 27px 0;
+  border: none;
+}
+
+.email:focus {
+  outline: none;
+}
+
+.inputDiv {
+  width: 480px;
+}
+
+.btn {
+  text-align: end;
+}
+
+.socialMedia {
+  text-align: center;
+  padding: 25px 0;
+}
+
+.logo {
+  width: 30px;
+}
+
+.logo:not(:last-child) {
+  margin-right: 12px;
+}
+
+.copyright {
+  padding: 20px 0;
+  background-color: var(--bg-lite-4);
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-main);
+  font-weight: 300;
+}
+
+.studio p {
+  margin-top: 10px;
+}
+
+.studio {
+  min-width: 150px;
+}
+
+@media (max-width:1200px) {
+  .inputDiv {
+    display: none;
+  }
+
+  .footer {
+    padding: 40px 45px 0;
+    align-items: initial;
+  }
+
+  .details {
+    font-size: 16px;
+    gap: 0 60px;
+  }
+
+  .getInTouch h3 {
+    font-size: 16px;
+  }
+
+  .getInTouch hr {
+    margin: 10px 0 30px;
+  }
+
+  .studio p {
+    margin-top: 10px;
+  }
+
+  .studio {
+    min-width: 150px;
+  }
+
+}
+
+@media (max-width:550px) {
+  .address {
+    display: none;
+  }
+
+  .addresX {
+    margin-top: 20px;
+    display: block;
+  }
+
+  .footer {
+    padding: 30px 30px 0;
+  }
+
+  .studio {
+    min-width: 120px;
+  }
+
+  .details {
+    font-size: 13px;
+    justify-content: space-between;
+  }
+
+  .details:first-child {
+    max-width: 200px;
+    min-width: 160px;
+  }
+
+  .callUs {
+    margin-top: 20px;
+  }
+
+  .socialMedia {
+    padding: 40px 0;
+  }
+
+  .logo {
+    width: 24px;
+  }
+
+  .logo:not(:last-child) {
+    margin-right: 9px;
+  }
+
+  .copyright {
+    font-size: 10px;
+  }
+}

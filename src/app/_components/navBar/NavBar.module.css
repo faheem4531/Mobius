@@ -1,10 +1,12 @@
 .navBar {
-  background: transparent;
+  background: var(--bg-primary-lite);
   color: var(--text-main);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 90px;
+  position: relative;
+  z-index: 10;
 }
 
 .responsiveNAv {
