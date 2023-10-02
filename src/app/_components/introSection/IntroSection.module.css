@@ -25,7 +25,7 @@
 }
 
 .text {
-  width: 50%;
+  width: 90%;
   font-size: 20px;
   line-height: 120%;
   margin: 25px 0 0;
@@ -58,7 +58,7 @@
   }
 }
 
-@media (max-width:500px) {
+@media (max-width:550px) {
   .introSection {
     height: 500px;
     background-image: url(../../_assets/png/mobile-bg.png);
@@ -77,5 +77,6 @@
 
   .text {
     font-size: 12px;
+    width: 75%
   }
 }
