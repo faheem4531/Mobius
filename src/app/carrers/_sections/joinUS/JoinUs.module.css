@@ -1,6 +1,7 @@
 .joinUs {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 100px 90px;
   column-gap: 90px;
 }
@@ -48,3 +49,37 @@
   border-left: 1px solid #A7A4AD;
   margin-left: 44px;
 }
+
+@media (min-width:992px)and (max-width:1200px) {
+  .joinUs {
+    column-gap: 40px;
+  }
+
+  .jobCard {
+    padding: 45px 30px 50px 30px;
+    width: 500px;
+  }
+
+  .requireContainer {
+    width: 300px;
+    padding-left: 20px;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .joinUs {
+    flex-direction: column;
+    margin: 50px;
+    column-gap: 0px;
+  }
+}
+
+@media (max-width: 772px) {
+  .jobCard {
+    padding: 45px 30px 50px 30px;
+    width: 500px;
+  }
+}
+
+@media (max-width: 500px) {}
