@@ -82,4 +82,34 @@
   }
 }
 
-@media (max-width: 500px) {}
+@media (max-width: 550px) {
+  .joinUs {
+    margin: 50px 30px;
+  }
+
+  .requireContainer {
+    display: none;
+  }
+
+  .jobCard {
+    padding: 16px 20px;
+    width: 100%;
+  }
+
+  .cardWraper {
+    width: 100%;
+  }
+
+  .midCard {
+    margin: 15px 0;
+  }
+
+  .jobCard h2 {
+    font-size: 14px;
+  }
+
+  .applyFormWraper {
+    width: 100%;
+  }
+
+}
