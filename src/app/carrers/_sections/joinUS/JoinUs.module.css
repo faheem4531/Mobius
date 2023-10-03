@@ -1,0 +1,115 @@
+.joinUs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 90px;
+  column-gap: 90px;
+}
+
+/* .cardWraper {} */
+
+.midCard {
+  margin: 20px 0;
+}
+
+/* job card  */
+.jobCard {
+  display: flex;
+  border-radius: 7px;
+  padding: 45px 45px 50px 40px;
+  width: 720px;
+  background: var(--bg-lite-2);
+}
+
+.jobCard h2 {
+  color: var(--text-main);
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.jobCard p {
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: 7px;
+  line-height: 120%;
+}
+
+.jobCard h3 {
+  color: var(--text-main);
+  font-size: 14px;
+}
+
+.detail {
+  width: 120px;
+}
+
+.requireContainer {
+  width: 450px;
+  padding-left: 40px;
+  border-left: 1px solid #A7A4AD;
+  margin-left: 44px;
+}
+
+@media (min-width:992px)and (max-width:1200px) {
+  .joinUs {
+    column-gap: 40px;
+  }
+
+  .jobCard {
+    padding: 45px 30px 50px 30px;
+    width: 500px;
+  }
+
+  .requireContainer {
+    width: 300px;
+    padding-left: 20px;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .joinUs {
+    flex-direction: column;
+    margin: 50px;
+    column-gap: 0px;
+  }
+}
+
+@media (max-width: 772px) {
+  .jobCard {
+    padding: 45px 30px 50px 30px;
+    width: 500px;
+  }
+}
+
+@media (max-width: 550px) {
+  .joinUs {
+    margin: 50px 30px;
+  }
+
+  .requireContainer {
+    display: none;
+  }
+
+  .jobCard {
+    padding: 16px 20px;
+    width: 100%;
+  }
+
+  .cardWraper {
+    width: 100%;
+  }
+
+  .midCard {
+    margin: 15px 0;
+  }
+
+  .jobCard h2 {
+    font-size: 14px;
+  }
+
+  .applyFormWraper {
+    width: 100%;
+  }
+
+}
