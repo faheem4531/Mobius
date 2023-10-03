@@ -18,7 +18,7 @@ const AboutUs = () => {
         <hr />
         <p>We provide expert animation services, With a dedicated team of skilled animators,
           we infuse creativity and flair into every frame. Our mission is to elevate your storytelling,
-          making it both engaging and memorable.  Let's embark on a creative journey together and bring your
+          making it both engaging and memorable.  Let&apos;s embark on a creative journey together and bring your
           vision to life</p>
       </div>
     </div>

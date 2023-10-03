@@ -12,7 +12,7 @@ const GetInTouch = () => {
         <div className={styles.block}>
           <div className={styles.introSec}>
             <h1>Wanna work with <br /> <span className={styles.color}> Mobius motion studios?</span></h1>
-            <p>Get in touch with us today and let's bring your ideas to life. We're here to answer your questions and discuss your next project.</p>
+            <p>Get in touch with us today and let&apos;s bring your ideas to life. We&apos;re here to answer your questions and discuss your next project.</p>
           </div>
         </div>
         <div className={styles.formParent}>
