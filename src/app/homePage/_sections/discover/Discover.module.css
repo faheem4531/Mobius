@@ -4,6 +4,10 @@
   position: relative;
 }
 
+.bgImg {
+  width: 100%;
+}
+
 .content {
   text-align: center;
   position: absolute;
@@ -42,4 +46,66 @@
   margin-top: 5px;
   font-size: 12px;
   font-weight: 500;
+}
+
+@media (max-width:992px) {
+  .discover {
+    height: 360px;
+  }
+
+  .bgImg {
+    height: 100%;
+  }
+
+  .content {
+    width: 50%;
+  }
+
+  .discover h1 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+
+  .stats {
+    height: 60px;
+    background: #555557;
+  }
+
+  .details h1 {
+    font-size: 28px;
+  }
+
+  .details p {
+    margin-top: 0px;
+    font-size: 8px;
+  }
+}
+
+@media (max-width:550px) {
+  .discover {
+    height: 155px;
+  }
+
+  .content {
+    width: 70%;
+  }
+
+  .discover h1 {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .stats {
+    height: 47px;
+    column-gap: 60px;
+  }
+
+  .details h1 {
+    font-size: 20px;
+  }
+
+  .details p {
+    font-size: 6px;
+  }
 }
