@@ -11,8 +11,8 @@ const HomePage = () => {
   return (
     <div className={styles.home}>
       <IntroSection />
-      {/* <AboutUs /> */}
-      {/* <Services /> */}
+      <AboutUs />
+      <Services />
       <Clients />
       <JoinUs />
       <Footer />
