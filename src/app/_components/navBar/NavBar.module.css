@@ -1,6 +1,5 @@
 .navBar {
   background: var(--bg-primary-lite);
-  color: var(--text-main);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,6 +26,7 @@
 
 .link {
   margin-right: 25px;
+
 }
 
 .menu {
@@ -38,33 +38,6 @@
   border-radius: 4px;
   background: var(--bg-lite-1);
   padding: 5px 10px;
-}
-
-@media (max-width:500px) {
-  .navBar {
-    padding: 25px 30px;
-  }
-
-  .displayBlock {
-    margin-top: 60px;
-  }
-
-  .logo,
-  .close {
-    width: 40px;
-  }
-
-  .linksList {
-    font-size: 14px;
-  }
-
-  .menu {
-    width: 40px;
-  }
-
-  .copyrights {
-    font-size: 12px;
-  }
 }
 
 @media (max-width:992px) {
@@ -117,4 +90,37 @@
     line-height: 18px;
     letter-spacing: 0.48px;
   }
+}
+
+@media (max-width:550px) {
+  .navBar {
+    padding: 25px 30px;
+  }
+
+  .displayBlock {
+    margin-top: 60px;
+  }
+
+  .logo,
+  .close {
+    width: 40px;
+  }
+
+  .linksList {
+    font-size: 14px;
+  }
+
+  .menu {
+    width: 25px;
+  }
+
+  .copyrights {
+    font-size: 12px;
+  }
+}
+
+
+.clickedLink {
+  color: var(--text-main);
+  border-bottom: 1px solid #fff;
 }

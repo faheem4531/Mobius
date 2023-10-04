@@ -130,6 +130,8 @@
   .addresX {
     margin-top: 20px;
     display: block;
+    max-width: 200px;
+    min-width: 160px;
   }
 
   .footer {
@@ -142,12 +144,7 @@
 
   .details {
     font-size: 13px;
-    justify-content: space-between;
-  }
-
-  .details:first-child {
-    max-width: 200px;
-    min-width: 160px;
+    gap: 0 40px;
   }
 
   .callUs {
