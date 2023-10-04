@@ -11,6 +11,7 @@
   --bg-lite-2: #0A0A0A;
   --bg-lite-3: #202020;
   --bg-lite-4: #222;
+  --bg-transparent: rgba(32, 32, 32, 0.25);
 
   --border-lite-1: 1px solid rgba(167, 164, 173, 0.50);
   --border-lite-2: 1px solid #161718;
