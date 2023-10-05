@@ -19,18 +19,74 @@ import Houduo from "@/app/_assets/projects/houduo.png";
 
 const project_dateils = [
   {
-
-  }
+    id: "p1",
+    image: Lense,
+    name: "Sony",
+    url: "https://dribbble.com/shots/22479838-Sony?utm_source=Clipboard_Shot&utm_campaign=aliimranmms&utm_content=Sony&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=aliimranmms&utm_content=Sony&utm_medium=Social_Share"
+  },
+  {
+    id: "p2",
+    image: PillPuncher,
+    name: "PILL PUNCHER",
+    url: "https://dribbble.com/shots/22478889-Pill-Puncher?utm_source=Clipboard_Shot&utm_campaign=aliimranmms&utm_content=Pill%20Puncher&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=aliimranmms&utm_content=Pill%20Puncher&utm_medium=Social_Share"
+  },
+  {
+    id: "p3",
+    image: Elevate,
+    name: "ELEVATE",
+    url: "https://dribbble.com/shots/22480246-Elevate?utm_source=Clipboard_Shot&utm_campaign=aliimranmms&utm_content=Elevate&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=aliimranmms&utm_content=Elevate&utm_medium=Social_Share"
+  },
+  {
+    id: "p4",
+    image: Fonestar,
+    name: "FONESTAR",
+    url: "https://dribbble.com/shots/22479440-Fonestar?utm_source=Clipboard_Shot&utm_campaign=aliimranmms&utm_content=Fonestar&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=aliimranmms&utm_content=Fonestar&utm_medium=Social_Share"
+  },
+  {
+    id: "p5",
+    image: Avancus,
+    name: "AVANCUS",
+    url: "https://dribbble.com/shots/22479266-Avancus?utm_source=Clipboard_Shot&utm_campaign=aliimranmms&utm_content=Avancus&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=aliimranmms&utm_content=Avancus&utm_medium=Social_Share"
+  },
+  {
+    id: "p6",
+    image: FormulaZ,
+    name: "FORMULA Z",
+    url: "https://dribbble.com/shots/22479951-Formula-Z?utm_source=Clipboard_Shot&utm_campaign=aliimranmms&utm_content=Formula%20Z&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=aliimranmms&utm_content=Formula%20Z&utm_medium=Social_Share"
+  },
+  {
+    id: "p7",
+    image: Luna,
+    name: "LUNA",
+    url: "https://dribbble.com/shots/22480084-Luna?utm_source=Clipboard_Shot&utm_campaign=aliimranmms&utm_content=Luna&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=aliimranmms&utm_content=Luna&utm_medium=Social_Share"
+  },
+  {
+    id: "p8",
+    image: Metaleon,
+    name: "METALEON",
+    url: "https://dribbble.com/shots/22472389-Metaleon?utm_source=Clipboard_Shot&utm_campaign=aliimranmms&utm_content=Metaleon&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=aliimranmms&utm_content=Metaleon&utm_medium=Social_Share"
+  },
+  {
+    id: "p9",
+    image: Houduo,
+    name: "HOUDUO",
+    url: "https://dribbble.com/shots/22482383-Houduo?utm_source=Clipboard_Shot&utm_campaign=aliimranmms&utm_content=Houduo&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=aliimranmms&utm_content=Houduo&utm_medium=Social_Share"
+  },
+  {
+    id: "p10",
+    image: LightOne,
+    name: "LIGHT ONE",
+    url: "https://dribbble.com/shots/22480315-Light-One?utm_source=Clipboard_Shot&utm_campaign=aliimranmms&utm_content=Light%20One&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=aliimranmms&utm_content=Light%20One&utm_medium=Social_Share"
+  },
 ];
+
 const Projects = () => {
   const settings = {
     dots: true,
     infinite: true,
     speed: 600,
     slidesToShow: 4,
-    centerPadding: "60px",
     slidesToScroll: 3,
-    // initialSlide: 0,
     responsive: [
       {
         breakpoint: 1024,
@@ -60,46 +116,18 @@ const Projects = () => {
   };
   return (
     <div className={styles.container}>
-
       <Slider {...settings} className={styles.slider}>
-        <div className={styles.card}>
-          <Image
-            src={Lense}
-            alt=''
-            className={styles.image} />
-          <div className={styles.name}>Sony </div>
-        </div>
-        <div className={styles.card}>
-          <Image
-            src={Fonestar}
-            alt=''
-            className={styles.image} />
-          <div className={styles.name}>Sony </div>
-        </div>
-        <div className={styles.card}>
-          <Image
-            src={Avancus}
-            alt=''
-            className={styles.image} />
-          <div className={styles.name}>Sony </div>
-        </div>
-        <div className={styles.card}>
-          <Image
-            src={Metaleon}
-            alt=''
-            className={styles.image} />
-          <div className={styles.name}>Sony </div>
-        </div>
-        <div className={styles.card}>
-          <Image
-            src={FormulaZ}
-            alt=''
-            className={styles.image} />
-          <div className={styles.name}>Sony </div>
-        </div>
+        {project_dateils.map((items) => {
+          return <div className={styles.card} key={items.id}>
+            <Image
+              src={items.image}
+              alt=''
+              className={styles.image} />
+            <div className={styles.name}>{items.name} </div>
+          </div>
+        })}
       </Slider>
     </div>
-
   );
 };
 
