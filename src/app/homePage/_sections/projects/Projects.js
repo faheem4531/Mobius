@@ -82,11 +82,11 @@ const project_dateils = [
 
 const Projects = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 600,
     slidesToShow: 4,
-    slidesToScroll: 3,
+    slidesToScroll: 2,
     responsive: [
       {
         breakpoint: 1024,
@@ -116,6 +116,8 @@ const Projects = () => {
   };
   return (
     <div className={styles.container}>
+      <h3>Projects</h3>
+      <h1>Here are our some recent Projects</h1>
       <Slider {...settings} className={styles.slider}>
         {project_dateils.map((items) => {
           return <div className={styles.card} key={items.id}>
