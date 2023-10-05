@@ -1,0 +1,49 @@
+.container {
+  /* background-color: #fff; */
+  /* width: 500px; */
+  height: 410px;
+  overflow: hidden;
+  margin-top: 100px;
+  /* width: 80%; */
+  text-align: center;
+}
+
+.slider {
+  /* background-color: red; */
+  /* width: 80&; */
+  /* margin: 0 auto; */
+}
+
+.card {
+  width: 402px;
+  height: 380px;
+  /* background: rgba(21, 21, 21, 0.60); */
+  background-color: red;
+  border-radius: 12px;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 220px;
+  margin: 30px auto;
+  height: 258px;
+}
+
+.name {
+  border-radius: 0px 0px 12px 12px;
+  background: rgba(150, 146, 151, 0.18);
+  height: 47px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 600;
+}
