@@ -3,6 +3,7 @@
 import React from 'react';
 import styles from './Projects.module.css'
 import Image from 'next/image';
+import Link from 'next/link';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -125,7 +126,11 @@ const Projects = () => {
               src={items.image}
               alt=''
               className={styles.image} />
-            <div className={styles.name}>{items.name} </div>
+            <Link
+              href={items.url}
+              target="_blank">
+              <div className={styles.name}>{items.name} </div>
+            </Link>
           </div>
         })}
       </Slider>
