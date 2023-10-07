@@ -7,6 +7,31 @@
   position: relative;
 }
 
+.setposition {
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoParent {
+  position: relative;
+  z-index: 10;
+}
+
+.video,
+.videoParent {
+  width: 826px;
+  height: 485px;
+}
+
+.closeVideo {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 20px;
+}
+
 .content {
   position: absolute;
   left: 90px;

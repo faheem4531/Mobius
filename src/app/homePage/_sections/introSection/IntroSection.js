@@ -1,13 +1,57 @@
+"use client";
+
+import { useState } from 'react';
 import styles from './IntroSection.module.css'
 import Image from 'next/image';
 import NavBar from '@/app/_components/navBar/NavBar';
 import Title from "@/app/_assets/svg/heading.svg";
 import Button from '@/app/_components/button/Button';
+import ReactPlayer from 'react-player';
+import Close from "@/app/_assets/svg/close.svg";
 
 const IntroSection = () => {
+  const [showVideo, setShoewVideo] = useState(false);
+
+  function handleVideo() {
+    setShoewVideo(true);
+
+  }
+  function handleCloseVideo() {
+    setShoewVideo(false);
+  }
+
   return (
     <div className={styles.introSection}>
       <NavBar />
+      {/* <ReactPlayer
+        url=""
+        playing
+        loop
+        muted
+        width="100%"
+        height="100%"
+        config={{
+          file: {
+            attributes: {
+              controlsList: 'nodownload',
+            },
+          },
+        }}
+      /> */}
+      <div className={styles.setposition}>
+        {showVideo && <div className={styles.videoParent}>
+          <video controls className={styles.video}>
+            <source src="video/home-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <Image
+            src={Close}
+            alt=''
+            className={styles.closeVideo}
+            onClick={handleCloseVideo} />
+        </div>
+        }
+      </div>
       <div className={styles.content}>
         <Image
           src={Title}
@@ -19,6 +63,7 @@ const IntroSection = () => {
         <p className={styles.resText}>We provide expert animation services, bringing your ideas to life with creativity and flair. </p>
         <Button
           text="Watch our Showreel"
+          onClick={handleVideo}
         />
       </div>
     </div>
