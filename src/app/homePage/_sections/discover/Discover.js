@@ -2,6 +2,7 @@ import styles from './Discover.module.css'
 import Button from '@/app/_components/button/Button';
 import Image from 'next/image';
 import Background from "@/app/_assets/png/discover-bg.png";
+import Link from 'next/link';
 
 const Discover = () => {
   return (<>
@@ -12,9 +13,12 @@ const Discover = () => {
         className={styles.bgImg} />
       <div className={styles.content}>
         <h1>Don&rsquo;t let your designs go to waste. let us turn them into reality!</h1>
-        <Button
-          text="Discover More"
-        />
+
+        <Link href="/caseStudy">
+          <Button
+            text="Discover More"
+          />
+        </Link>
       </div>
     </div>
     <div className={styles.stats}>

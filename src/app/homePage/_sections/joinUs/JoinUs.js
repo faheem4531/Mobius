@@ -3,6 +3,7 @@ import Image from 'next/image';
 import BackGround from "@/app/_assets/png/join-us-bg.png";
 import Button from '@/app/_components/button/Button';
 import Model from "@/app/_assets/svg/joinUs-model.svg";
+import Link from 'next/link';
 
 const JoinUs = () => {
   return (
@@ -15,9 +16,11 @@ const JoinUs = () => {
         />
         <div className={styles.content}>
           <h1>Want to Work Together?</h1>
-          <Button
-            text="Join Us Now"
-          />
+          <Link href="/carrers">
+            <Button
+              text="Join Us Now"
+            />
+          </Link>
         </div>
       </div>
       <Image
