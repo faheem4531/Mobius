@@ -56,6 +56,22 @@
     height: 530px;
   }
 
+  .setposition {
+    margin-top: 20px;
+  }
+
+  .video,
+  .videoParent {
+    width: 550px;
+    height: 380px;
+  }
+
+  .closeVideo {
+    top: 40px;
+    right: 14px;
+    width: 17px;
+  }
+
   .content,
   .heading {
     width: 450px;
@@ -78,10 +94,27 @@
   }
 }
 
-@media (max-width:500px) {
+@media (max-width:550px) {
   .introSection {
     height: 500px;
     background-image: url(../../../_assets/png/mobile-bg.png);
+  }
+
+  .setposition {
+    margin-top: 0px;
+    height: 80%;
+  }
+
+  .video,
+  .videoParent {
+    width: 320px;
+    height: 220px;
+  }
+
+  .closeVideo {
+    top: 25px;
+    right: 10px;
+    width: 20px;
   }
 
   .content,
