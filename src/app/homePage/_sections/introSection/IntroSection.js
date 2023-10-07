@@ -21,10 +21,9 @@ const IntroSection = () => {
   }
 
   return (
-    <div className={styles.introSection}>
-      <NavBar />
+    <div className={styles.container}>
       {/* <ReactPlayer
-        url=""
+        url="video/home-video.mp4"
         playing
         loop
         muted
@@ -37,34 +36,48 @@ const IntroSection = () => {
             },
           },
         }}
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          zIndex: -1,
+          opacity: .3,
+          width: 100
+        }}
       /> */}
-      <div className={styles.setposition}>
-        {showVideo && <div className={styles.videoParent}>
-          <video controls className={styles.video}>
-            <source src="video/home-video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <Image
-            src={Close}
-            alt=''
-            className={styles.closeVideo}
-            onClick={handleCloseVideo} />
-        </div>
-        }
-      </div>
-      <div className={styles.content}>
+      {showVideo && <div className={styles.videoParent}>
+        <video controls className={styles.video}>
+          <source src="video/home-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <Image
-          src={Title}
+          src={Close}
           alt=''
-          className={styles.heading}
-        />
-        <p className={styles.dextopText}>We provide expert animation services, bringing your ideas to life with creativity and flair.
-          Elevate your storytelling with our exceptional team at your service.</p>
-        <p className={styles.resText}>We provide expert animation services, bringing your ideas to life with creativity and flair. </p>
-        <Button
-          text="Watch our Showreel"
-          onClick={handleVideo}
-        />
+          className={styles.closeVideo}
+          onClick={handleCloseVideo} />
+      </div>
+      }
+      <div className={`${styles.introSection} ${showVideo && styles.backdrop}`}>
+
+        {/* <video autoplay muted loop id="background-video">
+        <source src="video/home-video.mp4" type="video/mp4" />
+      </video> */}
+        <NavBar />
+
+        <div className={styles.content}>
+          <Image
+            src={Title}
+            alt=''
+            className={styles.heading}
+          />
+          <p className={styles.dextopText}>We provide expert animation services, bringing your ideas to life with creativity and flair.
+            Elevate your storytelling with our exceptional team at your service.</p>
+          <p className={styles.resText}>We provide expert animation services, bringing your ideas to life with creativity and flair. </p>
+          <Button
+            text="Watch our Showreel"
+            onClick={handleVideo}
+          />
+        </div>
       </div>
     </div>
   )
