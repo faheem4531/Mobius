@@ -45,17 +45,25 @@ const IntroSection = () => {
           width: 100
         }}
       /> */}
-      {showVideo && <div className={styles.videoParent}>
-        <video controls className={styles.video}>
+      <div className={styles.bgVideo}>
+        <video className={styles.bgVideoContent} autoplay muted loop>
           <source src="video/home-video.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
+          {/* <source src="images/video.webm" type="video/webm" /> */}
+          {/* your browser is not suporting! */}
         </video>
-        <Image
-          src={Close}
-          alt=''
-          className={styles.closeVideo}
-          onClick={handleCloseVideo} />
       </div>
+      {
+        showVideo && <div className={styles.videoParent}>
+          <video controls className={styles.video}>
+            <source src="video/home-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <Image
+            src={Close}
+            alt=''
+            className={styles.closeVideo}
+            onClick={handleCloseVideo} />
+        </div>
       }
       <div className={`${styles.introSection} ${showVideo && styles.backdrop}`}>
 
@@ -79,7 +87,7 @@ const IntroSection = () => {
           />
         </div>
       </div>
-    </div>
+    </div >
   )
 };
 
