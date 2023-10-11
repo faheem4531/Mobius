@@ -11,6 +11,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   const phoneNumber = "+92 307 4567890";
+  const emailAddress = 'hr@mobiusmotionstudio.com';
   const address = '392, F Block Johar Town, Lahore, Punjab, Pakistan';
   const googleMapsLink = `https://www.google.com/maps?q=${encodeURIComponent(address)}`;
   return (
@@ -20,7 +21,7 @@ const Footer = () => {
           <div className={styles.getInTouch}>
             <h3>Get in Touch</h3>
             <hr />
-            <p>Email us at <br /> hr@mobiusmotionstudio.com</p>
+            <p>Email us at <br /> <a href={`mailto:${emailAddress}`}>{emailAddress}</a></p>
             <p className={styles.callUs}>Call us at <br /> <a href={`tel:${phoneNumber}`}>{phoneNumber}</a></p>
             <p className={styles.addresX}> <a href={googleMapsLink} target="_blank" rel="noopener noreferrer">
               {address}
@@ -38,7 +39,7 @@ const Footer = () => {
             <hr />
             <p className={styles.terms}>Terms of Condition </p>
             <p>Privacy Policy </p>
-            <Link href="/connectUs" passHref>
+            <Link href="/carrers" passHref>
               <p className={styles.addresX}>Career</p>
             </Link>
             <Link href="/connectUs" passHref>
