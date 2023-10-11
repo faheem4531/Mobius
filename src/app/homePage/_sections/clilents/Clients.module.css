@@ -24,11 +24,6 @@
 .logoWrap {
   width: 246px;
   height: 166px;
-  border-radius: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--bg-transparent);
   margin-right: 10px;
 }
 
@@ -107,11 +102,6 @@
     width: 128px;
     height: 84px;
     margin-right: 5px;
-    border-radius: 7px;
-  }
-
-  .logo {
-    width: 55%;
   }
 
   .reviewContainer {
@@ -162,7 +152,6 @@
     width: 103px;
     height: 70px;
     margin-right: 3px;
-    border-radius: 5px;
   }
 
   .logo {

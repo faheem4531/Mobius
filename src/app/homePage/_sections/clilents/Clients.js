@@ -67,13 +67,12 @@ const Clients = () => {
       <Marquee>
         {
           Clients_data.map((items) => {
-            return <div className={styles.logoWrap} key={items.id}>
-              <Image
-                className={styles.logo}
-                src={items.logo}
-                alt="icon"
-              />
-            </div>
+            return <Image
+              className={styles.logoWrap}
+              src={items.logo}
+              alt="icon"
+              key={items.id}
+            />
           })
         }
       </Marquee>
