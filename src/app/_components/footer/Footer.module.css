@@ -47,6 +47,10 @@
   border: none;
 }
 
+.email::placeholder {
+  color: #fff !important;
+}
+
 .email:focus {
   outline: none;
 }

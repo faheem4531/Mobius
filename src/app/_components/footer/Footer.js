@@ -7,9 +7,12 @@ import Facebook from "@/app/_assets/svg/facebook.svg";
 import Instagram from "@/app/_assets/svg/instagram.svg";
 import Image from 'next/image';
 import { Fragment } from 'react';
+import Link from 'next/link';
 
 const Footer = () => {
-
+  const phoneNumber = "+92 307 4567890";
+  const address = '392, F Block Johar Town, Lahore, Punjab, Pakistan';
+  const googleMapsLink = `https://www.google.com/maps?q=${encodeURIComponent(address)}`;
   return (
     <Fragment>
       <div className={styles.footer}>
@@ -18,21 +21,29 @@ const Footer = () => {
             <h3>Get in Touch</h3>
             <hr />
             <p>Email us at <br /> hr@mobiusmotionstudio.com</p>
-            <p className={styles.callUs}>Call us at <br /> +92 307 4567890</p>
-            <p className={styles.addresX}>392, F Block Johar Town, Lahore, Punjab, Pakistan  </p>
+            <p className={styles.callUs}>Call us at <br /> <a href={`tel:${phoneNumber}`}>{phoneNumber}</a></p>
+            <p className={styles.addresX}> <a href={googleMapsLink} target="_blank" rel="noopener noreferrer">
+              {address}
+            </a></p>
           </div>
           <div className={`${styles.getInTouch} ${styles.address}`}>
             <h3>Address</h3>
             <hr />
-            <p>392, F Block Johar Town, Lahore, Punjab, Pakistan  </p>
+            <p><a href={googleMapsLink} target="_blank" rel="noopener noreferrer">
+              {address}
+            </a></p>
           </div>
           <div className={`${styles.getInTouch} ${styles.studio}`}>
             <h3>Studio</h3>
             <hr />
             <p className={styles.terms}>Terms of Condition </p>
             <p>Privacy Policy </p>
-            <p className={styles.addresX}>Career</p>
-            <p className={styles.addresX}>Contact Us</p>
+            <Link href="/connectUs" passHref>
+              <p className={styles.addresX}>Career</p>
+            </Link>
+            <Link href="/connectUs" passHref>
+              <p className={styles.addresX}>Contact Us</p>
+            </Link>
           </div>
           <div className={`${styles.getInTouch} ${styles.inputDiv}`}>
             <h3>Newsletter</h3>
@@ -42,6 +53,7 @@ const Footer = () => {
             <div className={styles.btn}>
               <Button
                 text="submit"
+                padding="6px 28px"
               />
             </div>
           </div>
