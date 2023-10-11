@@ -72,7 +72,7 @@
   width: 30px;
 }
 
-.logo:not(:last-child) {
+.logoLink:not(:last-child) {
   margin-right: 12px;
 }
 
@@ -163,7 +163,7 @@
     width: 24px;
   }
 
-  .logo:not(:last-child) {
+  .logoLink:not(:last-child) {
     margin-right: 9px;
   }
 

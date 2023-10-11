@@ -60,31 +60,41 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.socialMedia}>
-          <Image
-            alt='Logo'
-            src={Dribbble}
-            className={styles.logo}
-          />
-          <Image
-            alt='Logo'
-            src={Behance}
-            className={styles.logo}
-          />
-          <Image
-            alt='Logo'
-            src={Facebook}
-            className={styles.logo}
-          />
-          <Image
-            alt='Logo'
-            src={Instagram}
-            className={styles.logo}
-          />
-          <Image
-            alt='Logo'
-            src={LinkedIn}
-            className={styles.logo}
-          />
+          <Link href="https://dribbble.com/mobius_motion_studio" className={styles.logoLink} target="_blank">
+            <Image
+              alt='Logo'
+              src={Dribbble}
+              className={styles.logo}
+            />
+          </Link>
+          <Link href="https://www.behance.net/mobiusmotion" className={styles.logoLink} target="_blank">
+            <Image
+              alt='Logo'
+              src={Behance}
+              className={styles.logo}
+            />
+          </Link>
+          <Link href="" className={styles.logoLink} >
+            <Image
+              alt='Logo'
+              src={Facebook}
+              className={styles.logo}
+            />
+          </Link>
+          <Link href="" className={styles.logoLink} >
+            <Image
+              alt='Logo'
+              src={Instagram}
+              className={styles.logo}
+            />
+          </Link>
+          <Link href="" className={styles.logoLink} >
+            <Image
+              alt='Logo'
+              src={LinkedIn}
+              className={styles.logo}
+            />
+          </Link>
 
         </div>
       </div>
