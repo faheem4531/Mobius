@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from 'react';
 import styles from './Footer.module.css'
 import Button from '../button/Button';
 import LinkedIn from "@/app/_assets/svg/linkedIn.svg";
@@ -10,10 +13,17 @@ import { Fragment } from 'react';
 import Link from 'next/link';
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+
+  function handleEmail() {
+    setEmail('');
+  }
+
   const phoneNumber = "+92 307 4567890";
   const emailAddress = 'hr@mobiusmotionstudio.com';
   const address = '392, F Block Johar Town, Lahore, Punjab, Pakistan';
   const googleMapsLink = `https://www.google.com/maps?q=${encodeURIComponent(address)}`;
+
   return (
     <Fragment>
       <div className={styles.footer}>
@@ -50,11 +60,18 @@ const Footer = () => {
             <h3>Newsletter</h3>
             <hr />
             <p>Receive the latest trend updates directly in your inbox.</p>
-            <input className={styles.email} type='email' placeholder='Enter your email' />
+            <input
+              className={styles.email}
+              type='email'
+              placeholder='Enter your email'
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+            />
             <div className={styles.btn}>
               <Button
                 text="submit"
                 padding="6px 28px"
+                onClick={handleEmail}
               />
             </div>
           </div>
@@ -102,7 +119,6 @@ const Footer = () => {
         © 2023 MMS | Mobius Motion Studio. All rights reserved.
       </div>
     </Fragment>
-
   )
 };
 
