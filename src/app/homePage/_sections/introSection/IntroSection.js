@@ -6,7 +6,6 @@ import Image from 'next/image';
 import NavBar from '@/app/_components/navBar/NavBar';
 import Title from "@/app/_assets/svg/heading.svg";
 import Button from '@/app/_components/button/Button';
-import ReactPlayer from 'react-player';
 import Close from "@/app/_assets/svg/close.svg";
 
 const IntroSection = () => {
@@ -22,39 +21,14 @@ const IntroSection = () => {
 
   return (
     <div className={styles.container}>
-      {/* <ReactPlayer
-        url="video/home-video.mp4"
-        playing
-        loop
-        muted
-        width="100%"
-        height="100%"
-        config={{
-          file: {
-            attributes: {
-              controlsList: 'nodownload',
-            },
-          },
-        }}
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          zIndex: -1,
-          opacity: .3,
-          width: 100
-        }}
-      /> */}
       <div className={styles.bgVideo}>
-        <video className={styles.bgVideoContent} autoplay muted loop>
+        <video className={styles.bgVideoContent} autoPlay muted loop >
           <source src="video/home-video.mp4" type="video/mp4" />
-          {/* <source src="images/video.webm" type="video/webm" /> */}
-          {/* your browser is not suporting! */}
         </video>
       </div>
       {
         showVideo && <div className={styles.videoParent}>
-          <video controls className={styles.video}>
+          <video controls className={styles.video} autoPlay >
             <source src="video/home-video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
