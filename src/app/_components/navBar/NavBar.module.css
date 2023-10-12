@@ -12,6 +12,7 @@
   flex-direction: column;
   height: 100vh;
   background-color: var(--bg-lite);
+  overflow: none;
 }
 
 .linksList {
@@ -41,19 +42,27 @@
 
 .active {
   color: var(--text-main);
-  border-bottom: 1px solid #fff;
+  font-weight: 600;
+  position: relative;
 }
 
 .activebtn {
   color: var(--text-main);
-
+  font-weight: 600;
 }
 
+.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20px;
+  border-bottom: 1.5px solid var(--text-primary);
+}
 
 .borderBottom {
   border-bottom: var(--border-lite-1);
   margin-right: 25px;
-  /* margin-bottom: 45px; */
   padding-bottom: 5px;
 }
 
@@ -69,7 +78,6 @@
   .displayBlock {
     display: block;
     width: 100%;
-    /* background-color: red; */
     font-size: 14px;
     margin-top: 70px;
   }
@@ -102,9 +110,10 @@
     letter-spacing: 0.48px;
   }
 
+  .active::after {
+    border-bottom: none;
+  }
 }
-
-
 
 @media (max-width:550px) {
   .navBar {
