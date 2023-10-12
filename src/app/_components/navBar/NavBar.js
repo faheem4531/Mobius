@@ -7,11 +7,14 @@ import Close from "@/app/_assets/svg/close.svg";
 import Menu from "@/app/_assets/svg/menu.svg";
 import { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const NavBar = () => {
   const [mobileState, setMobileState] = useState(false);
+  const pathname = usePathname();
 
   return (
+
     <div className={`${styles.navBar} ${mobileState && styles.responsiveNAv}`}>
       {!mobileState && <Image
         src={Logo}
@@ -33,21 +36,57 @@ const NavBar = () => {
       }
 
       <ul className={`${styles.linksList} ${styles.displayNone} ${mobileState && styles.displayBlock}`}>
-        <Link href="/">
-          <li className={styles.link}>Home</li>
+        <Link href="/"
+          className={`
+        ${pathname === "/" ? styles.active : ""} 
+        ${styles.link} 
+        `}
+        >
+          <li className={mobileState && styles.borderBottom}>
+            Home
+          </li>
         </Link>
-        <Link href="/caseStudy">
-          <li className={styles.link}>Case Studies</li>
+        <Link href="/caseStudy"
+          className={`
+        ${pathname === "/caseStudy" ? styles.active : ""} 
+        ${styles.link} `
+          }>
+          <li className={mobileState && styles.borderBottom}>
+            Case Studies
+          </li>
         </Link>
-        <Link href="/carrers">
-          <li className={styles.link}>Carrers</li>
+        <Link href="/carrers"
+          className={`
+        ${pathname === "/carrers" ? styles.active : ""} 
+        ${styles.link} `
+          }>
+          <li className={mobileState && styles.borderBottom}>
+            Carrers
+          </li>
         </Link>
-        <Link href="/connectUs">
+        <Link href="/connectUs"
+          className={pathname === "/connectUs" ? styles.activebtn : ""}
+        >
           <li
-            className={`${!mobileState && styles.btn} ${mobileState && styles.link}`}>
+            className={`${!mobileState && styles.btn} ${mobileState && styles.borderBottom}`}>
             Get in Touch
           </li>
         </Link>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       </ul>
       {mobileState && <p className={styles.copyrights} >All rights reserved.
         <br />
