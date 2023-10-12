@@ -38,12 +38,12 @@
 
 .details h1 {
   color: var(--text-main);
-  font-size: 70px;
+  font-size: 62px;
   font-weight: 900;
 }
 
 .details p {
-  margin-top: 5px;
+  margin-top: 0px;
   font-size: 12px;
   font-weight: 500;
 }
