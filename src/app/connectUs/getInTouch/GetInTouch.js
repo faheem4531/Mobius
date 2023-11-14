@@ -10,6 +10,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const GetInTouch = () => {
+  const [showError, setShowError] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,39 +22,40 @@ const GetInTouch = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = () => {
-    // e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (formData.name == '' || formData.email == '' || formData.phone == '' || formData.message == '') {
+      setShowError(true)
+      return
+    }
+    setShowError(false)
 
     // Use your own template ID from Email.js
-    const templateId = 'template_16gph0l';
-
+    const templateId = 'template_l1n3bav';
     // Send email
     emailjs
-      .send('service_a21as21', templateId, formData, 'Pi3JkUms872980J13')
+      .send('service_wzj6jwh', templateId, formData, 'jidiVNfnYWDhMfZP-')
       .then((response) => {
-        console.log('into sssss');
         toast(`Email sent successfully`, {
           type: 'success',
         });
-        console.log('toast end');
-        console.log('Email sent successfully:', response);
         setFormData({
           name: '',
           email: '',
           phone: '',
           message: '',
         });
+        console.log('Email sent successfully:', response);
       })
       .catch((error) => {
-        toast(`Email sent fail`, {
+        toast(`Error sending email: ${error.message}`, {
           type: 'error',
         });
-        console.log('into error');
         console.error('Error sending email:', error);
       });
 
   };
-
 
 
   return (
@@ -98,10 +100,11 @@ const GetInTouch = () => {
                 rows="5"
               >
               </textarea>
+              {showError && <div className={styles.errorMsg}>Fill all the above fields</div>}
               <Button
                 text="Submit"
-                // type="submit"
-                onClick={handleSubmit}
+                type="submit"
+                margin="40px 0 0"
               />
             </form>
           </div>

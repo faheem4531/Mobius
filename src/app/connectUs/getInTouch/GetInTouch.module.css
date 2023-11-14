@@ -65,17 +65,23 @@
   width: 100%;
   border: var(--border-lite-2);
   border-radius: 4px;
-  margin: 20px 0 45px;
   padding: 15px;
   color: var(--text-main);
   resize: none;
   outline: none;
   overflow: hidden;
+  margin-top: 20px;
 }
 
 .textarea::placeholder {
   font-family: sans-serif;
   font-size: 12px;
+}
+
+.errorMsg {
+  /* background-color: red; */
+  text-align: start;
+  color: rgb(177, 29, 29);
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -160,7 +166,6 @@
   }
 
   .textarea {
-    margin: 20px 0 30px;
     padding: 15px;
   }
 }
