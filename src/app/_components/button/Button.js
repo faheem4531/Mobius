@@ -1,6 +1,6 @@
 import styles from './Button.module.css'
 
-const Button = ({ text, onClick, margin, color, padding }) => {
+const Button = ({ text, onClick, margin, color, padding, type }) => {
 
   const btnStyle = {
     backgroundColor: 'var(--bg-lite-1)',
@@ -13,7 +13,7 @@ const Button = ({ text, onClick, margin, color, padding }) => {
   }
 
   return (
-    <button style={btnStyle} onClick={onClick}>{text}</button>
+    <button style={btnStyle} type={type} onClick={onClick}>{text}</button>
   )
 };
 
