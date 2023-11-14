@@ -77,6 +77,7 @@ const GetInTouch = () => {
                 placeHolder="Name"
                 name="name"
                 onChange={handleChange}
+                value={formData.name}
               />
               <Input
                 type="email"
@@ -84,6 +85,7 @@ const GetInTouch = () => {
                 margin="20px 0 0"
                 name="email"
                 onChange={handleChange}
+                value={formData.email}
               />
               <Input
                 type="number"
@@ -91,6 +93,7 @@ const GetInTouch = () => {
                 margin="20px 0 0"
                 name="phone"
                 onChange={handleChange}
+                value={formData.phone}
               />
               <textarea
                 className={styles.textarea}
@@ -98,6 +101,7 @@ const GetInTouch = () => {
                 name="message"
                 placeholder="Project Description"
                 rows="5"
+                value={formData.message}
               >
               </textarea>
               {showError && <div className={styles.errorMsg}>Fill all the above fields</div>}

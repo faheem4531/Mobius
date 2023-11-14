@@ -1,6 +1,6 @@
 import styles from './Input.module.css'
 
-const Input = ({ type, placeHolder, onChange, margin, name }) => {
+const Input = ({ type, placeHolder, onChange, margin, name, value }) => {
 
   const inputStyle = {
     backgroundColor: 'transparent',
@@ -14,7 +14,15 @@ const Input = ({ type, placeHolder, onChange, margin, name }) => {
   }
 
   return (
-    <input name={name} className={styles.input} style={inputStyle} type={type} placeholder={placeHolder} onChange={onChange} />
+    <input
+      type={type}
+      name={name}
+      value={value}
+      placeholder={placeHolder}
+      onChange={onChange}
+      style={inputStyle}
+      className={styles.input}
+    />
   )
 };
 
