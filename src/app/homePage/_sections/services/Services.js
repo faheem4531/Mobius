@@ -10,11 +10,31 @@ import Lense from "@/app/_assets/png/lense.png";
 
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
+import { useControls } from 'leva';
 
 const Services = () => {
 
   const lens = useGLTF('./lens.glb')
 
+  // const { positionT, rotationT, intensity1, intensity2, right } = useControls({
+  //   positionT: {
+  //     value: { x: -0.7, y: -2, z: 0 },
+  //     step: 0.1,
+  //     joystick: 'invertY'
+  //   },
+  //   intensity1: 2,
+  //   right: {
+  //     value: { x: -0.7, y: -2, z: 0 },
+  //     step: 0.1,
+  //     joystick: 'invertY'
+  //   },
+  //   intensity2: 2,
+  //   rotationT: {
+  //     value: { x: 0.9, y: 4, z: -5.6 },
+  //     step: 0.1,
+  //     joystick: 'invertY'
+  //   },
+  // })
 
   return (
     <div className={styles.services}>
@@ -59,18 +79,24 @@ const Services = () => {
       <div className={styles.imageWraper}>
 
         <Canvas
-          shadows
           camera={{
             fov: 45,
-            // near: 0.1,
-            // far: 200,
-            position: [2, 2, 10]
+            near: 0.1,
+            far: 200,
+            position: [4, 2, 10]
           }}
         >
-          <OrbitControls makeDefault />
-          <directionalLight castShadow position={[0, -1, 0]} intensity={2.1} />
+          <OrbitControls enableZoom={false} />
+          <directionalLight position={[-8, -0.9, -1.5]} intensity={1} />
+          <directionalLight position={[0.4, -1, -1.1]} intensity={1} />
           <ambientLight intensity={0.5} />
-          <primitive object={lens.scene} scale={0.5} position={[0, -1, 0]} rotation={[0, 8, 5]} />
+          <primitive
+            object={lens.scene}
+            scale={0.05}
+            position={[-0.7, -2, 0]}
+            rotation={[0.9, 4, -5.6]}
+
+          />
         </Canvas>
 
 
