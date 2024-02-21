@@ -20,8 +20,7 @@
 }
 
 .lense {
-  width: 380px;
-  height: 360px;
+  display: none;
 }
 
 .content {
