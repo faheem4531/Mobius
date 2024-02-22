@@ -5,6 +5,6 @@ const nextConfig = {}
 
 module.exports = {
   nextConfig,
-  favicon: '/favicon.ico',
+  // favicon: '/favicon.ico',
   // transpilePackages: ['three'],
 };

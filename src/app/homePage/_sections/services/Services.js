@@ -25,7 +25,7 @@ const Services = () => {
   })
 
   const loadModels = {
-    lens: useGLTF('./lens.glb'),
+    lens: useGLTF('./lens-clay.glb'),
     lensClay: useGLTF('./lens-clay.glb'),
     lensWireframe: useGLTF('./lens-wireframe.glb')
   };
