@@ -14,7 +14,7 @@ import Lense from "@/app/_assets/png/lense.png";
 import { Canvas } from '@react-three/fiber';
 import { useState } from 'react';
 import Model from '@/app/Model/Model';
-import { useGLTF } from '@react-three/drei';
+import { OrbitControls, useGLTF } from '@react-three/drei';
 
 const Services = () => {
 
@@ -25,9 +25,9 @@ const Services = () => {
   })
 
   const loadModels = {
-    lens: useGLTF('./lens-clay.glb'),
-    lensClay: useGLTF('./lens-clay.glb'),
-    lensWireframe: useGLTF('./lens-wireframe.glb')
+    lens: useGLTF("./lens.glb"),
+    lensClay: useGLTF("./lens-clay.glb"),
+    lensWireframe: useGLTF("./lens-wireframe.glb")
   };
 
   function handlingModel() {
@@ -97,18 +97,21 @@ const Services = () => {
       </div>
       <div className={styles.imageWraper}>
 
-        <Canvas
-          camera={{
-            fov: 45,
-            near: 0.1,
-            far: 200,
-            position: [4, 2, 10]
-          }}
-        >
-          <Model
-            modelStates={modelStates}
-            models={loadModels} />
-        </Canvas>
+        <div className={styles.index}>
+
+          <Canvas
+            camera={{
+              fov: 45,
+              near: 0.1,
+              far: 200,
+              position: [4, 2, 10]
+            }}
+          >
+            <Model
+              modelStates={modelStates}
+              models={loadModels} />
+          </Canvas>
+        </div>
 
         <Image
           src={Lense}
@@ -116,7 +119,30 @@ const Services = () => {
           className={styles.lense}
         />
       </div>
-    </div>
+
+      <div className={styles.torus}>
+        <Canvas
+          camera={{
+            fov: 45,
+            near: 0.1,
+            far: 200,
+            position: [4, 2, 6]
+          }}
+        >
+          <OrbitControls makeDefault />
+          <directionalLight castShadow position={[1, 2, 3]} intensity={1.5} />
+          <ambientLight intensity={0.5} />
+          <mesh
+            position={[0, -1.8, -7.6]}
+            rotation={[-3.4, -0.2, 0]}
+            scale={7}
+          >
+            <torusGeometry />
+            <meshStandardMaterial wireframe color="#ffffff" />
+          </mesh>
+        </Canvas>
+      </div>
+    </div >
   )
 };
 
