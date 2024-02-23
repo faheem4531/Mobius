@@ -24,11 +24,12 @@ const Services = () => {
     clay: false
   })
 
-  const loadModels = {
-    lens: useGLTF("./lens.glb"),
-    lensClay: useGLTF("./lens-clay.glb"),
-    lensWireframe: useGLTF("./lens-wireframe.glb")
-  };
+  // const publicUrl = process.env.PUBLIC_URL || '';
+  // const loadModels = {
+  //   lens: useGLTF(publicUrl + "/lens.glb"),
+  //   lensClay: useGLTF(publicUrl + "/lens-clay.glb"),
+  //   lensWireframe: useGLTF(publicUrl + "/lens-wireframe.glb")
+  // };
 
   function handlingModel() {
     setModelState({
@@ -99,7 +100,7 @@ const Services = () => {
 
         <div className={styles.index}>
 
-          <Canvas
+          {/* <Canvas
             camera={{
               fov: 45,
               near: 0.1,
@@ -110,7 +111,7 @@ const Services = () => {
             <Model
               modelStates={modelStates}
               models={loadModels} />
-          </Canvas>
+          </Canvas> */}
         </div>
 
         <Image
