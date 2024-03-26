@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './Discover.module.css'
 import Button from '@/app/_components/button/Button';
 import Image from 'next/image';

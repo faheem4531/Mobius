@@ -1,3 +1,5 @@
+'use client'
+
 import Avancus from "@/app/_assets/clients/avancus.svg";
 import Elevant from "@/app/_assets/clients/elevant.svg";
 import Fonestar from "@/app/_assets/clients/fonestar.svg";

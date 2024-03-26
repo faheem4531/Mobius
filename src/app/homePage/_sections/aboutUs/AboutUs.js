@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './AboutUs.module.css'
 import Image from 'next/image';
 import Model from "@/app/_assets/png/aboutUs-model.png";

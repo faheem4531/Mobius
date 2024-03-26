@@ -1,3 +1,5 @@
+'use client'
+
 import styles from "./CaseStudy.module.css"
 import Footer from "../_components/footer/Footer";
 import IntroSection from "../_components/introSection/IntroSection";

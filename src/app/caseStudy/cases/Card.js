@@ -1,3 +1,4 @@
+'use client'
 
 import styles from "./Cases.module.css"
 import Image from "next/image";
@@ -8,7 +9,7 @@ const Card = ({ img, name, url }) => {
     <div className={styles.card}>
       <Image
         src={img}
-        alt=""
+        alt="img"
         className={styles.image}
       />
       <div className={styles.details}>

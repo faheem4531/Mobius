@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './JoinUs.module.css'
 import Image from 'next/image';
 import BackGround from "@/app/_assets/png/join-us-bg.png";

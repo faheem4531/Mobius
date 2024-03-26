@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import styles from "./ApplyForm.module.css"
 import Input from "@/app/_components/input/Input";
@@ -32,7 +34,7 @@ const ApplyForm = () => {
         <div className={styles.attachDoc}>
           <Image
             src={Pin}
-            alt=""
+            alt="img"
             className={styles.pin}
           />
           Attach your Resume

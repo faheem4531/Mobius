@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './Input.module.css'
 
 const Input = ({ type, placeHolder, onChange, margin, name, value }) => {

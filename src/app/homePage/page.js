@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import styles from "./HomePage.module.css";
 import IntroSection from "./_sections/introSection/IntroSection";
