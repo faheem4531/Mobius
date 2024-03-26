@@ -6,6 +6,7 @@ import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber';
 import { Lens } from '@/app/Model/Lens';
 import { LensClay } from '@/app/Model/LensClay';
+import { LensWireFrame } from './LensWireFrame';
 import { Environment } from '@react-three/drei'
 
 const Model = ({ modelStates, models }) => {
@@ -36,7 +37,7 @@ const Model = ({ modelStates, models }) => {
       return <Lens />
     }
     else if (modelStates.simulation) {
-      return <LensClay />
+      return <LensWireFrame />
     }
     else if (modelStates.clay) {
       return <LensClay />
