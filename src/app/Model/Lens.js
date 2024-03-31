@@ -10,6 +10,11 @@ export function Lens(props) {
   const groupRef = useRef()
   const { nodes, materials } = useGLTF('/lens.glb')
 
+  materials.Mat.wireframe = false
+  materials.Chrome.wireframe = false
+  materials.Gold.wireframe = false
+  materials['Camera-Lens'].wireframe = false
+
   return (
     <group ref={groupRef} {...props} dispose={null}
       scale={0.05}
