@@ -58,8 +58,8 @@ const Model = ({ modelStates, models }) => {
     >
       <Suspense fallback={null}>
         <OrbitControls enableZoom={false} />
-        <directionalLight position={[-8, -0.9, -1.5]} intensity={1} />
-        <directionalLight position={[0.4, -1, -1.1]} intensity={1} />
+        <directionalLight position={[-8, -0.9, -1.5]} intensity={2} />
+        <directionalLight position={[0.4, -1, -1.1]} intensity={2} />
         <ambientLight intensity={0.5} />
 
         {/* <Environment preset="sunset" /> */}
