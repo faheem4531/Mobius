@@ -13,10 +13,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* <!-- Google Tag Manager --> */}
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
+      <head>
+        {/* <!-- Google Tag Manager --> */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
                 (function(w,d,s,l,i){
                   w[l]=w[l]||[];
                   w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
@@ -27,9 +28,9 @@ export default function RootLayout({ children }) {
                   f.parentNode.insertBefore(j,f);
                 })(window,document,'script','dataLayer','GTM-WHTLHHQK');
               `,
-        }}
-      />
-      <script
+          }}
+        />
+        {/* <script
         dangerouslySetInnerHTML={{
           __html: `
                  (function(w,d,s,r,n){w.TrustpilotObject=n;w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)};
@@ -38,10 +39,17 @@ export default function RootLayout({ children }) {
             tp('register', '6ZPuvh25Jszax5NL');
           `,
         }}
-      />
-
-      {/* <!-- End Google Tag Manager --> */}
-
+      /> */}
+        <script>
+          {`
+        
+        (function(w,d,s,r,n){w.TrustpilotObject=n;w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)};
+            a=d.createElement(s);a.async=1;a.src=r;a.type='text/java'+s;f=d.getElementsByTagName(s)[0];
+            f.parentNode.insertBefore(a,f)})(window,document,'script', 'https://invitejs.trustpilot.com/tp.min.js', 'tp');
+            tp('register', '6ZPuvh25Jszax5NL');
+        `}
+        </script>
+      </head>
       <body className={inter.className}>
         {/* Google Tag Manager (noscript) */}
         <noscript
