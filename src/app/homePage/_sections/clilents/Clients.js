@@ -77,7 +77,7 @@ const Clients = () => {
       </Marquee>
       <div className={styles.reviewContainer}>
         <h3>Testimonial</h3>
-        <div
+        {/* <div
           className="trustpilot-widget"
           data-locale="en-US"
           data-template-id="mobiusstudios.co"
@@ -92,7 +92,7 @@ const Clients = () => {
           >
             Trustpilot
           </a>
-        </div>
+        </div> */}
         <div className={styles.reviewCardWraper}>
           <div className={styles.innerWrapper}>
             <Review name="Angelina Molnar" />

@@ -72,7 +72,7 @@ const Footer = () => {
             <Link href="/carrers" passHref>
               <p className={styles.addresX}>Career</p>
             </Link>
-            <Link href="/connectUs" passHref>
+            <Link href="/connect-us" passHref>
               <p className={styles.addresX}>Contact Us</p>
             </Link>
           </div>
@@ -114,28 +114,28 @@ const Footer = () => {
           {/* <!-- End TrustBox widget --> */}
         </div>
         <div className={styles.socialMedia}>
-          <Link
-            href="https://dribbble.com/mobius_motion_studio"
+        <Link
+            href="https://dribbble.com/aliimranmms"
             className={styles.logoLink}
             target="_blank"
           >
-            <Image alt="Logo" src={Dribbble} className={styles.logo} />
+            <Image alt="Dribbble Logo - Portfolio of mobius motion studio. We are 3d animation studio providing 3d animation services " src={Dribbble} className={styles.logo} />
           </Link>
           <Link
-            href="https://www.behance.net/mobiusmotion"
+            href="https://www.behance.net/aliimran4"
             className={styles.logoLink}
             target="_blank"
           >
-            <Image alt="Logo" src={Behance} className={styles.logo} />
+            <Image alt="Logo Behance: Portfolio of mobius motion studio. We are 3d modeling artist providing 3d modeling, rendering and 3d animation services " src={Behance} className={styles.logo} />
           </Link>
-          <Link href="" className={styles.logoLink}>
-            <Image alt="Logo" src={Facebook} className={styles.logo} />
+          <Link href="https://www.facebook.com/Mobiusmotionstudio/" className={styles.logoLink}>
+            <Image alt="Logo - Mobius Motion Studio is animation studio providing best vfx services, product modeling, 3d product animation services" src={Facebook} className={styles.logo} />
           </Link>
-          <Link href="" className={styles.logoLink}>
-            <Image alt="Logo" src={Instagram} className={styles.logo} />
+          <Link href="https://www.instagram.com/mobiusmotion.studio/" className={styles.logoLink}>
+            <Image alt="Logo - You can hire top animation and best vfx company. You get product modeling 3d product animation video" src={Instagram} className={styles.logo} />
           </Link>
-          <Link href="" className={styles.logoLink}>
-            <Image alt="Logo" src={LinkedIn} className={styles.logo} />
+          <Link href="https://www.linkedin.com/company/mobius-motion-studio/?viewAsMember=true" className={styles.logoLink}>
+            <Image alt="Logo - Mobius motion studio is 3d modeling company. We have best 3d animation artist, motion capture artist, cgi designer, and 3d modeling designer" src={LinkedIn} className={styles.logo} />
           </Link>
         </div>
       </div>

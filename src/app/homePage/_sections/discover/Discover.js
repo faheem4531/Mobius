@@ -16,7 +16,7 @@ const Discover = () => {
       <div className={styles.content}>
         <h1>Don&rsquo;t let your designs go to waste. let us turn them into reality!</h1>
 
-        <Link href="/caseStudy">
+        <Link href="/case-study">
           <Button
             text="Discover More"
           />
