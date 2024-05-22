@@ -60,7 +60,7 @@ const Services = () => {
     <div className={styles.services}>
       <div className={styles.content}>
         <div className={styles.title}>Our Services</div>
-        <h1>We Provide 3D Services</h1>
+        <h2 style={{color: "var(--text-main)", fontSize:"38px", marginBottom:"40px"}}>We Provide 3D Services</h2>
         <hr />
         <div className={styles.servicesSteps}>
           <Image
