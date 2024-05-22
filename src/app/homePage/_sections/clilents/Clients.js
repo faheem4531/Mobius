@@ -62,7 +62,7 @@ const Clients = () => {
   return (
     <div className={styles.clients}>
       <h3>Clients</h3>
-      <h1>Here are our some Favorite Clients</h1>
+      <p style={{color: "var(--text-main)", fontSize:"38px", fontWeight:"500", margin:"35px 0 70px"}}>Here are our some Favorite Clients</p>
       <Marquee>
         {Clients_data.map((items) => {
           return (

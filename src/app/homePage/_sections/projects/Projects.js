@@ -118,7 +118,7 @@ const Projects = () => {
   return (
     <div className={styles.container}>
       <h3>Projects</h3>
-      <h1>Here are our some recent Projects</h1>
+      <h3 style={{fontSize:"38px", color: "var(--text-main)", fontWeight:"500", margin:" 35px 0 70px"}}>Here are our some recent Projects</h3>
       <Slider {...settings} className={styles.slider}>
         {project_dateils.map((items) => {
           return <div className={styles.card} key={items.id}>

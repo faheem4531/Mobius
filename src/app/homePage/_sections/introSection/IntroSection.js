@@ -46,12 +46,14 @@ const IntroSection = () => {
       </video> */}
         <NavBar />
 
-        <div className={styles.content}>
           <Image
             src={Title}
             alt=''
             className={styles.heading}
+            style={{position:"absolute",left:"90px", marginTop:"90px"}}
           />
+        <div className={styles.content}>
+          <h1 style={{fontSize:"50px", color: "var(--text-main)", width:"65%"}}>Custom 3D Animation Services & 3D Modeling Services</h1>
           <p className={styles.dextopText}>We provide expert animation services, bringing your ideas to life with creativity and flair.
             Elevate your storytelling with our exceptional team at your service.</p>
           <p className={styles.resText}>We provide expert animation services, bringing your ideas to life with creativity and flair. </p>
