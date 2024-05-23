@@ -17,10 +17,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
       <link rel="canonical" href="https://www.mobiusstudios.co/" />
-      {/* <link rel="canonical" href="https://www.mobiusstudios.co/carrers" />
-      <link rel="canonical" href="https://www.mobiusstudios.co/connect-us" />
-      <link rel="canonical" href="https://www.mobiusstudios.co/_next/static/media/c9a5bc6a7c948fb0-s.p.woff2" />
-      <link rel="canonical" href="https://www.mobiusstudios.co/case-study" /> */}
         {/* Add Clarity script here */}
         <script
           dangerouslySetInnerHTML={{
