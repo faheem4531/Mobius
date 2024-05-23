@@ -20,7 +20,8 @@ const Footer = () => {
   }
 
   const phoneNumber = "+92 307 4567890";
-  const emailAddress = "hr@mobiusmotionstudio.com";
+  // const emailAddress = "hr@mobiusmotionstudio.com";
+  const emailAddress = "info@mobiusstudios.co";
   const address = "392, F Block Johar Town, Lahore, Punjab, Pakistan";
   const googleMapsLink = `https://www.google.com/maps?q=${encodeURIComponent(
     address
