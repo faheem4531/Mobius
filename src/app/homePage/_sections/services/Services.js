@@ -70,7 +70,8 @@ const Services = () => {
           />
           <div>
             <h2 className={`${styles.heading} ${modelStates.model && styles.active}`} onClick={handlingModel}>
-              3D Modeling
+              {/* 3D Modeling */}
+              Texturing
               <Image
                 alt=''
                 src={modelStates.model ? Step1Active : Step1}
@@ -78,7 +79,8 @@ const Services = () => {
               />
             </h2>
             <h2 className={`${styles.heading} ${styles.unselected} ${modelStates.simulation && styles.active}`} onClick={handlingSimulation}>
-              3D Simulation
+              {/* 3D Simulation */}
+              Wireframe
               <Image
                 alt=''
                 src={modelStates.simulation ? Step2Active : Step2}
@@ -86,7 +88,8 @@ const Services = () => {
               />
             </h2>
             <h2 className={`${styles.heading} ${styles.unselected} ${modelStates.clay && styles.active}`} onClick={handlingClay}>
-              Video Animation
+              {/* Video Animation */}
+              3d Model
               <Image
                 alt=''
                 src={modelStates.clay ? Step3Active : Step3}
