@@ -1,7 +1,16 @@
+'use client'
+
 import { OrbitControls } from '@react-three/drei';
 import { useControls } from 'leva';
+import { Suspense } from 'react'
+import { Canvas } from '@react-three/fiber';
+import { Lens } from '@/app/Model/Lens';
+import { LensClay } from '@/app/Model/LensClay';
+import { LensWireFrame } from './LensWireFrame';
+import { Environment } from '@react-three/drei'
 
 const Model = ({ modelStates, models }) => {
+
 
   // const { positionT, rotationT, intensity1, intensity2, right } = useControls({
   //   positionT: { 
@@ -25,30 +34,39 @@ const Model = ({ modelStates, models }) => {
 
   function setModel() {
     if (modelStates.model) {
-      return models.lens.scene
+      return <Lens />
     }
     else if (modelStates.simulation) {
-      return models.lensWireframe.scene
+      return <LensWireFrame />
     }
     else if (modelStates.clay) {
-      return models.lensClay.scene
+      return <LensClay />
+    }
+    else {
+      return null;
     }
   }
 
   return <>
-    <OrbitControls enableZoom={false} />
-    <directionalLight position={[-8, -0.9, -1.5]} intensity={1} />
-    <directionalLight position={[0.4, -1, -1.1]} intensity={1} />
-    <ambientLight intensity={0.5} />
+    <Canvas
+      camera={{
+        fov: 45,
+        near: 0.1,
+        far: 200,
+        position: [4, 2, 10]
+      }}
+    >
+      <Suspense fallback={null}>
+        <OrbitControls enableZoom={false} />
+        <directionalLight position={[-8, -0.9, -1.5]} intensity={2} />
+        <directionalLight position={[0.4, -1, -1.1]} intensity={2} />
+        <ambientLight intensity={0.5} />
 
-    {setModel() && (
-      <primitive
-        object={setModel()}
-        scale={0.05}
-        position={[-0.7, -2, 0]}
-        rotation={[0.9, 4, -5.6]}
-      />
-    )}
+        {/* <Environment preset="sunset" /> */}
+        {setModel()}
+
+      </Suspense>
+    </Canvas>
   </>
 }
 

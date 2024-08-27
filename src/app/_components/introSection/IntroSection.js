@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './IntroSection.module.css'
 import NavBar from '@/app/_components/navBar/NavBar';
 

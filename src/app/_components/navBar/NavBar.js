@@ -46,9 +46,9 @@ const NavBar = () => {
             Home
           </li>
         </Link>
-        <Link href="/caseStudy"
+        <Link href="/case-study"
           className={`
-        ${pathname === "/caseStudy" ? styles.active : ""} 
+        ${pathname === "/case-study" ? styles.active : ""} 
         ${styles.link} `
           }>
           <li className={mobileState && styles.borderBottom}>
@@ -64,8 +64,8 @@ const NavBar = () => {
             Carrers
           </li>
         </Link>
-        <Link href="/connectUs"
-          className={pathname === "/connectUs" ? styles.activebtn : ""}
+        <Link href="/connect-us"
+          className={pathname === "/connect-us" ? styles.activebtn : ""}
         >
           <li
             className={`${!mobileState && styles.btn} ${mobileState && styles.borderBottom}`}>

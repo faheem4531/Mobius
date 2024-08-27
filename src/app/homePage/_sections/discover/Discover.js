@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './Discover.module.css'
 import Button from '@/app/_components/button/Button';
 import Image from 'next/image';
@@ -12,9 +14,9 @@ const Discover = () => {
         alt=''
         className={styles.bgImg} />
       <div className={styles.content}>
-        <h1>Don&rsquo;t let your designs go to waste. let us turn them into reality!</h1>
+        <h4 style={{fontSize:"50px", fontWeight:"600",color: "var(--text-main)", marginBottom:"40px"}}>Don&rsquo;t let your designs go to waste. let us turn them into reality!</h4>
 
-        <Link href="/caseStudy">
+        <Link href="/case-study">
           <Button
             text="Discover More"
           />
@@ -23,15 +25,15 @@ const Discover = () => {
     </div>
     <div className={styles.stats}>
       <div className={styles.details}>
-        <h1>145+</h1>
+        <p style={{color:"#FAFAFA", fontSize:"60px", fontWeight:"900"}}>145+</p>
         <p>Clients</p>
       </div>
       <div className={styles.details}>
-        <h1>328+</h1>
+        <p style={{color:"#FAFAFA", fontSize:"60px", fontWeight:"900"}}>328+</p>
         <p>Projects</p>
       </div>
       <div className={styles.details}>
-        <h1>67+</h1>
+        <p style={{color:"#FAFAFA", fontSize:"60px", fontWeight:"900"}}>67+</p>
         <p>Experts</p>
       </div>
     </div>

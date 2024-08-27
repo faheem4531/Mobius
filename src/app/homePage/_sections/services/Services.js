@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import styles from './Services.module.css'
 import Image from 'next/image';
@@ -10,11 +10,18 @@ import Step2Active from "@/app/_assets/svg/simulation-service-active.svg";
 import Step3 from "@/app/_assets/svg/video-service.svg";
 import Step3Active from "@/app/_assets/svg/video-service-active.svg";
 import Lense from "@/app/_assets/png/lense.png";
+import { Suspense } from 'react'
 
 import { Canvas } from '@react-three/fiber';
 import { useState } from 'react';
 import Model from '@/app/Model/Model';
 import { OrbitControls, useGLTF } from '@react-three/drei';
+
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { useLoader } from "@react-three/fiber";
+import { Lens } from '@/app/Model/Lens';
+import { LensClay } from '@/app/Model/LensClay';
+import { Environment } from '@react-three/drei'
 
 const Services = () => {
 
@@ -59,7 +66,7 @@ const Services = () => {
     <div className={styles.services}>
       <div className={styles.content}>
         <div className={styles.title}>Our Services</div>
-        <h1>We Provide 3D Services</h1>
+        <h2 style={{color: "var(--text-main)", fontSize:"38px", marginBottom:"40px"}}>We Provide 3D Services</h2>
         <hr />
         <div className={styles.servicesSteps}>
           <Image
@@ -69,7 +76,8 @@ const Services = () => {
           />
           <div>
             <h2 className={`${styles.heading} ${modelStates.model && styles.active}`} onClick={handlingModel}>
-              3D Modeling
+              {/* 3D Modeling */}
+              Texturing
               <Image
                 alt=''
                 src={modelStates.model ? Step1Active : Step1}
@@ -77,7 +85,8 @@ const Services = () => {
               />
             </h2>
             <h2 className={`${styles.heading} ${styles.unselected} ${modelStates.simulation && styles.active}`} onClick={handlingSimulation}>
-              3D Simulation
+              {/* 3D Simulation */}
+              Wireframe
               <Image
                 alt=''
                 src={modelStates.simulation ? Step2Active : Step2}
@@ -85,7 +94,8 @@ const Services = () => {
               />
             </h2>
             <h2 className={`${styles.heading} ${styles.unselected} ${modelStates.clay && styles.active}`} onClick={handlingClay}>
-              Video Animation
+              {/* Video Animation */}
+              3d Model
               <Image
                 alt=''
                 src={modelStates.clay ? Step3Active : Step3}
@@ -96,31 +106,19 @@ const Services = () => {
         </div>
       </div>
       <div className={styles.imageWraper}>
-
         <div className={styles.index}>
-
-          <Canvas
-            camera={{
-              fov: 45,
-              near: 0.1,
-              far: 200,
-              position: [4, 2, 10]
-            }}
-          >
-            <Model
-              modelStates={modelStates}
-              models={loadModels} />
-          </Canvas>
+          <Model
+            modelStates={modelStates}
+          />
         </div>
-
         <Image
           src={Lense}
-          alt=''
+          alt='img'
           className={styles.lense}
         />
       </div>
 
-      <div className={styles.torus}>
+      {/* <div className={styles.torus}>
         <Canvas
           camera={{
             fov: 45,
@@ -129,7 +127,7 @@ const Services = () => {
             position: [4, 2, 6]
           }}
         >
-          <OrbitControls makeDefault />
+          <OrbitControls enableZoom={false} />
           <directionalLight castShadow position={[1, 2, 3]} intensity={1.5} />
           <ambientLight intensity={0.5} />
           <mesh
@@ -141,7 +139,7 @@ const Services = () => {
             <meshStandardMaterial wireframe color="#ffffff" />
           </mesh>
         </Canvas>
-      </div>
+      </div> */}
     </div >
   )
 };

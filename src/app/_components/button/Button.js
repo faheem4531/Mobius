@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './Button.module.css'
 
 const Button = ({ text, onClick, margin, color, padding, type }) => {

@@ -66,6 +66,16 @@
   font-weight: 300;
 }
 
+.content .heading{
+  margin-bottom: 20px;
+}
+
+.content .titleHeading{
+  font-size: 38px;
+  color:var(--text-main) ;
+  margin-bottom: -25px;
+}
+
 .dextopText {
   width: 50%;
   font-size: 20px;
@@ -144,6 +154,7 @@
   .content,
   .heading {
     width: 290px;
+    margin-bottom: 10px;
   }
 
   .content {
@@ -154,5 +165,12 @@
   .resText {
     font-size: 14px;
     margin: 0 0 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .content .titleHeading{
+    font-size: 18px;
+    margin-bottom: 10px;
   }
 }

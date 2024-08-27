@@ -1,3 +1,5 @@
+'use client'
+
 import Card from "./Card";
 import styles from "./Cases.module.css"
 import Formula from "@/app/_assets/png/formulaZ.png";

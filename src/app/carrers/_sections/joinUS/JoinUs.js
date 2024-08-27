@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './JoinUs.module.css'
 import ApplyForm from '../applyForm/ApplyForm';
 

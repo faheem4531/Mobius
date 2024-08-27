@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './AboutUs.module.css'
 import Image from 'next/image';
 import Model from "@/app/_assets/png/aboutUs-model.png";
@@ -14,7 +16,7 @@ const AboutUs = () => {
       </div>
       <div className={styles.content}>
         <h4>About Us</h4>
-        <h1>We Create Impracticality To Reality</h1>
+        <h2 style={{color: "var(--text-main)", fontSize:"38px"}}>We Create Impracticality To Reality</h2>
         <hr />
         <p>We provide expert animation services, With a dedicated team of skilled animators,
           we infuse creativity and flair into every frame. Our mission is to elevate your storytelling,

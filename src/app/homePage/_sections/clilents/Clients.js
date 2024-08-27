@@ -1,3 +1,5 @@
+'use client'
+
 import Avancus from "@/app/_assets/clients/avancus.svg";
 import Elevant from "@/app/_assets/clients/elevant.svg";
 import Fonestar from "@/app/_assets/clients/fonestar.svg";
@@ -60,7 +62,7 @@ const Clients = () => {
   return (
     <div className={styles.clients}>
       <h3>Clients</h3>
-      <h1>Here are our some Favorite Clients</h1>
+      <p style={{color: "var(--text-main)", fontSize:"38px", fontWeight:"500", margin:"35px 0 70px"}}>Here are our some Favorite Clients</p>
       <Marquee>
         {Clients_data.map((items) => {
           return (
@@ -75,7 +77,7 @@ const Clients = () => {
       </Marquee>
       <div className={styles.reviewContainer}>
         <h3>Testimonial</h3>
-        <div
+        {/* <div
           className="trustpilot-widget"
           data-locale="en-US"
           data-template-id="mobiusstudios.co"
@@ -90,7 +92,7 @@ const Clients = () => {
           >
             Trustpilot
           </a>
-        </div>
+        </div> */}
         <div className={styles.reviewCardWraper}>
           <div className={styles.innerWrapper}>
             <Review name="Angelina Molnar" />
