@@ -17,16 +17,16 @@ const AboutUs = () => {
         </h2>
         <hr />
         <p>
-          At Mobius Studios, 3D animation is not just a job for us. It's our
-          true passion. We're a team of passionate project managers, creative
-          directors, 3D animators, CGI artists, and Simulation experts dedicated
-          to helping businesses tell their stories through powerful 3d visual
-          content. Our focus is on making high-quality 3D animation accessible
-          to all, ensuring that every business—regardless of size or budget—can
-          use the power of compelling visuals to communicate its message
-          effectively. We believe in the power of simplicity and clarity,
-          stripping away the unnecessary to deliver animations that are both
-          impactful and memorable.
+          At Mobius Studios, 3D animation is not just a job for us. It&apos;s
+          our true passion. We&apos;re a team of passionate project managers,
+          creative directors, 3D animators, CGI artists, and Simulation experts
+          dedicated to helping businesses tell their stories through powerful 3d
+          visual content. Our focus is on making high-quality 3D animation
+          accessible to all, ensuring that every business—regardless of size or
+          budget—can use the power of compelling visuals to communicate its
+          message effectively. We believe in the power of simplicity and
+          clarity, stripping away the unnecessary to deliver animations that are
+          both impactful and memorable.
         </p>
       </div>
     </div>
