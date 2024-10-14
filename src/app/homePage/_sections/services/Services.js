@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
-import styles from './Services.module.css'
-import Image from 'next/image';
+import styles from "./Services.module.css";
+import Image from "next/image";
 import Steps from "@/app/_assets/svg/service-steps.svg";
 import Step1 from "@/app/_assets/svg/3d-service.svg";
 import Step1Active from "@/app/_assets/svg/3d-service-active.svg";
@@ -10,94 +10,111 @@ import Step2Active from "@/app/_assets/svg/simulation-service-active.svg";
 import Step3 from "@/app/_assets/svg/video-service.svg";
 import Step3Active from "@/app/_assets/svg/video-service-active.svg";
 import Lense from "@/app/_assets/png/lense.png";
-import { Suspense } from 'react'
+import { Suspense } from "react";
 
-import { Canvas } from '@react-three/fiber';
-import { useState } from 'react';
-import Model from '@/app/Model/Model';
-import { OrbitControls, useGLTF } from '@react-three/drei';
+import { Canvas } from "@react-three/fiber";
+import { useState } from "react";
+import Model from "@/app/Model/Model";
+import { OrbitControls, useGLTF } from "@react-three/drei";
 
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { useLoader } from "@react-three/fiber";
-import { Lens } from '@/app/Model/Lens';
-import { LensClay } from '@/app/Model/LensClay';
-import { Environment } from '@react-three/drei'
+import { Lens } from "@/app/Model/Lens";
+import { LensClay } from "@/app/Model/LensClay";
+import { Environment } from "@react-three/drei";
 
 const Services = () => {
-
   const [modelStates, setModelState] = useState({
     model: true,
     simulation: false,
-    clay: false
-  })
+    clay: false,
+  });
 
   const loadModels = {
     lens: useGLTF("/socksLow.glb"),
     lensClay: useGLTF("/socksLow.glb"),
-    lensWireframe: useGLTF("/socksLow.glb")
+    lensWireframe: useGLTF("/socksLow.glb"),
   };
 
   function handlingModel() {
     setModelState({
       model: true,
       simulation: false,
-      clay: false
-    })
+      clay: false,
+    });
   }
 
   function handlingSimulation() {
     setModelState({
       model: false,
       simulation: true,
-      clay: false
-    })
+      clay: false,
+    });
   }
 
   function handlingClay() {
     setModelState({
       model: false,
       simulation: false,
-      clay: true
-    })
+      clay: true,
+    });
   }
-
 
   return (
     <div className={styles.services}>
       <div className={styles.content}>
         <div className={styles.title}>Our Services</div>
-        <h2 style={{color: "var(--text-main)", fontSize:"38px", marginBottom:"40px"}}>We Provide 3D Services</h2>
+        <h2
+          style={{
+            color: "var(--text-main)",
+            fontSize: "38px",
+            marginBottom: "40px",
+          }}
+        >
+          Elevate website with 3D Models{" "}
+        </h2>
         <hr />
         <div className={styles.servicesSteps}>
-          <Image
-            alt=''
-            src={Steps}
-            className={styles.steps}
-          />
+          <Image alt="" src={Steps} className={styles.steps} />
           <div>
-            <h2 className={`${styles.heading} ${modelStates.model && styles.active}`} onClick={handlingModel}>
+            <h2
+              className={`${styles.heading} ${
+                modelStates.model && styles.active
+              }`}
+              onClick={handlingModel}
+            >
               {/* 3D Modeling */}
-              Texturing
+              Textured Model
               <Image
-                alt=''
+                alt="Textured Model icon"
                 src={modelStates.model ? Step1Active : Step1}
                 className={styles.logo}
               />
             </h2>
-            <h2 className={`${styles.heading} ${styles.unselected} ${modelStates.simulation && styles.active}`} onClick={handlingSimulation}>
+            <h2
+              className={`${styles.heading} ${styles.unselected} ${
+                modelStates.simulation && styles.active
+              }`}
+              onClick={handlingSimulation}
+            >
               {/* 3D Simulation */}
-              Wireframe
+              Wireframes
               <Image
-                alt=''
+                alt="Wireframes icon"
                 src={modelStates.simulation ? Step2Active : Step2}
                 className={styles.logo}
               />
             </h2>
-            <h2 className={`${styles.heading} ${styles.unselected} ${modelStates.clay && styles.active}`} onClick={handlingClay}>
+            <h2
+              className={`${styles.heading} ${styles.unselected} ${
+                modelStates.clay && styles.active
+              }`}
+              onClick={handlingClay}
+            >
               {/* Video Animation */}
-              3d Model
+              3d Clay Model
               <Image
-                alt=''
+                alt="3d Clay Model icon"
                 src={modelStates.clay ? Step3Active : Step3}
                 className={styles.logo}
               />
@@ -107,15 +124,9 @@ const Services = () => {
       </div>
       <div className={styles.imageWraper}>
         <div className={styles.index}>
-          <Model
-            modelStates={modelStates}
-          />
+          <Model modelStates={modelStates} />
         </div>
-        <Image
-          src={Lense}
-          alt='img'
-          className={styles.lense}
-        />
+        <Image src={Lense} alt="img" className={styles.lense} />
       </div>
 
       {/* <div className={styles.torus}>
@@ -140,8 +151,8 @@ const Services = () => {
           </mesh>
         </Canvas>
       </div> */}
-    </div >
-  )
+    </div>
+  );
 };
 
 export default Services;
