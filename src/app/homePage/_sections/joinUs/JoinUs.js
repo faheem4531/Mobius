@@ -21,7 +21,7 @@ const JoinUs = () => {
               marginBottom: "40px",
             }}
           >
-            Want to Work Together?
+            Still confused on 3d ?
           </p>
           <Link href="/carrers">
             <Button text="Join Us Now" />
