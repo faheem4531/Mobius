@@ -18,7 +18,6 @@
   width: 100%;
   height: 50%;
   background: linear-gradient(var(--bg-gradient));
-  /* background-size: 100%; */
   z-index: 1;
 }
 
@@ -83,12 +82,15 @@
     padding: 120px 90px 110px 100px;
   }
 
+  .content p {
+    font-size: 20px;
+  }
 }
 
 @media (max-width:992px) {
   .about {
     column-gap: 100px;
-    padding: 85px 50px 70px 100px;
+    padding: 85px 0px 70px 50px;
   }
 
   .model {
@@ -125,7 +127,7 @@
   }
 }
 
-@media (max-width:550px) {
+@media (max-width:600px) {
   .about {
     flex-direction: column;
     padding: 50px 0;
@@ -160,12 +162,10 @@
 
   .content h1 {
     font-size: 18px;
-    /* font-weight: 500; */
   }
 
   .content hr {
     margin: 20px 0;
-    /* width: 50px; */
   }
 
   .content p {
