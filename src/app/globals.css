@@ -5,6 +5,8 @@
   --text-main: #fff;
   --text-primary: #A7A4AD;
   --text-lite-1: #6E6E6B;
+  --text-dark:#000000;
+
 
   --bg-primary: #000;
   --bg-primary-lite: rgba(0, 0, 0, 0.50);
@@ -15,6 +17,7 @@
   --bg-lite-4: #222;
   --bg-lite-5: rgba(150, 146, 151, 0.18);
   --bg-lite-6: rgba(21, 21, 21, 0.60);
+  --bg-lite-7:#B0AFAF80;
   --bg-transparent: rgba(32, 32, 32, 0.25);
 
   --border-lite-1: 1px solid rgba(167, 164, 173, 0.50);

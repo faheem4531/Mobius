@@ -40,33 +40,16 @@ const IntroSection = () => {
         </div>
       )}
       <div className={`${styles.introSection} ${showVideo && styles.backdrop}`}>
-        {/* <video autoplay muted loop id="background-video">
-        <source src="video/home-video.mp4" type="video/mp4" />
-      </video> */}
         <NavBar />
-
         <div className={styles.content}>
-          <Image
-            src={Title}
-            alt=""
-            className={styles.heading}
-          />
-          <h1
-            className={styles.titleHeading}
-          >
-            
-            3D Product Animation Services
-          </h1>
-          <p className={styles.dextopText}>
-            We provide expert animation services, bringing your ideas to life
-            with creativity and flair. Elevate your storytelling with our
-            exceptional team at your service.
+          <Image src={Title} alt="Mobius Studio" className={styles.heading} />
+          <p className={styles.introSecText}>
+            We specialize in transforming your ideas into dynamic 3D animations
+            that captivate your audience. Through our cutting-edge animation
+            services, we bring your products to life in a way that is visually
+            striking and emotionally engaging.
           </p>
-          <p className={styles.resText}>
-            We provide expert animation services, bringing your ideas to life
-            with creativity and flair.{" "}
-          </p>
-          <Button text="Watch our Showreel" onClick={handleVideo} />
+          <Button text="Talk to Our Expert" onClick={handleVideo} />
         </div>
       </div>
     </div>
