@@ -30,11 +30,11 @@ const Services = () => {
     clay: false,
   });
 
-  const loadModels = {
-    lens: useGLTF("/socksLow.glb"),
-    lensClay: useGLTF("/socksLow.glb"),
-    lensWireframe: useGLTF("/socksLow.glb"),
-  };
+  // const loadModels = {
+  //   lens: useGLTF("/socksLow.glb"),
+  //   lensClay: useGLTF("/socksLow.glb"),
+  //   lensWireframe: useGLTF("/socksLow.glb"),
+  // };
 
   function handlingModel() {
     setModelState({

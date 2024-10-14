@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React from "react";
 import styles from "./HomePage.module.css";
@@ -10,6 +10,7 @@ import Footer from "../_components/footer/Footer";
 import Clients from "./_sections/clilents/Clients";
 import Discover from "./_sections/discover/Discover";
 import Projects from "./_sections/projects/Projects";
+import Service1 from "./_sections/services/Service1";
 
 const HomePage = () => {
   return (
@@ -17,13 +18,14 @@ const HomePage = () => {
       <IntroSection />
       <AboutUs />
       <Services />
+      <Service1 />
       <Projects />
       <Discover />
       <Clients />
       <JoinUs />
       <Footer />
     </div>
-  )
+  );
 };
 
 export default HomePage;
