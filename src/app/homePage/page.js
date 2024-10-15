@@ -11,6 +11,7 @@ import Clients from "./_sections/clilents/Clients";
 import Discover from "./_sections/discover/Discover";
 import Projects from "./_sections/projects/Projects";
 import Service1 from "./_sections/services/Service1";
+import Service2 from "./_sections/services/Service2";
 
 const HomePage = () => {
   return (
@@ -19,6 +20,7 @@ const HomePage = () => {
       <AboutUs />
       <Services />
       <Service1 />
+      <Service2 />
       <Projects />
       <Discover />
       <Clients />
