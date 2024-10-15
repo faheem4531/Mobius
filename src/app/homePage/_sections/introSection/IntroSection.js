@@ -22,7 +22,7 @@ const IntroSection = () => {
     <div className={styles.container}>
       <div className={styles.bgVideo}>
         <video className={styles.bgVideoContent} autoPlay muted loop>
-          <source src="video/home-video.mp4" type="video/mp4" />
+          <source src="video/showreel-3d-animation.webm" type="video/webm" />
         </video>
       </div>
       {showVideo && (

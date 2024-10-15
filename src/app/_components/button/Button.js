@@ -7,9 +7,10 @@ const Button = ({ text, onClick, margin, color, padding, type }) => {
     backgroundColor: "var(--bg-lite-7)",
     color: color || "var(--text-dark)",
     borderRadius: "4px",
-    padding: padding || "10px 50px",
     fontSize: "18px",
     border: "none",
+    width: "265px",
+    height: "45px",
     margin: margin || "0px",
   };
 
