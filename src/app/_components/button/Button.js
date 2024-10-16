@@ -1,8 +1,4 @@
-"use client";
-
-import styles from "./Button.module.css";
-
-const Button = ({ text, onClick, margin, color, padding, type }) => {
+const Button = ({ text, onClick, margin, color, type }) => {
   const btnStyle = {
     backgroundColor: "var(--bg-lite-7)",
     color: color || "var(--text-dark)",
