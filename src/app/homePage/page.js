@@ -12,6 +12,7 @@ import Discover from "./_sections/discover/Discover";
 import Projects from "./_sections/projects/Projects";
 import Service1 from "./_sections/services/Service1";
 import Service2 from "./_sections/services/Service2";
+import Service3 from "./_sections/services/Service3";
 
 const HomePage = () => {
   return (
@@ -21,6 +22,7 @@ const HomePage = () => {
       <Services />
       <Service1 />
       <Service2 />
+      <Service3 />
       <Projects />
       <Discover />
       <Clients />
