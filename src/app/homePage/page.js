@@ -1,7 +1,3 @@
-"use client";
-
-import React from "react";
-import styles from "./HomePage.module.css";
 import IntroSection from "./_sections/introSection/IntroSection";
 import AboutUs from "./_sections/aboutUs/AboutUs";
 import Services from "./_sections/services/Services";
@@ -13,10 +9,11 @@ import Projects from "./_sections/projects/Projects";
 import Service1 from "./_sections/services/Service1";
 import Service2 from "./_sections/services/Service2";
 import Service3 from "./_sections/services/Service3";
+import OurProcess from "./_sections/ourProcess/OurProcess";
 
 const HomePage = () => {
   return (
-    <div className={styles.home}>
+    <div>
       <IntroSection />
       <AboutUs />
       <Services />
@@ -25,6 +22,7 @@ const HomePage = () => {
       <Service3 />
       <Projects />
       <Discover />
+      <OurProcess />
       <Clients />
       <JoinUs />
       <Footer />

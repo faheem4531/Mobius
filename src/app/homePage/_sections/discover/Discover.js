@@ -57,7 +57,7 @@ const Discover = () => {
           width: "100%",
           height: { xs: "47px", sm: "60px", lg: "120px" },
           display: "flex",
-          alignItems: "center",
+          alignItems: "end",
           justifyContent: "center",
           columnGap: { xs: "60px", lg: "160px" },
         }}
