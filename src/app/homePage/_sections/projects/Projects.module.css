@@ -1,5 +1,5 @@
 .container {
-  background: linear-gradient(var(--bg-geadient-2));
+ background: linear-gradient(180deg, #0D0C0C 0%, rgba(0, 0, 0, 0) 66.61%);
   overflow: hidden;
   display: flex;
   flex-direction: column;
