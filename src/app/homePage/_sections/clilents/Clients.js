@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Avancus from "@/app/_assets/clients/avancus.svg";
 import Elevant from "@/app/_assets/clients/elevant.svg";
@@ -14,7 +14,7 @@ import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import styles from "./Clients.module.css";
 import Review from "./ReviewCard";
-
+import { Box, Typography } from "@mui/material";
 const Clients_data = [
   {
     id: "Sony",
@@ -60,48 +60,121 @@ const Clients_data = [
 
 const Clients = () => {
   return (
-    <div className={styles.clients}>
-      <h3>Clients</h3>
-      <p style={{color: "var(--text-main)", fontSize:"38px", fontWeight:"500", margin:"35px 0 70px"}}>Here are our some Favorite Clients</p>
-      <Marquee>
-        {Clients_data.map((items) => {
-          return (
-            <Image
-              className={styles.logoWrap}
-              src={items.logo}
-              alt="icon"
-              key={items.id}
-            />
-          );
-        })}
-      </Marquee>
-      <div className={styles.reviewContainer}>
-        <h3>Testimonial</h3>
-        {/* <div
-          className="trustpilot-widget"
-          data-locale="en-US"
-          data-template-id="mobiusstudios.co"
-          data-businessunit-id="mobiusstudios.co"
-          data-style-height="300px"
-          data-style-width="100%"
+    <Box
+      sx={{
+        padding: { xs: "20px 0 0", md: "70px 0", lg: "110px 0" },
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        backgroundImage: "url('/_assets/png/clients-bg.png')",
+        backgroundSize: "cover",
+      }}
+    >
+      <Typography
+        variant="h3"
+        sx={{ fontSize: { xs: "16px", md: "20px" }, fontWeight: 300 }}
+      >
+        Clients
+      </Typography>
+      <Typography
+        variant="h1"
+        sx={{
+          fontSize: { xs: "24px", md: "30px", lg: "38px" },
+          fontWeight: { xs: 400, md: 500, lg: 600 },
+          color: "var(--text-main)",
+          margin: { xs: "20px 0", md: "30px 0", lg: "35px 0 70px" },
+          textAlign: "center",
+        }}
+      >
+        Here are some of our Favorite Clients
+      </Typography>
+      <Marquee
+        style={{ overflow: "hidden" }}
+        speed={30}
+        pauseOnHover={true}
+        gradient={false}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            mt: "20px",
+            justifyContent: "center",
+          }}
         >
-          <a
-            href="https://www.trustpilot.com/review/mobiusstudios.co"
-            target="_blank"
-            rel="noopener"
+          {Clients_data.map((items) => (
+            <Box
+              key={items.id}
+              sx={{
+                width: { xs: "103px", md: "128px", lg: "246px" },
+                height: { xs: "70px", md: "84px", lg: "166px" },
+                marginRight: { xs: "4px", md: "6px", lg: "10px" },
+                flexShrink: 0,
+              }}
+            >
+              <Image
+                src={items.logo}
+                alt="client logo"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
+                }}
+              />
+            </Box>
+          ))}
+        </Box>
+      </Marquee>
+
+      <Box
+        sx={{
+          marginTop: { xs: "60px", md: "70px", lg: "120px" },
+          textAlign: "center",
+        }}
+      >
+        <Typography
+          variant="h3"
+          sx={{ fontSize: { xs: "16px", md: "20px" }, fontWeight: 300 }}
+        >
+          Testimonial
+        </Typography>
+        <Typography
+          variant="h1"
+          sx={{
+            fontSize: { xs: "24px", md: "30px", lg: "38px" },
+            fontWeight: { xs: 400, md: 500, lg: 600 },
+            color: "var(--text-main)",
+            margin: { xs: "30px 0", md: "30px 0", lg: "35px 0 70px" },
+            textAlign: "center",
+          }}
+        >
+          Don’t take our word for the work quality
+        </Typography>
+        <Box
+          sx={{
+            width: "100vw",
+            overflowX: "auto",
+            mt: 3,
+            "&::-webkit-scrollbar": {
+              width: 0,
+            },
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              gap: { xs: "20px", lg: "30px" },
+              width: { sm: "fit-content", xs: "fit-content", md: "100%" },
+            }}
           >
-            Trustpilot
-          </a>
-        </div> */}
-        <div className={styles.reviewCardWraper}>
-          <div className={styles.innerWrapper}>
             <Review name="Angelina Molnar" />
-            <Review name="Cehan alee" />
+            <Review name="Cehan Alee" />
             <Review name="Hale Allon" />
-          </div>
-        </div>
-      </div>
-    </div>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 
