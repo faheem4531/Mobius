@@ -10,6 +10,7 @@ import Service1 from "./_sections/services/Service1";
 import Service2 from "./_sections/services/Service2";
 import Service3 from "./_sections/services/Service3";
 import OurProcess from "./_sections/ourProcess/OurProcess";
+import GotQuestions from "./_sections/gotQuestions/GotQuestions";
 
 const HomePage = () => {
   return (
@@ -24,6 +25,7 @@ const HomePage = () => {
       <Discover />
       <OurProcess />
       <Clients />
+      <GotQuestions />
       <JoinUs />
       <Footer />
     </div>
