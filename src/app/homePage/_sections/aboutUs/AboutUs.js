@@ -57,7 +57,11 @@ const AboutUs = () => {
       <div className={styles.modelContainer}>
         <Image src={Model} alt="" className={styles.model} ref={imageRef} />
       </div>
-      <div className={styles.content} ref={textRef}>
+      <div
+        className={styles.content}
+        ref={textRef}
+        style={{ position: "relative", zIndex: 2 }}
+      >
         <h4>About Us</h4>
         <h2 style={{ color: "var(--text-main)", fontSize: "38px" }}>
           Impracticality To Reality
