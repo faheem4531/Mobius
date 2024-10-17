@@ -6,6 +6,7 @@ import BackGround from "@/app/_assets/png/join-us-bg.png";
 import Button from "@/app/_components/button/Button";
 import Model from "@/app/_assets/svg/joinUs-model.svg";
 import Link from "next/link";
+import { Typography, Box } from "@mui/material";
 
 const JoinUs = () => {
   return (
@@ -13,19 +14,21 @@ const JoinUs = () => {
       <div className={styles.imagWrap}>
         <Image alt="" src={BackGround} className={styles.background} />
         <div className={styles.content}>
-          <p
-            style={{
-              fontSize: "38px",
-              fontWeight: "600",
+          <Typography
+            sx={{
+              fontSize: { xs: "22px", sm: "20px", lg: "38px" },
+              fontWeight: { xs: 400, sm: 500, lg: 600 },
               color: "var(--text-main)",
-              marginBottom: "40px",
+              marginBottom: { xs: "27px", sm: "30px", lg: "50px" },
             }}
           >
-            Still confused on 3d ?
-          </p>
-          <Link href="/carrers">
-            <Button text="Join Us Now" />
-          </Link>
+            Still confused on 3d?
+          </Typography>
+          <Box sx={{ width: { lg: "265px", sm: "240px", xs: "230px" } }}>
+            <Link href="/carrers">
+              <Button width="100%" text="Get Free Consultation" />
+            </Link>
+          </Box>
         </div>
       </div>
       <Image alt="" src={Model} className={styles.model} />
