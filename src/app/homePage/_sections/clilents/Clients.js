@@ -1,5 +1,9 @@
 "use client";
 
+import { Box, Typography } from "@mui/material";
+import Image from "next/image";
+import Marquee from "react-fast-marquee";
+
 import Avancus from "@/app/_assets/clients/avancus.svg";
 import Elevant from "@/app/_assets/clients/elevant.svg";
 import Fonestar from "@/app/_assets/clients/fonestar.svg";
@@ -10,11 +14,8 @@ import Luna from "@/app/_assets/clients/luna.svg";
 import Metaleon from "@/app/_assets/clients/metaleon-society.svg";
 import PillPuncher from "@/app/_assets/clients/pill-puncher.svg";
 import Sony from "@/app/_assets/clients/sony.svg";
-import Image from "next/image";
-import Marquee from "react-fast-marquee";
-import styles from "./Clients.module.css";
 import Review from "./ReviewCard";
-import { Box, Typography } from "@mui/material";
+
 const Clients_data = [
   {
     id: "Sony",
