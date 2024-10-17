@@ -48,15 +48,19 @@ const Service2 = () => {
           height: "auto",
         }}
       >
-        <Image
-          src={GifImage}
+        <video
+          src="/video/3d-video-consumer-electronics.webm"
           alt="3d video consumer electronics"
           style={{
             width: "100%",
             height: "100%",
           }}
+          autoPlay
+          loop
+          muted
         />
       </Box>
+
       <Box
         sx={{
           maxWidth: { lg: "680px", md: "450px", sm: "550px" },
