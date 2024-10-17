@@ -27,10 +27,16 @@ const Service3 = () => {
           minWidth: { lg: "450px", md: "400px", sm: "", xs: "" },
         }}
       >
-        <Image
-          src={GifImage}
-          alt="gif"
-          style={{ width: "100%", height: "100%" }}
+        <video
+          src="/video/Imi-hairs-cgi.webm"
+          alt="Imi Hairs CGI"
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
+          autoPlay
+          loop
+          muted
         />
       </Box>
       <Box
