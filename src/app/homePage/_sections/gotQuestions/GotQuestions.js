@@ -62,7 +62,7 @@ const GotQuestions = ({}) => {
 
   useEffect(() => {
     setDummyQ(questions);
-  }, [t]);
+  }, []);
 
   const handleExpands = (panel) => {
     setDummyQ((prev) => {
@@ -80,38 +80,42 @@ const GotQuestions = ({}) => {
     <Box
       sx={{
         padding: {
-          lg: "150px 160px  120px 110px",
+          lg: "20px 160px  120px 110px",
           md: "150px 50px 150px",
           sm: "150px 100px 150px",
           xs: "120px 20px 80px",
         },
       }}
-      // className={styles.gotQsBg}
     >
       <Typography
         sx={{
-          fontSize: { md: "52px", sm: "44px", xs: "32px" },
-          fontWeight: 500,
-          fontFamily: "Besley !important",
+          fontSize: { lg: "20px", sm: "18px", xs: "16px" },
+          textAlign: "center",
+          fontWeight: 300,
         }}
       >
-        {t("landingPage.questionSection.title")}
+        FAQs
       </Typography>
       <Typography
         sx={{
-          fontSize: { sm: "20px", xs: "16px" },
-          marginTop: "10px",
-          fontFamily: "Avenir",
+          fontSize: { lg: "38px", md: "32px", xs: "30px" },
+          fontWeight: 800,
+          color: "#FFFFFF",
+          lineHeight: { sm: "45.6px", xs: "120%" },
+          maxWidth: "1270px",
+          textAlign: "center",
+          m: "25px 0",
         }}
       >
-        {t("landingPage.questionSection.subTitle")}
+        Got Questions? We have answers
       </Typography>
       <Box
         sx={{
-          marginTop: { sm: "85px", xs: "45px" },
+          margin: { sm: "85px auto 0", xs: "45px auto 0" },
           display: "flex",
           flexDirection: { md: "row", sm: "column", xs: "column" },
           columnGap: { lg: "10%", md: "5%" },
+          maxWidth: "1300px",
         }}
       >
         <Box sx={{ width: "100%" }}>
@@ -139,25 +143,6 @@ const GotQuestions = ({}) => {
             />
           ))}
         </Box>
-      </Box>
-
-      <Box sx={{ textAlign: "center" }}>
-        <Link href="/faqs">
-          <Typography
-            sx={{
-              textAlign: "center",
-              fontSize: "18px",
-              marginTop: "80px",
-              display: "inline-block",
-              border: "1px solid #3E4F3C",
-              padding: "10px 25px 7px",
-              fontFamily: "Avenir",
-              borderRadius: "4px",
-            }}
-          >
-            {t("landingPage.questionSection.btnText")}
-          </Typography>
-        </Link>
       </Box>
     </Box>
   );
