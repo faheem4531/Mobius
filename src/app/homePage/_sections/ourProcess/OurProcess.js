@@ -4,10 +4,50 @@ import Step1 from "@/app/_assets/png/step1-icon.png";
 import Line from "@/app/_assets/svg/process-line.svg";
 
 const OurProcess = () => {
+  const processStepData = [
+    {
+      img: Step1,
+      title: "Consultation",
+      content:
+        "We begin by understanding your project goals and creating a detailed roadmap, complete with storyboards to align with your vision.",
+      mt: "0",
+    },
+    {
+      img: Step1,
+      title: "Story boarding",
+      content:
+        "Here, our efforts officially jump in, and we collaborate on conceiving creative ideas and approaches to make your project unique and impactful.",
+      count: "02",
+      mt: "110px",
+    },
+    {
+      img: Step1,
+      title: "3D Modeling",
+      content:
+        "Our professional and dedicated team builds the 3D models and sets the stage with backgrounds and other elements to tell your product’s story.",
+      mt: "-50px",
+    },
+    {
+      img: Step1,
+      title: "Animation",
+      content:
+        "It’s time to production by using advanced animation techniques, we bring your scene to life, and make sure every detail is captured.",
+      count: "04",
+      mt: "20px",
+    },
+    {
+      img: Step1,
+      title: "Rendering",
+      content:
+        "The final video is crafted with precision, combining animation, lighting, and textures. We render out a 4k video to take your product to new heights.",
+      count: "05",
+      mt: "220px",
+    },
+  ];
   return (
     <Box
       sx={{
-        backgroundImage: "url('/bg-services.png')",
+        backgroundImage: "url('/process.png')",
         backgroundSize: { md: "100% 100%", sm: "cover", xs: "cover" },
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
@@ -18,8 +58,9 @@ const OurProcess = () => {
         padding: {
           lg: "100px 70px",
           sm: "170px 20px",
-          xs: "140px 20px",
+          xs: "190px 20px",
         },
+        m: { sm: "0", xs: "-70px 0" },
       }}
     >
       <Typography
@@ -28,38 +69,49 @@ const OurProcess = () => {
           fontWeight: 300,
         }}
       >
-        Our Services
+        Our Easy Peasy Process
       </Typography>
       <Typography
         sx={{
-          fontSize: { lg: "38px", md: "32px", xs: "32px" },
+          fontSize: { lg: "38px", md: "32px", xs: "30px" },
           fontWeight: 800,
           color: "#FFFFFF",
-          lineHeight: "45.6px",
-          m: "20px 0",
+          lineHeight: { sm: "45.6px", xs: "120%" },
+          maxWidth: "1270px",
+          m: "25px 0",
+          textAlign: "center",
         }}
       >
-        Boost Engagement With Viral CGI Videos
+        Discover how we turn your product or even just an idea from you into
+        appealing and meaningful animations.
       </Typography>
       <Box
         sx={{
           display: "flex",
-          m: "0px 0 120px",
-          gap: "80px",
+          flexDirection: { md: "row", sm: "column", xs: "column" },
+          alignItems: "center",
+          m: { lg: "0 0 50px", md: "0 30px 0", sm: "50px 0", xs: "20px 0" },
+          gap: { lg: "80px", sm: "40px", xs: "50px" },
           position: "relative",
         }}
       >
-        <ProcessStep />
-        <ProcessStep mt="170px" />
-        <ProcessStep mt="-50px" />
-        <ProcessStep mt="100px" />
-        <ProcessStep mt="200px" />
+        {processStepData.map((data, index) => (
+          <ProcessStep
+            key={index}
+            img={data.img}
+            title={data.title}
+            content={data.content}
+            count={data.count}
+            mt={data.mt}
+          />
+        ))}
         <Box
           sx={{
             position: "absolute",
             left: "50%",
-            top: "50%",
-            transform: "translate(-50%, -50%)",
+            top: "40%",
+            transform: "translate(-50%, -40%)",
+            display: { xs: "none", lg: "block", sm: "none" },
           }}
         >
           <Image src={Line} alt="line" />
@@ -71,25 +123,25 @@ const OurProcess = () => {
 
 export default OurProcess;
 
-const ProcessStep = ({ mt }) => {
+const ProcessStep = ({ mt, img, title, content, count }) => {
   return (
     <Box
       sx={{
-        maxWidth: "210px",
+        maxWidth: { lg: "210px", md: "150px", sm: "300px", xs: "280px" },
         textAlign: "center",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        mt: mt,
+        mt: { md: mt, sm: "0", xs: "0" },
         position: "relative",
         zIndex: 1,
       }}
     >
       <Box
         sx={{
-          width: "160px",
-          height: "160px",
+          width: { lg: "160px", md: "120px", sm: "160px", xs: "160px" },
+          height: { lg: "160px", md: "120px", sm: "160px", xs: "160px" },
           borderRadius: "50%",
           border: "1px solid #2E2E2E",
           outline: "1px solid #5F5F5F",
@@ -115,35 +167,34 @@ const ProcessStep = ({ mt }) => {
         >
           <Image src={Step1} alt="icon" />
         </Box>
-        <Box
-          sx={{
-            position: "absolute",
-            top: "-15px",
-            left: "0",
-            fontSize: "12px",
-            fontWeight: 300,
-            color: "#fff",
-            bgcolor: "#716E69",
-            borderRadius: "50%",
-            width: "37px",
-            height: "37px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          02
-        </Box>
+        {count && (
+          <Box
+            sx={{
+              position: "absolute",
+              top: "-15px",
+              left: "0",
+              fontSize: "12px",
+              fontWeight: 300,
+              color: "#fff",
+              bgcolor: "#716E69",
+              borderRadius: "50%",
+              width: "37px",
+              height: "37px",
+              display: { md: "flex", sm: "none", xs: "none" },
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            {count}
+          </Box>
+        )}
       </Box>
       <Typography
         sx={{ fontSize: "20px", fontWeight: 500, m: "12px 0", color: "#fff" }}
       >
-        Consultation
+        {title}
       </Typography>
-      <Typography fontWeight={500}>
-        We begin by understanding your project goals and creating a detailed
-        roadmap, complete with storyboards to align with your vision.
-      </Typography>
+      <Typography fontWeight={500}>{content}</Typography>
     </Box>
   );
 };
