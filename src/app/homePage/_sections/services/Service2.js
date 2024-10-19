@@ -1,9 +1,87 @@
+import React, { useEffect, useRef } from "react";
 import { Box, Typography } from "@mui/material";
-import Image from "next/image";
-import GifImage from "@/app/_assets/gif/3d-video-consumer-electronics.webp";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import Button from "@/app/_components/button/Button";
 
 const Service2 = () => {
+  const textRef = useRef(null);
+  const headingRef = useRef(null);
+  const paragraphRef = useRef(null);
+  const btnRef = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.fromTo(
+      textRef.current,
+      { x: -200, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: textRef.current,
+          start: "top 80%",
+          end: "top 30%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      headingRef.current,
+      { x: -350, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: headingRef.current,
+          start: "top 80%",
+          end: "top 30%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      paragraphRef.current,
+      { x: -500, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: paragraphRef.current,
+          start: "top 80%",
+          end: "top 30%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+    gsap.fromTo(
+      btnRef.current,
+      { x: -500, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: btnRef.current,
+          start: "top 80%",
+          end: "top 30%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }, []);
+
   return (
     <Box
       sx={{
@@ -72,29 +150,32 @@ const Service2 = () => {
             fontSize: { lg: "20px", sm: "18px", xs: "16px" },
             fontWeight: 300,
           }}
+          ref={textRef}
         >
           Our Services
         </Typography>
-        <Typography
-          sx={{
-            fontSize: { lg: "38px", md: "32px", xs: "32px" },
-            fontWeight: 800,
-            color: "#FFFFFF",
-            m: "20px 0 10px",
-          }}
-        >
-          HCurate the perfect 3d videos
-        </Typography>
-        <Typography
-          sx={{
-            fontSize: { sm: "22px", xs: "20px" },
-            fontWeight: 600,
-            color: "#FFFFFF",
-            mb: "20px",
-          }}
-        >
-          Brand focused customized product animations
-        </Typography>
+        <Box ref={headingRef}>
+          <Typography
+            sx={{
+              fontSize: { lg: "38px", md: "32px", xs: "32px" },
+              fontWeight: 800,
+              color: "#FFFFFF",
+              m: "20px 0 10px",
+            }}
+          >
+            Curate the perfect 3d videos
+          </Typography>
+          <Typography
+            sx={{
+              fontSize: { sm: "22px", xs: "20px" },
+              fontWeight: 600,
+              color: "#FFFFFF",
+              mb: "20px",
+            }}
+          >
+            Brand focused customized product animations
+          </Typography>
+        </Box>
         <Box sx={{ width: "100px", bgcolor: "#A7A4AD", height: "1px" }}></Box>
         <Box
           sx={{
@@ -103,6 +184,7 @@ const Service2 = () => {
             gap: { lg: "25px", md: "16px", sm: "20px", xs: "15px" },
             m: "20px 0 30px",
           }}
+          ref={paragraphRef}
         >
           <Typography
             sx={{
@@ -214,7 +296,9 @@ const Service2 = () => {
             the best suited animation style
           </Typography>
         </Box>
-        <Button text={"Hire the best"} />
+        <Box ref={btnRef}>
+          <Button text={"Hire the best"} />
+        </Box>
       </Box>
     </Box>
   );
