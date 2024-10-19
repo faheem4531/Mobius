@@ -1,6 +1,4 @@
 import { Box, Typography } from "@mui/material";
-import Image from "next/image";
-import GifImage from "@/app/_assets/png/gif-image.png";
 import Button from "@/app/_components/button/Button";
 
 const Service1 = () => {
@@ -20,17 +18,21 @@ const Service1 = () => {
       <Box
         sx={{
           maxWidth: { lg: "510px", sm: "450px" },
-          maxHeight: "820px",
           width: "100%",
           height: "100%",
           minWidth: { lg: "500px", md: "350px", sm: "", xs: "" },
-          //   minHeight: { lg: "800px", md: "", sm: "", xs: "" },
         }}
       >
-        <Image
-          src={GifImage}
-          alt="gif"
-          style={{ width: "100%", height: "100%" }}
+        <video
+          src="/video/3d-product-animation-cosmetics.webm"
+          alt="3d product animation cosmetics"
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
+          autoPlay
+          loop
+          muted
         />
       </Box>
       <Box
