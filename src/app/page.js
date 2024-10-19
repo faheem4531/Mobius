@@ -7,6 +7,58 @@ import Head from "next/head";
 export default function Home() {
   return (
     <>
+      {/* Tawk.to Live Chat Widget */}
+      <Script id="tawkto" strategy="afterInteractive">
+        {`
+          var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+          (function() {
+              var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+              s1.async = true;
+              s1.src = 'https://embed.tawk.to/XXXXXX/default'; 
+              s1.charset = 'UTF-8';
+              s1.setAttribute('crossorigin', '*');
+              s0.parentNode.insertBefore(s1, s0);
+          })();
+        `}
+      </Script>
+      {/* Meta Pixel Code */}
+      <Script id="facebook-pixel" strategy="afterInteractive">
+        {`
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/sdk.js');
+          fbq('init', 'XXXXXXXX'); // Replace with your Pixel ID
+          fbq('track', 'PageView');
+        `}
+      </Script>
+
+      <noscript>
+        <img
+          height="1"
+          width="1"
+          style={{ display: "none" }}
+          src="https://www.facebook.com/tr?id=XXXXXXXX&ev=PageView&noscript=1"
+        />
+      </noscript>
+
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=XXXXXXXX`}
+      />
+      <Script id="google-ads" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          
+          gtag('config', 'XXXXXXXX');
+        `}
+      </Script>
       <Script id="tiktok-pixel" strategy="afterInteractive">
         {`
           !function (w, d, t) {
@@ -68,7 +120,7 @@ export default function Home() {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
           
-            gtag('config', 'G-RGM8D41H5K');
+            gtag('config', 'XXXXXXXXX');
           `}
       </Script>
       <HomePage />
