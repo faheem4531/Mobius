@@ -15,6 +15,7 @@ import Metaleon from "@/app/_assets/clients/metaleon-society.svg";
 import PillPuncher from "@/app/_assets/clients/pill-puncher.svg";
 import Sony from "@/app/_assets/clients/sony.svg";
 import Review from "./ReviewCard";
+import TrustpilotWidget from "@/app/_components/trustPilot/TrustPilot";
 
 const Clients_data = [
   {
@@ -167,6 +168,7 @@ const Clients = () => {
               justifyContent: "center",
               gap: { xs: "20px", lg: "30px" },
               width: { sm: "fit-content", xs: "fit-content", md: "100%" },
+              mb: { md: "40px", xs: "20px" },
             }}
           >
             <Review name="Angelina Molnar" />
@@ -174,6 +176,7 @@ const Clients = () => {
             <Review name="Hale Allon" />
           </Box>
         </Box>
+        <TrustpilotWidget />
       </Box>
     </Box>
   );
