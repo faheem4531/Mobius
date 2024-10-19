@@ -93,50 +93,58 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className={styles.trustpilot}>
-          {/* <!-- TrustBox widget - Review Collector --> */}
-          <div
-            className="trustpilot-widget"
-            data-locale="en-US"
-            data-template-id="56278e9abfbbba0bdcd568bc"
-            data-businessunit-id="6597b2fe021710c9f4a6bf6d"
-            data-style-height="52px"
-            data-style-width="100%"
-          >
-            <a
-              href="https://www.trustpilot.com/review/mobiusstudios.co"
-              target="_blank"
-              rel="noopener"
-              style={{fontSize:"30px"}}
-            >
-              Trustpilot
-            </a>
-          </div>
-          {/* <!-- End TrustBox widget --> */}
-        </div>
         <div className={styles.socialMedia}>
-        <Link
+          <Link
             href="https://dribbble.com/aliimranmms"
             className={styles.logoLink}
             target="_blank"
           >
-            <Image alt="Dribbble Logo - Portfolio of mobius motion studio. We are 3d animation studio providing 3d animation services " src={Dribbble} className={styles.logo} />
+            <Image
+              alt="Dribbble Logo - Portfolio of mobius motion studio. We are 3d animation studio providing 3d animation services "
+              src={Dribbble}
+              className={styles.logo}
+            />
           </Link>
           <Link
             href="https://www.behance.net/aliimran4"
             className={styles.logoLink}
             target="_blank"
           >
-            <Image alt="Logo Behance: Portfolio of mobius motion studio. We are 3d modeling artist providing 3d modeling, rendering and 3d animation services " src={Behance} className={styles.logo} />
+            <Image
+              alt="Logo Behance: Portfolio of mobius motion studio. We are 3d modeling artist providing 3d modeling, rendering and 3d animation services "
+              src={Behance}
+              className={styles.logo}
+            />
           </Link>
-          <Link href="https://www.facebook.com/Mobiusmotionstudio/" className={styles.logoLink}>
-            <Image alt="Logo - Mobius Motion Studio is animation studio providing best vfx services, product modeling, 3d product animation services" src={Facebook} className={styles.logo} />
+          <Link
+            href="https://www.facebook.com/Mobiusmotionstudio/"
+            className={styles.logoLink}
+          >
+            <Image
+              alt="Logo - Mobius Motion Studio is animation studio providing best vfx services, product modeling, 3d product animation services"
+              src={Facebook}
+              className={styles.logo}
+            />
           </Link>
-          <Link href="https://www.instagram.com/mobiusmotion.studio/" className={styles.logoLink}>
-            <Image alt="Logo - You can hire top animation and best vfx company. You get product modeling 3d product animation video" src={Instagram} className={styles.logo} />
+          <Link
+            href="https://www.instagram.com/mobiusmotion.studio/"
+            className={styles.logoLink}
+          >
+            <Image
+              alt="Logo - You can hire top animation and best vfx company. You get product modeling 3d product animation video"
+              src={Instagram}
+              className={styles.logo}
+            />
           </Link>
-          <Link href="https://www.linkedin.com/company/mobius-motion-studio/?viewAsMember=true" className={styles.logoLink}>
-            <Image alt="Logo - Mobius motion studio is 3d modeling company. We have best 3d animation artist, motion capture artist, cgi designer, and 3d modeling designer" src={LinkedIn} className={styles.logo} />
+          <Link
+            href="https://www.linkedin.com/company/mobius-motion-studio/?viewAsMember=true"
+            className={styles.logoLink}
+          >
+            <Image
+              alt="Logo - Mobius motion studio is 3d modeling company. We have best 3d animation artist, motion capture artist, cgi designer, and 3d modeling designer"
+              src={LinkedIn}
+              className={styles.logo}
+            />
           </Link>
         </div>
       </div>
