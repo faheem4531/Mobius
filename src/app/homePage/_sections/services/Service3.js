@@ -1,10 +1,106 @@
+import React, { useEffect, useRef } from "react";
 import { Box, Typography } from "@mui/material";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
-import GifImage from "@/app/_assets/image.png";
+
 import Line from "@/app/_assets/svg/curve-line.svg";
 import Button from "@/app/_components/button/Button";
 
 const Service3 = () => {
+  const textRef = useRef(null);
+  const headingRef = useRef(null);
+  const paragraphRef = useRef(null);
+  const paragraphListRef = useRef(null);
+  const btnRef = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.fromTo(
+      textRef.current,
+      { x: 200, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: textRef.current,
+          start: "top 80%",
+          end: "top 30%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      headingRef.current,
+      { x: 350, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: headingRef.current,
+          start: "top 80%",
+          end: "top 30%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      paragraphListRef.current,
+      { x: 450, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: paragraphListRef.current,
+          start: "top 80%",
+          end: "top 30%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+    gsap.fromTo(
+      paragraphRef.current,
+      { x: 700, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1.2,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: paragraphRef.current,
+          start: "top 80%",
+          end: "top 30%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+    gsap.fromTo(
+      btnRef.current,
+      { x: 300, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: btnRef.current,
+          start: "top 80%",
+          end: "top 30%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }, []);
+
   return (
     <Box
       sx={{
@@ -50,6 +146,7 @@ const Service3 = () => {
             fontSize: { lg: "20px", sm: "18px", xs: "16px" },
             fontWeight: 300,
           }}
+          ref={textRef}
         >
           Our Services
         </Typography>
@@ -61,6 +158,7 @@ const Service3 = () => {
             lineHeight: "45.6px",
             m: "20px 0",
           }}
+          ref={headingRef}
         >
           Boost Engagement With Viral CGI Videos
         </Typography>
@@ -75,10 +173,11 @@ const Service3 = () => {
             sx={{
               display: { sm: "block", xs: "none" },
             }}
+            ref={paragraphListRef}
           >
             <Image src={Line} alt="image" />
           </Box>
-          <Box>
+          <Box ref={paragraphRef}>
             <Typography
               sx={{
                 fontSize: { lg: "20px", md: "16px", sm: "18px", xs: "16px" },
@@ -118,7 +217,9 @@ const Service3 = () => {
             </Typography>
           </Box>
         </Box>
-        <Button text={"Get free Storyboard"} />
+        <Box ref={btnRef}>
+          <Button text={"Get free Storyboard"} />
+        </Box>
       </Box>
     </Box>
   );
