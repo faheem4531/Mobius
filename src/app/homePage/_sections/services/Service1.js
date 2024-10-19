@@ -1,7 +1,87 @@
+import React, { useEffect, useRef } from "react";
 import { Box, Typography } from "@mui/material";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import Button from "@/app/_components/button/Button";
 
 const Service1 = () => {
+  const textRef = useRef(null);
+  const headingRef = useRef(null);
+  const paragraphRef = useRef(null);
+  const btnRef = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.fromTo(
+      textRef.current,
+      { x: 200, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: textRef.current,
+          start: "top 80%",
+          end: "top 30%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      headingRef.current,
+      { x: 350, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: headingRef.current,
+          start: "top 80%",
+          end: "top 30%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      paragraphRef.current,
+      { x: 500, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: paragraphRef.current,
+          start: "top 80%",
+          end: "top 30%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+    gsap.fromTo(
+      btnRef.current,
+      { x: 500, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: btnRef.current,
+          start: "top 80%",
+          end: "top 30%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }, []);
+
   return (
     <Box
       sx={{
@@ -46,6 +126,7 @@ const Service1 = () => {
             fontSize: { lg: "20px", sm: "18px", xs: "16px" },
             fontWeight: 300,
           }}
+          ref={textRef}
         >
           Our Services
         </Typography>
@@ -57,6 +138,7 @@ const Service1 = () => {
             lineHeight: "45.6px",
             m: "20px 0",
           }}
+          ref={headingRef}
         >
           Helping Brands Grow Using 3d Product Animation Videos
         </Typography>
@@ -68,6 +150,7 @@ const Service1 = () => {
             gap: { lg: "25px", md: "16px", sm: "20px", xs: "15px" },
             m: "20px 0 30px",
           }}
+          ref={paragraphRef}
         >
           <Typography
             sx={{
@@ -152,7 +235,9 @@ const Service1 = () => {
             decisions
           </Box>
         </Box>
-        <Button text={"Get in touch now!"} />
+        <Box ref={btnRef}>
+          <Button text={"Get in touch now!"} />
+        </Box>
       </Box>
     </Box>
   );
