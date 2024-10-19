@@ -39,7 +39,7 @@ const AboutUs = () => {
       {
         x: 0,
         opacity: 1,
-        duration: 1.2,
+        duration: 1,
         ease: "power2.out",
         scrollTrigger: {
           trigger: headingRef.current,
@@ -56,7 +56,7 @@ const AboutUs = () => {
       {
         x: 0,
         opacity: 1,
-        duration: 1.4,
+        duration: 1,
         ease: "power2.out",
         scrollTrigger: {
           trigger: paragraphRef.current,
