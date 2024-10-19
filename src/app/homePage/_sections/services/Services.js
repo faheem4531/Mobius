@@ -1,7 +1,11 @@
 "use client";
 
-import styles from "./Services.module.css";
+import React, { useEffect, useRef, useState } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+
+import styles from "./Services.module.css";
 import Steps from "@/app/_assets/svg/service-steps.svg";
 import Step1 from "@/app/_assets/svg/3d-service.svg";
 import Step1Active from "@/app/_assets/svg/3d-service-active.svg";
@@ -10,18 +14,7 @@ import Step2Active from "@/app/_assets/svg/simulation-service-active.svg";
 import Step3 from "@/app/_assets/svg/video-service.svg";
 import Step3Active from "@/app/_assets/svg/video-service-active.svg";
 import Lense from "@/app/_assets/png/lense.png";
-import { Suspense } from "react";
-
-import { Canvas } from "@react-three/fiber";
-import { useState } from "react";
 import Model from "@/app/Model/Model";
-import { OrbitControls, useGLTF } from "@react-three/drei";
-
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { useLoader } from "@react-three/fiber";
-import { Lens } from "@/app/Model/Lens";
-import { LensClay } from "@/app/Model/LensClay";
-import { Environment } from "@react-three/drei";
 
 const Services = () => {
   const [modelStates, setModelState] = useState({
@@ -29,12 +22,9 @@ const Services = () => {
     simulation: false,
     clay: false,
   });
-
-  // const loadModels = {
-  //   lens: useGLTF("/socksLow.glb"),
-  //   lensClay: useGLTF("/socksLow.glb"),
-  //   lensWireframe: useGLTF("/socksLow.glb"),
-  // };
+  const textRef = useRef(null);
+  const headingRef = useRef(null);
+  const paragraphRef = useRef(null);
 
   function handlingModel() {
     setModelState({
@@ -60,21 +50,79 @@ const Services = () => {
     });
   }
 
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.fromTo(
+      textRef.current,
+      { x: 200, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: textRef.current,
+          start: "top 80%",
+          end: "top 30%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      headingRef.current,
+      { x: 350, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: headingRef.current,
+          start: "top 80%",
+          end: "top 30%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      paragraphRef.current,
+      { x: 500, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: paragraphRef.current,
+          start: "top 80%",
+          end: "top 30%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }, []);
+
   return (
     <div className={styles.services}>
       <div className={styles.content}>
-        <div className={styles.title}>Our Services</div>
+        <div className={styles.title} ref={textRef}>
+          Our Services
+        </div>
         <h2
           style={{
             color: "var(--text-main)",
             fontSize: "38px",
             marginBottom: "40px",
           }}
+          ref={headingRef}
         >
           Elevate website with 3D Models{" "}
         </h2>
         <hr />
-        <div className={styles.servicesSteps}>
+        <div className={styles.servicesSteps} ref={paragraphRef}>
           <Image alt="" src={Steps} className={styles.steps} />
           <div>
             <h2
