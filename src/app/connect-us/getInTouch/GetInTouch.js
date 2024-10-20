@@ -1,62 +1,70 @@
 "use client";
 
-import React, { useState } from 'react';
-import styles from "./GetInTouch.module.css"
+import React, { useState } from "react";
+import styles from "./GetInTouch.module.css";
 import NavBar from "@/app/_components/navBar/NavBar";
 import Input from "@/app/_components/input/Input";
 import Button from "@/app/_components/button/Button";
-import emailjs from 'emailjs-com';
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import axios from "axios";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const GetInTouch = () => {
-  const [showError, setShowError] = useState(false)
+  const [showError, setShowError] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
   });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (formData.name == '' || formData.email == '' || formData.phone == '' || formData.message == '') {
-      setShowError(true)
-      return
+    // Check for empty fields
+    if (
+      formData.name === "" ||
+      formData.email === "" ||
+      formData.phone === "" ||
+      formData.message === ""
+    ) {
+      setShowError(true);
+      return;
     }
-    setShowError(false)
+    setShowError(false);
 
-    // Use your own template ID from Email.js
-    const templateId = 'template_l1n3bav';
-    // Send email
-    emailjs
-      .send('service_wzj6jwh', templateId, formData, 'jidiVNfnYWDhMfZP-')
-      .then((response) => {
-        toast(`Email sent successfully`, {
-          type: 'success',
-        });
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          message: '',
-        });
-        console.log('Email sent successfully:', response);
-      })
-      .catch((error) => {
-        toast(`Error sending email: ${error.message}`, {
-          type: 'error',
-        });
-        console.error('Error sending email:', error);
+    try {
+      setLoading(true);
+
+      const response = await axios.post("/api/contactus", formData, {
+        headers: {
+          "Content-Type": "application/json",
+        },
       });
 
+      if (response.status === 200) {
+        toast.success("Email sent successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        toast.error(`Failed to send email: ${response.data.error}`);
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast.error(`Error sending email: ${error.message}`);
+    } finally {
+      setLoading(false);
+    }
   };
-
 
   return (
     <div className={styles.getInTouch}>
@@ -64,13 +72,20 @@ const GetInTouch = () => {
       <div className={styles.mainSection}>
         <div className={styles.block}>
           <div className={styles.introSec}>
-            <h1>Wanna work with <br /> <span className={styles.color}> Mobius motion studios?</span></h1>
-            <p>Get in touch with us today and let&apos;s bring your ideas to life. We&apos;re here to answer your questions and discuss your next project.</p>
+            <h1>
+              Wanna work with <br />{" "}
+              <span className={styles.color}> Mobius motion studios?</span>
+            </h1>
+            <p>
+              Get in touch with us today and let&apos;s bring your ideas to
+              life. We&apos;re here to answer your questions and discuss your
+              next project.
+            </p>
           </div>
         </div>
         <div className={styles.formParent}>
           <div className={styles.form}>
-            <h2>Feel free to connet with us...</h2>
+            <h2>Feel free to connect with us...</h2>
             <form onSubmit={handleSubmit}>
               <Input
                 type="text"
@@ -89,7 +104,7 @@ const GetInTouch = () => {
               />
               <Input
                 type="number"
-                placeHolder="Phone "
+                placeHolder="Phone"
                 margin="20px 0 0"
                 name="phone"
                 onChange={handleChange}
@@ -102,20 +117,22 @@ const GetInTouch = () => {
                 placeholder="Project Description"
                 rows="5"
                 value={formData.message}
-              >
-              </textarea>
-              {showError && <div className={styles.errorMsg}>Fill all the above fields</div>}
+              ></textarea>
+              {showError && (
+                <div className={styles.errorMsg}>Fill all the above fields</div>
+              )}
               <Button
-                text="Submit"
+                text={loading ? "Sending..." : "Submit"}
                 type="submit"
                 margin="40px 0 0"
+                disabled={loading}
               />
             </form>
           </div>
         </div>
       </div>
-    </div >
-  )
+    </div>
+  );
 };
 
 export default GetInTouch;
