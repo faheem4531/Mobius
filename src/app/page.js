@@ -59,6 +59,7 @@ export default function Home() {
           gtag('config', 'XXXXXXXX');
         `}
       </Script>
+      {/* Add iktok-pixel*/}
       <Script id="tiktok-pixel" strategy="afterInteractive">
         {`
           !function (w, d, t) {
@@ -110,7 +111,7 @@ export default function Home() {
           })(window, document, "clarity", "script", "mfdkxv9e0n");
         `}
       </Script>
-
+      {/* Add google-analytics*/}
       <Script id="google-analytics">
         {`
             window.dataLayer = window.dataLayer || [];
