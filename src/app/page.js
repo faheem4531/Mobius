@@ -110,11 +110,6 @@ export default function Home() {
           })(window, document, "clarity", "script", "mfdkxv9e0n");
         `}
       </Script>
-      {/* <!-- Google Tag Manager --> */}
-      <Script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"
-      />
 
       <Script id="google-analytics">
         {`
