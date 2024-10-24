@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useRef } from "react";
 import { Box, Typography } from "@mui/material";
 import { gsap } from "gsap";
