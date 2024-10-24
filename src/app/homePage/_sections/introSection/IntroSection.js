@@ -7,7 +7,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import NavBar from "@/app/_components/navBar/NavBar";
 import Title from "@/app/_assets/svg/heading.svg";
-import Close from "@/app/_assets/svg/close.svg";
 import styles from "./IntroSection.module.css";
 import MaskButton from "@/app/_components/button/MaskButton";
 

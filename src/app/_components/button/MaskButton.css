@@ -87,3 +87,14 @@
     mask-position: 0 0;
   }
 }
+
+
+/* @media (max-width: 600px) {
+  .button-container-2 {
+    width: auto;
+  height: 30px;
+  }
+  .mas {
+    margin-top: 0;
+  }
+} */
