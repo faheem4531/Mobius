@@ -1,28 +1,20 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import NavBar from "@/app/_components/navBar/NavBar";
 import Title from "@/app/_assets/svg/heading.svg";
-import Button from "@/app/_components/button/Button";
 import Close from "@/app/_assets/svg/close.svg";
 import styles from "./IntroSection.module.css";
+import MaskButton from "@/app/_components/button/MaskButton";
 
 const IntroSection = () => {
-  const [showVideo, setShoewVideo] = useState(false);
   const headingImgRef = useRef(null);
   const textRef = useRef(null);
   const btnRef = useRef(null);
-
-  function handleVideo() {
-    setShoewVideo(true);
-  }
-  function handleCloseVideo() {
-    setShoewVideo(false);
-  }
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -86,21 +78,7 @@ const IntroSection = () => {
           <source src="video/showreel-3d-animation.webm" type="video/webm" />
         </video>
       </div>
-      {showVideo && (
-        <div className={styles.videoParent}>
-          <video controls className={styles.video} autoPlay>
-            <source src="video/home-video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <Image
-            src={Close}
-            alt=""
-            className={styles.closeVideo}
-            onClick={handleCloseVideo}
-          />
-        </div>
-      )}
-      <div className={`${styles.introSection} ${showVideo && styles.backdrop}`}>
+      <div className={styles.introSection}>
         <NavBar />
         <div className={styles.content}>
           <Image
@@ -116,7 +94,7 @@ const IntroSection = () => {
             striking and emotionally engaging.
           </p>
           <div ref={btnRef}>
-            <Button text="Talk to Our Expert" onClick={handleVideo} />
+            <MaskButton text="Talk to Our Expert" />
           </div>
         </div>
       </div>
