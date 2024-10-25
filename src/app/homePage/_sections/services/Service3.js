@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 
 import Line from "@/app/_assets/svg/curve-line.svg";
-import Button from "@/app/_components/button/Button";
+import MaskButton from "@/app/_components/button/MaskButton";
 
 const Service3 = () => {
   const textRef = useRef(null);
@@ -220,7 +220,7 @@ const Service3 = () => {
           </Box>
         </Box>
         <Box ref={btnRef}>
-          <Button text={"Get free Storyboard"} />
+          <MaskButton text={"Get free Storyboard"} />
         </Box>
       </Box>
     </Box>

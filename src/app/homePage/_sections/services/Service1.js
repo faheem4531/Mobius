@@ -5,7 +5,7 @@ import { Box, Typography } from "@mui/material";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import Button from "@/app/_components/button/Button";
+import MaskButton from "@/app/_components/button/MaskButton";
 
 const Service1 = () => {
   const textRef = useRef(null);
@@ -238,7 +238,7 @@ const Service1 = () => {
           </Box>
         </Box>
         <Box ref={btnRef}>
-          <Button text={"Get in touch now!"} />
+          <MaskButton text={"Get in touch now!"} />
         </Box>
       </Box>
     </Box>
