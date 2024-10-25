@@ -1,13 +1,14 @@
 "use client";
 
 import React, { useState } from "react";
+import axios from "axios";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import styles from "./GetInTouch.module.css";
 import NavBar from "@/app/_components/navBar/NavBar";
 import Input from "@/app/_components/input/Input";
 import Button from "@/app/_components/button/Button";
-import axios from "axios";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const GetInTouch = () => {
   const [showError, setShowError] = useState(false);
