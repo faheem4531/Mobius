@@ -7,6 +7,7 @@ import Button from "@/app/_components/button/Button";
 import Model from "@/app/_assets/svg/joinUs-model.svg";
 import Link from "next/link";
 import { Typography, Box } from "@mui/material";
+import MaskButton from "@/app/_components/button/MaskButton";
 
 const JoinUs = () => {
   return (
@@ -25,9 +26,7 @@ const JoinUs = () => {
             Still confused on 3d?
           </Typography>
           <Box sx={{ width: { lg: "265px", sm: "240px", xs: "230px" } }}>
-            <Link href="/carrers">
-              <Button width="100%" text="Get Free Consultation" />
-            </Link>
+            <MaskButton width="100%" text="Get Free Consultation" />
           </Box>
         </div>
       </div>

@@ -1,10 +1,10 @@
 "use client";
 
 import { Box, Typography } from "@mui/material";
-import Button from "@/app/_components/button/Button";
 import Image from "next/image";
+
 import Background from "@/app/_assets/png/discover-bg.png";
-import Link from "next/link";
+import MaskButton from "@/app/_components/button/MaskButton";
 
 const Discover = () => {
   return (
@@ -47,9 +47,9 @@ const Discover = () => {
           >
             Want your product to standout in the competition?
           </Typography>
-          <Link href="/case-study">
-            <Button text="Discover More" />
-          </Link>
+          <Box sx={{ display: "inline-block" }}>
+            <MaskButton text="Discover More" />
+          </Box>
         </Box>
       </Box>
       <Box
