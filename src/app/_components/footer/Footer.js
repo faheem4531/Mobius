@@ -19,10 +19,10 @@ const Footer = () => {
     setEmail("");
   }
 
-  const phoneNumber = "+92 307 4567890";
+  const phoneNumber = "+1 (415) 800 3047";
   // const emailAddress = "hr@mobiusmotionstudio.com";
   const emailAddress = "info@mobiusstudios.co";
-  const address = "392, F Block Johar Town, Lahore, Punjab, Pakistan";
+  const address = "30 N Gould St STE N, Sheridan, WY 82801";
   const googleMapsLink = `https://www.google.com/maps?q=${encodeURIComponent(
     address
   )}`;
