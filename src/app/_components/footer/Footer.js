@@ -1,16 +1,17 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
+import { Fragment } from "react";
+import Link from "next/link";
 import styles from "./Footer.module.css";
+
 import Button from "../button/Button";
 import LinkedIn from "@/app/_assets/svg/linkedIn.svg";
 import Behance from "@/app/_assets/svg/behance.svg";
 import Dribbble from "@/app/_assets/svg/dribbble.svg";
 import Facebook from "@/app/_assets/svg/facebook.svg";
 import Instagram from "@/app/_assets/svg/instagram.svg";
-import Image from "next/image";
-import { Fragment } from "react";
-import Link from "next/link";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
