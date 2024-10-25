@@ -1,11 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 
 import Background from "@/app/_assets/png/discover-bg.png";
 import MaskButton from "@/app/_components/button/MaskButton";
-import { useState } from "react";
 import ContactModal from "@/app/_components/modal/ContactModal";
 
 const Discover = () => {

@@ -1,4 +1,4 @@
-import { Box, Button as MUIButton } from "@mui/material";
+import { Box } from "@mui/material";
 import "./MaskButton.css";
 
 const MaskButton = ({ text, onClick }) => {

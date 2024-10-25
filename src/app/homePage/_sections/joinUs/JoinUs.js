@@ -1,14 +1,13 @@
 "use client";
 
-import styles from "./JoinUs.module.css";
-import Image from "next/image";
-import BackGround from "@/app/_assets/png/join-us-bg.png";
-import Button from "@/app/_components/button/Button";
-import Model from "@/app/_assets/svg/joinUs-model.svg";
-import Link from "next/link";
-import { Typography, Box } from "@mui/material";
-import MaskButton from "@/app/_components/button/MaskButton";
 import { useState } from "react";
+import Image from "next/image";
+import { Typography, Box } from "@mui/material";
+
+import styles from "./JoinUs.module.css";
+import BackGround from "@/app/_assets/png/join-us-bg.png";
+import Model from "@/app/_assets/svg/joinUs-model.svg";
+import MaskButton from "@/app/_components/button/MaskButton";
 import ContactModal from "@/app/_components/modal/ContactModal";
 
 const JoinUs = () => {
