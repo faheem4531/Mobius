@@ -5,8 +5,12 @@ import Image from "next/image";
 
 import Background from "@/app/_assets/png/discover-bg.png";
 import MaskButton from "@/app/_components/button/MaskButton";
+import { useState } from "react";
+import ContactModal from "@/app/_components/modal/ContactModal";
 
 const Discover = () => {
+  const [modal, setModal] = useState(false);
+
   return (
     <>
       <Box
@@ -48,7 +52,7 @@ const Discover = () => {
             Want your product to standout in the competition?
           </Typography>
           <Box sx={{ display: "inline-block" }}>
-            <MaskButton text="Discover More" />
+            <MaskButton text="Discover More" onClick={() => setModal(true)} />
           </Box>
         </Box>
       </Box>
@@ -105,6 +109,8 @@ const Discover = () => {
           </Typography>
         </Box>
       </Box>
+
+      <ContactModal open={modal} setOpen={setModal} />
     </>
   );
 };
