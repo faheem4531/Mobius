@@ -3,9 +3,8 @@
 import { Box, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 
-import Link from "next/link.js";
-// import styles from "../ComponentsStyles.module.css";
 import Question from "./Question.js";
+
 const GotQuestions = ({}) => {
   const questions = [
     {
@@ -147,4 +146,5 @@ const GotQuestions = ({}) => {
     </Box>
   );
 };
+
 export default GotQuestions;
