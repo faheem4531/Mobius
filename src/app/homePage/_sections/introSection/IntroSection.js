@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -9,11 +9,13 @@ import NavBar from "@/app/_components/navBar/NavBar";
 import Title from "@/app/_assets/svg/heading.svg";
 import styles from "./IntroSection.module.css";
 import MaskButton from "@/app/_components/button/MaskButton";
+import ContactModal from "@/app/_components/modal/ContactModal";
 
 const IntroSection = () => {
   const headingImgRef = useRef(null);
   const textRef = useRef(null);
   const btnRef = useRef(null);
+  const [modal, setModal] = useState(false);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -71,33 +73,40 @@ const IntroSection = () => {
   }, []);
 
   return (
-    <div className={styles.container}>
-      <div className={styles.bgVideo}>
-        <video className={styles.bgVideoContent} autoPlay muted loop>
-          <source src="video/showreel-3d-animation.webm" type="video/webm" />
-        </video>
-      </div>
-      <div className={styles.introSection}>
-        <NavBar />
-        <div className={styles.content}>
-          <Image
-            src={Title}
-            alt="Mobius Studio"
-            className={styles.heading}
-            ref={headingImgRef}
-          />
-          <p className={styles.introSecText} ref={textRef}>
-            We specialize in transforming your ideas into dynamic 3D animations
-            that captivate your audience. Through our cutting-edge animation
-            services, we bring your products to life in a way that is visually
-            striking and emotionally engaging.
-          </p>
-          <div ref={btnRef}>
-            <MaskButton text="Talk to Our Expert" />
+    <>
+      <div className={styles.container}>
+        <div className={styles.bgVideo}>
+          <video className={styles.bgVideoContent} autoPlay muted loop>
+            <source src="video/showreel-3d-animation.webm" type="video/webm" />
+          </video>
+        </div>
+        <div className={styles.introSection}>
+          <NavBar />
+          <div className={styles.content}>
+            <Image
+              src={Title}
+              alt="Mobius Studio"
+              className={styles.heading}
+              ref={headingImgRef}
+            />
+            <p className={styles.introSecText} ref={textRef}>
+              We specialize in transforming your ideas into dynamic 3D
+              animations that captivate your audience. Through our cutting-edge
+              animation services, we bring your products to life in a way that
+              is visually striking and emotionally engaging.
+            </p>
+            <div ref={btnRef}>
+              <MaskButton
+                text="Talk to Our Expert"
+                onClick={() => setModal(true)}
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+
+      <ContactModal open={modal} setOpen={setModal} />
+    </>
   );
 };
 
