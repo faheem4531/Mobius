@@ -8,13 +8,21 @@ import Footer from "../_components/footer/Footer";
 
 const ConnectUs = () => {
   return (
-    <div>
+    <>
       <Head>
+        <title>Get in Touch</title>
+        <meta
+          name="description"
+          content="Get in touch with Mobius Studios for custom CGI and animation solutions. Let's collaborate to bring your vision to life with creative visual excellence."
+        />
         <link rel="canonical" href="https://www.mobiusstudios.co/connect-us" />
       </Head>
-      <GetInTouch />
-      <Footer />
-    </div>
+
+      <div>
+        <GetInTouch />
+        <Footer />
+      </div>
+    </>
   );
 };
 
