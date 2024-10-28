@@ -46,10 +46,7 @@ export default function Home() {
         />
       </noscript>
 
-      <Script
-        strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=XXXXXXXX`}
-      />
+      {/* Add google-ads*/}
       <Script id="google-ads" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
@@ -59,7 +56,8 @@ export default function Home() {
           gtag('config', 'XXXXXXXX');
         `}
       </Script>
-      {/* Add iktok-pixel*/}
+
+      {/* Add tiktok-pixel*/}
       <Script id="tiktok-pixel" strategy="afterInteractive">
         {`
           !function (w, d, t) {
