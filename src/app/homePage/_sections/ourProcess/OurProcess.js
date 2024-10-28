@@ -1,19 +1,25 @@
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
+
 import Step1 from "@/app/_assets/png/step1-icon.png";
 import Line from "@/app/_assets/svg/process-line.svg";
+import Consultation from "@/app/_assets/svg/process/Consultation.svg";
+import Modal from "@/app/_assets/svg/process/3d-model.svg";
+import Storyboarding from "@/app/_assets/svg/process/Storyboarding.svg";
+import Rendering from "@/app/_assets/svg/process/rendering.svg";
+import Animation from "@/app/_assets/svg/process/animation.gif";
 
 const OurProcess = () => {
   const processStepData = [
     {
-      img: Step1,
+      img: Consultation,
       title: "Consultation",
       content:
         "We begin by understanding your project goals and creating a detailed roadmap, complete with storyboards to align with your vision.",
       mt: "0",
     },
     {
-      img: Step1,
+      img: Storyboarding,
       title: "Story boarding",
       content:
         "Here, our efforts officially jump in, and we collaborate on conceiving creative ideas and approaches to make your project unique and impactful.",
@@ -21,14 +27,14 @@ const OurProcess = () => {
       mt: "110px",
     },
     {
-      img: Step1,
+      img: Modal,
       title: "3D Modeling",
       content:
         "Our professional and dedicated team builds the 3D models and sets the stage with backgrounds and other elements to tell your product’s story.",
       mt: "-50px",
     },
     {
-      img: Step1,
+      img: Animation,
       title: "Animation",
       content:
         "It’s time to production by using advanced animation techniques, we bring your scene to life, and make sure every detail is captured.",
@@ -36,7 +42,7 @@ const OurProcess = () => {
       mt: "20px",
     },
     {
-      img: Step1,
+      img: Rendering,
       title: "Rendering",
       content:
         "The final video is crafted with precision, combining animation, lighting, and textures. We render out a 4k video to take your product to new heights.",
@@ -44,6 +50,7 @@ const OurProcess = () => {
       mt: "220px",
     },
   ];
+
   return (
     <Box
       sx={{
@@ -165,7 +172,17 @@ const ProcessStep = ({ mt, img, title, content, count }) => {
             alignItems: "center",
           }}
         >
-          <Image src={Step1} alt="icon" />
+          <Box
+            sx={{
+              width: "80px",
+            }}
+          >
+            <Image
+              src={img}
+              alt="icon"
+              style={{ width: "100%", height: "100%" }}
+            />
+          </Box>
         </Box>
         {count && (
           <Box
