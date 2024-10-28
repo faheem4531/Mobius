@@ -118,7 +118,7 @@ export default function Home() {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
           
-            gtag('config', 'XXXXXXXXX');
+            gtag('config', 'G-DWT2N0FQWP');
           `}
       </Script>
       <HomePage />
