@@ -4,7 +4,7 @@
   height: 45px;
   overflow: hidden;
   border: 1px solid #B0AFAF80;
-  font-family: 'Poppins', sans-serif ;
+  font-family: Avenir3;
   font-weight: 300;
   transition: 0.5s;
   letter-spacing: 1px;
@@ -13,7 +13,7 @@
 .button-container-2 button {
   width: 101%;
   height: 100%;
-  font-family: 'Poppins', sans-serif ;
+  font-family: Avenir3;
   font-weight: 300;
   font-size: 16px;
   letter-spacing: 1px;
@@ -39,11 +39,11 @@
   color: #B0AFAF80;
   text-align: center;
   width: 101%;
-  font-family: 'Poppins', sans-serif ;
+  font-family: Avenir3;
   font-weight: 300;
   position: absolute;
   font-size: 16px;
-  margin-top: 10px;
+  margin-top: 12px;
   overflow: hidden;
 }
 
@@ -87,14 +87,3 @@
     mask-position: 0 0;
   }
 }
-
-
-/* @media (max-width: 600px) {
-  .button-container-2 {
-    width: auto;
-  height: 30px;
-  }
-  .mas {
-    margin-top: 0;
-  }
-} */

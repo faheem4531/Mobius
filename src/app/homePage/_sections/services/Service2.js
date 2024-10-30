@@ -152,8 +152,9 @@ const Service2 = () => {
         >
           <Typography
             sx={{
-              fontSize: { lg: "20px", sm: "18px", xs: "16px" },
-              fontWeight: 300,
+              fontSize: { lg: "19px", sm: "18px", xs: "16px" },
+              fontFamily: "Avenir3 !important",
+              fontFamily: "Avenir3 !important",
             }}
             ref={textRef}
           >
@@ -163,7 +164,7 @@ const Service2 = () => {
             <Typography
               sx={{
                 fontSize: { lg: "38px", md: "32px", xs: "32px" },
-                fontWeight: 800,
+                fontFamily: "Avenir5 !important",
                 color: "#FFFFFF",
                 m: "20px 0 10px",
               }}
@@ -173,7 +174,7 @@ const Service2 = () => {
             <Typography
               sx={{
                 fontSize: { sm: "22px", xs: "20px" },
-                fontWeight: 600,
+                fontFamily: "Avenir5 !important",
                 color: "#FFFFFF",
                 mb: "20px",
               }}
@@ -193,8 +194,8 @@ const Service2 = () => {
           >
             <Typography
               sx={{
-                fontSize: { lg: "20px", md: "16px", sm: "18px", xs: "16px" },
-                fontWeight: 300,
+                fontSize: { lg: "19px", md: "16px", sm: "18px", xs: "16px" },
+                fontFamily: "Avenir3 !important",
               }}
             >
               Depicting your brand identity with the product animation is the
@@ -203,14 +204,14 @@ const Service2 = () => {
             </Typography>
             <Box
               sx={{
-                fontSize: { lg: "20px", md: "16px", sm: "18px", xs: "16px" },
-                fontWeight: 300,
+                fontSize: { lg: "19px", md: "16px", sm: "18px", xs: "16px" },
+                fontFamily: "Avenir3 !important",
               }}
             >
               <Typography
                 sx={{
-                  fontSize: { lg: "20px", md: "16px", sm: "18px", xs: "16px" },
-                  fontWeight: 700,
+                  fontSize: { lg: "19px", md: "16px", sm: "18px", xs: "16px" },
+                  fontFamily: "Avenir8 !important",
                   display: "inline-block",
                 }}
               >
@@ -221,14 +222,14 @@ const Service2 = () => {
             </Box>
             <Box
               sx={{
-                fontSize: { lg: "20px", sm: "18px", xs: "16px" },
-                fontWeight: 300,
+                fontSize: { lg: "19px", sm: "18px", xs: "16px" },
+                fontFamily: "Avenir3 !important",
               }}
             >
               <Typography
                 sx={{
-                  fontSize: { lg: "20px", sm: "18px", xs: "16px" },
-                  fontWeight: 700,
+                  fontSize: { lg: "19px", sm: "18px", xs: "16px" },
+                  fontFamily: "Avenir8 !important",
                   display: "inline-block",
                 }}
               >
@@ -239,14 +240,14 @@ const Service2 = () => {
             </Box>
             <Box
               sx={{
-                fontSize: { lg: "20px", sm: "18px", xs: "16px" },
-                fontWeight: 300,
+                fontSize: { lg: "19px", sm: "18px", xs: "16px" },
+                fontFamily: "Avenir3 !important",
               }}
             >
               <Typography
                 sx={{
-                  fontSize: { lg: "20px", sm: "18px", xs: "16px" },
-                  fontWeight: 700,
+                  fontSize: { lg: "19px", sm: "18px", xs: "16px" },
+                  fontFamily: "Avenir8 !important",
                   display: "inline-block",
                 }}
               >
@@ -257,14 +258,14 @@ const Service2 = () => {
             </Box>
             <Box
               sx={{
-                fontSize: { lg: "20px", sm: "18px", xs: "16px" },
-                fontWeight: 300,
+                fontSize: { lg: "19px", sm: "18px", xs: "16px" },
+                fontFamily: "Avenir3 !important",
               }}
             >
               <Typography
                 sx={{
-                  fontSize: { lg: "20px", sm: "18px", xs: "16px" },
-                  fontWeight: 700,
+                  fontSize: { lg: "19px", sm: "18px", xs: "16px" },
+                  fontFamily: "Avenir8 !important",
                   display: "inline-block",
                 }}
               >
@@ -275,14 +276,14 @@ const Service2 = () => {
             </Box>
             <Box
               sx={{
-                fontSize: { lg: "20px", sm: "18px", xs: "16px" },
-                fontWeight: 300,
+                fontSize: { lg: "19px", sm: "18px", xs: "16px" },
+                fontFamily: "Avenir3 !important",
               }}
             >
               <Typography
                 sx={{
-                  fontSize: { lg: "20px", sm: "18px", xs: "16px" },
-                  fontWeight: 700,
+                  fontSize: { lg: "19px", sm: "18px", xs: "16px" },
+                  fontFamily: "Avenir8 !important",
                   display: "inline-block",
                 }}
               >
@@ -293,8 +294,8 @@ const Service2 = () => {
             </Box>
             <Typography
               sx={{
-                fontSize: { lg: "20px", md: "16px", sm: "18px", xs: "16px" },
-                fontWeight: 300,
+                fontSize: { lg: "19px", md: "16px", sm: "18px", xs: "16px" },
+                fontFamily: "Avenir3 !important",
               }}
             >
               Discuss your product concept with our animation expert to identify

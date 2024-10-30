@@ -149,7 +149,7 @@ const Service3 = () => {
           <Typography
             sx={{
               fontSize: { lg: "20px", sm: "18px", xs: "16px" },
-              fontWeight: 300,
+              fontFamily: "Avenir3 !important",
             }}
             ref={textRef}
           >
@@ -158,7 +158,7 @@ const Service3 = () => {
           <Typography
             sx={{
               fontSize: { lg: "38px", md: "32px", xs: "32px" },
-              fontWeight: 800,
+              fontFamily: "Avenir5 !important",
               color: "#FFFFFF",
               lineHeight: "45.6px",
               m: "20px 0",
@@ -186,7 +186,7 @@ const Service3 = () => {
               <Typography
                 sx={{
                   fontSize: { lg: "20px", md: "16px", sm: "18px", xs: "16px" },
-                  fontWeight: 300,
+                  fontFamily: "Avenir3 !important",
                 }}
               >
                 Give us the idea for the CGI campaign you want to run and get
@@ -195,7 +195,7 @@ const Service3 = () => {
               <Typography
                 sx={{
                   fontSize: { lg: "20px", md: "16px", sm: "18px", xs: "16px" },
-                  fontWeight: 300,
+                  fontFamily: "Avenir3 !important",
                   m: { sm: "90px 0", xs: "30px 0" },
                 }}
               >
@@ -205,7 +205,7 @@ const Service3 = () => {
               <Typography
                 sx={{
                   fontSize: { lg: "20px", md: "16px", sm: "18px", xs: "16px" },
-                  fontWeight: 300,
+                  fontFamily: "Avenir3 !important",
                 }}
               >
                 Composite the 3d elements with the real footage matching the
@@ -214,7 +214,7 @@ const Service3 = () => {
               <Typography
                 sx={{
                   fontSize: { lg: "20px", md: "16px", sm: "18px", xs: "16px" },
-                  fontWeight: 300,
+                  fontFamily: "Avenir3 !important",
                   mt: { sm: "110px", xs: "30px" },
                 }}
               >
@@ -223,7 +223,10 @@ const Service3 = () => {
             </Box>
           </Box>
           <Box ref={btnRef}>
-            <MaskButton text={"Get free Storyboard"} onClick={() => setModal(true)}/>
+            <MaskButton
+              text={"Get free Storyboard"}
+              onClick={() => setModal(true)}
+            />
           </Box>
         </Box>
       </Box>

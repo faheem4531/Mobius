@@ -150,7 +150,7 @@ const Footer = () => {
         </div>
       </div>
       <div className={styles.copyright}>
-        © 2023 MMS | Mobius Motion Studio. All rights reserved.
+        © 2024 MMS | Mobius Motion Studio. All rights reserved.
       </div>
     </Fragment>
   );

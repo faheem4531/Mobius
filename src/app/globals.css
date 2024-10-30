@@ -1,4 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/AvenirLTStd-Black.otf") format("opentype");
+  src: url("/fonts/AvenirLTStd-BlackOblique.otf") format("opentype");
+  src: url("/fonts/AvenirLTStd-Book.otf") format("opentype");
+  src: url("/fonts/AvenirLTStd-BookOblique.otf") format("opentype");
+  src: url("/fonts/AvenirLTStd-Heavy.otf") format("opentype");
+  src: url("/fonts/AvenirLTStd-HeavyOblique.otf") format("opentype");
+  src: url("/fonts/AvenirLTStd-Light.otf") format("opentype");
+  src: url("/fonts/AvenirLTStd-LightOblique.otf") format("opentype");
+  src: url("/fonts/AvenirLTStd-Medium.otf") format("opentype");
+  src: url("/fonts/AvenirLTStd-MediumOblique.otf") format("opentype");
+  src: url("/fonts/AvenirLTStd-Oblique.otf") format("opentype");
+  src: url("/fonts/AvenirLTStd-Roman.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir5";
+  src: url("/fonts/AvenirLTStd-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir3";
+  src: url("/fonts/AvenirLTStd-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir8";
+  src: url("/fonts/AvenirLTStd-Heavy.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
 
 :root {
 
@@ -39,12 +79,12 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  font-family: 'Poppins', sans-serif !important;
 }
 
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
+  font-family: Avenir !important;
 }
 
 a {

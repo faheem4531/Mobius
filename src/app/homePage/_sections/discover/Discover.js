@@ -44,7 +44,7 @@ const Discover = () => {
             variant="h4"
             sx={{
               fontSize: { xs: "24px", sm: "30px", lg: "50px" },
-              fontWeight: 600,
+              fontFamily: "Avenir5 !important",
               color: "var(--text-main)",
               marginBottom: { xs: "50px", sm: "30px", lg: "140px" },
             }}
@@ -72,11 +72,17 @@ const Discover = () => {
               color: "#FAFAFA",
               fontSize: { xs: "20px", sm: "28px", lg: "60px" },
               lineHeight: "100%",
+              fontFamily: "Avenir !important",
             }}
           >
             145+
           </Typography>
-          <Typography sx={{ fontSize: { xs: "6px", sm: "8px", lg: "12px" } }}>
+          <Typography
+            sx={{
+              fontSize: { xs: "6px", sm: "8px", lg: "12px" },
+              fontFamily: "Avenir !important",
+            }}
+          >
             Clients
           </Typography>
         </Box>
@@ -85,12 +91,18 @@ const Discover = () => {
             sx={{
               color: "#FAFAFA",
               fontSize: { xs: "20px", sm: "28px", lg: "60px" },
+              fontFamily: "Avenir !important",
               lineHeight: "100%",
             }}
           >
             328+
           </Typography>
-          <Typography sx={{ fontSize: { xs: "6px", sm: "8px", lg: "12px" } }}>
+          <Typography
+            sx={{
+              fontSize: { xs: "6px", sm: "8px", lg: "12px" },
+              fontFamily: "Avenir !important",
+            }}
+          >
             Projects
           </Typography>
         </Box>
@@ -99,12 +111,18 @@ const Discover = () => {
             sx={{
               color: "#FAFAFA",
               fontSize: { xs: "20px", sm: "28px", lg: "60px" },
+              fontFamily: "Avenir !important",
               lineHeight: "100%",
             }}
           >
             67+
           </Typography>
-          <Typography sx={{ fontSize: { xs: "6px", sm: "8px", lg: "12px" } }}>
+          <Typography
+            sx={{
+              fontSize: { xs: "6px", sm: "8px", lg: "12px" },
+              fontFamily: "Avenir !important",
+            }}
+          >
             Experts
           </Typography>
         </Box>

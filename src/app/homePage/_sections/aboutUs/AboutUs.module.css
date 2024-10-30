@@ -70,7 +70,7 @@
 }
 
 .content p {
-  font-size: 22px;
+  font-size: 19px ;
   line-height: 120%;
   position: relative;
   z-index: 20;
@@ -83,7 +83,7 @@
   }
 
   .content p {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 

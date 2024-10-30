@@ -74,7 +74,10 @@ const Clients = () => {
     >
       <Typography
         variant="h3"
-        sx={{ fontSize: { xs: "16px", md: "20px" }, fontWeight: 300 }}
+        sx={{
+          fontSize: { xs: "16px", md: "20px" },
+          fontFamily: "Avenir3 !important",
+        }}
       >
         Clients
       </Typography>
@@ -85,6 +88,7 @@ const Clients = () => {
           fontWeight: { xs: 400, md: 500, lg: 600 },
           color: "var(--text-main)",
           margin: { xs: "20px 0", md: "30px 0", lg: "35px 0 70px" },
+          fontFamily: "Avenir !important",
           textAlign: "center",
         }}
       >
@@ -136,7 +140,10 @@ const Clients = () => {
       >
         <Typography
           variant="h3"
-          sx={{ fontSize: { xs: "16px", md: "20px" }, fontWeight: 300 }}
+          sx={{
+            fontSize: { xs: "16px", md: "20px" },
+            fontFamily: "Avenir3 !important",
+          }}
         >
           Testimonial
         </Typography>
@@ -148,6 +155,7 @@ const Clients = () => {
             color: "var(--text-main)",
             margin: { xs: "30px 0", md: "30px 0", lg: "35px 0 70px" },
             textAlign: "center",
+            fontFamily: "Avenir !important",
           }}
         >
           Don’t take our word for the work quality

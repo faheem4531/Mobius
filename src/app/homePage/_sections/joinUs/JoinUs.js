@@ -24,6 +24,7 @@ const JoinUs = () => {
                 fontSize: { xs: "22px", sm: "20px", lg: "38px" },
                 fontWeight: { xs: 400, sm: 500, lg: 600 },
                 color: "var(--text-main)",
+                fontFamily: "Avenir !important",
                 marginBottom: { xs: "27px", sm: "30px", lg: "50px" },
               }}
             >

@@ -128,8 +128,9 @@ const Service1 = () => {
         >
           <Typography
             sx={{
-              fontSize: { lg: "20px", sm: "18px", xs: "16px" },
+              fontSize: { lg: "19px", sm: "18px", xs: "16px" },
               fontWeight: 300,
+              fontFamily: "Avenir3 !important",
             }}
             ref={textRef}
           >
@@ -142,6 +143,7 @@ const Service1 = () => {
               color: "#FFFFFF",
               lineHeight: "45.6px",
               m: "20px 0",
+              fontFamily: "Avenir5 !important",
             }}
             ref={headingRef}
           >
@@ -154,13 +156,15 @@ const Service1 = () => {
               flexDirection: "column",
               gap: { lg: "25px", md: "16px", sm: "20px", xs: "15px" },
               m: "20px 0 30px",
+              fontFamily: "Avenir !important",
             }}
             ref={paragraphRef}
           >
             <Typography
               sx={{
-                fontSize: { lg: "20px", md: "16px", sm: "18px", xs: "16px" },
+                fontSize: { lg: "19px", md: "16px", sm: "18px", xs: "16px" },
                 fontWeight: 300,
+                fontFamily: "Avenir3 !important",
               }}
             >
               From corporations to start-ups. we create stunning product
@@ -170,8 +174,9 @@ const Service1 = () => {
             </Typography>
             <Typography
               sx={{
-                fontSize: { lg: "20px", md: "16px", sm: "18px", xs: "16px" },
+                fontSize: { lg: "19px", md: "16px", sm: "18px", xs: "16px" },
                 fontWeight: 300,
+                fontFamily: "Avenir3 !important",
               }}
             >
               Costly and environment damaging product shoots are a thing of
@@ -181,22 +186,25 @@ const Service1 = () => {
             </Typography>
             <Typography
               sx={{
-                fontSize: { lg: "20px", md: "16px", sm: "18px", xs: "16px" },
+                fontSize: { lg: "19px", md: "16px", sm: "18px", xs: "16px" },
                 fontWeight: 700,
+                fontFamily: "Avenir8 !important",
               }}
             >
               The benefits are immense
             </Typography>
             <Box
               sx={{
-                fontSize: { lg: "20px", md: "16px", sm: "18px", xs: "16px" },
+                fontSize: { lg: "19px", md: "16px", sm: "18px", xs: "16px" },
                 fontWeight: 300,
+                fontFamily: "Avenir3 !important",
               }}
             >
               <Typography
                 sx={{
-                  fontSize: { lg: "20px", md: "16px", sm: "18px", xs: "16px" },
+                  fontSize: { lg: "19px", md: "16px", sm: "18px", xs: "16px" },
                   fontWeight: 700,
+                  fontFamily: "Avenir8 !important",
                   display: "inline-block",
                 }}
               >
@@ -206,15 +214,17 @@ const Service1 = () => {
             </Box>
             <Box
               sx={{
-                fontSize: { lg: "20px", sm: "18px", xs: "16px" },
+                fontSize: { lg: "19px", sm: "18px", xs: "16px" },
                 fontWeight: 300,
+                fontFamily: "Avenir3 !important",
               }}
             >
               <Typography
                 sx={{
-                  fontSize: { lg: "20px", sm: "18px", xs: "16px" },
+                  fontSize: { lg: "19px", sm: "18px", xs: "16px" },
                   fontWeight: 700,
                   display: "inline-block",
+                  fontFamily: "Avenir8 !important",
                 }}
               >
                 - Intricate Details:
@@ -223,14 +233,16 @@ const Service1 = () => {
             </Box>
             <Box
               sx={{
-                fontSize: { lg: "20px", sm: "18px", xs: "16px" },
+                fontSize: { lg: "19px", sm: "18px", xs: "16px" },
                 fontWeight: 300,
+                fontFamily: "Avenir3 !important",
               }}
             >
               <Typography
                 sx={{
-                  fontSize: { lg: "20px", sm: "18px", xs: "16px" },
+                  fontSize: { lg: "19px", sm: "18px", xs: "16px" },
                   fontWeight: 700,
+                  fontFamily: "Avenir8 !important",
                   display: "inline-block",
                 }}
               >

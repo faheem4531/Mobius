@@ -61,7 +61,9 @@ export default function Question({
       <AccordionSummary
         sx={{ padding: { md: "10px 0 ", sm: "5px 0", xs: "5px 0" } }}
       >
-        <Typography sx={{ fontSize: "17px" }}>{qs}</Typography>
+        <Typography sx={{ fontSize: "17px", fontFamily: "Avenir !important" }}>
+          {qs}
+        </Typography>
       </AccordionSummary>
       <AccordionDetails>
         <Typography
@@ -71,6 +73,7 @@ export default function Question({
               sm: "0 0 10px 47px",
               xs: "0px 0 10px 47px",
             },
+            fontFamily: "Avenir3 !important",
             fontSize: "14px",
           }}
         >

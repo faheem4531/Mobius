@@ -73,6 +73,7 @@ const OurProcess = () => {
       <Typography
         sx={{
           fontSize: { lg: "20px", sm: "18px", xs: "16px" },
+          fontFamily: "Avenir3 !important",
           fontWeight: 300,
         }}
       >
@@ -81,7 +82,7 @@ const OurProcess = () => {
       <Typography
         sx={{
           fontSize: { lg: "38px", md: "32px", xs: "30px" },
-          fontWeight: 800,
+          fontFamily: "Avenir5 !important",
           color: "#FFFFFF",
           lineHeight: { sm: "45.6px", xs: "120%" },
           maxWidth: "1270px",
@@ -199,6 +200,7 @@ const ProcessStep = ({ mt, img, title, content, count }) => {
               height: "37px",
               display: { md: "flex", sm: "none", xs: "none" },
               justifyContent: "center",
+              fontFamily: "Avenir3 !important",
               alignItems: "center",
             }}
           >
@@ -207,11 +209,23 @@ const ProcessStep = ({ mt, img, title, content, count }) => {
         )}
       </Box>
       <Typography
-        sx={{ fontSize: "20px", fontWeight: 500, m: "12px 0", color: "#fff" }}
+        sx={{
+          fontSize: "20px",
+          fontWeight: 500,
+          m: "16px 0 8px",
+          color: "#fff",
+          fontFamily: "Avenir5 !important",
+        }}
       >
         {title}
       </Typography>
-      <Typography fontWeight={500}>{content}</Typography>
+      <Typography
+        sx={{
+          fontFamily: "Avenir !important",
+        }}
+      >
+        {content}
+      </Typography>
     </Box>
   );
 };

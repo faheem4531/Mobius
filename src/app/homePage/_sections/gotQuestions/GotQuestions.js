@@ -90,7 +90,7 @@ const GotQuestions = ({}) => {
         sx={{
           fontSize: { lg: "20px", sm: "18px", xs: "16px" },
           textAlign: "center",
-          fontWeight: 300,
+          fontFamily: "Avenir3 !important",
         }}
       >
         FAQs
@@ -98,7 +98,7 @@ const GotQuestions = ({}) => {
       <Typography
         sx={{
           fontSize: { lg: "38px", md: "32px", xs: "30px" },
-          fontWeight: 800,
+          fontFamily: "Avenir5 !important",
           color: "#FFFFFF",
           lineHeight: { sm: "45.6px", xs: "120%" },
           maxWidth: "1300px",
