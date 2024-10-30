@@ -14,6 +14,9 @@ const Button = ({ text, onClick, margin, color, type, width = "265px" }) => {
         width: width,
         height: "45px",
         margin: margin || "0px",
+        "&:hover": {
+          backgroundColor: "#4B4B4B",
+        },
       }}
     >
       {text}

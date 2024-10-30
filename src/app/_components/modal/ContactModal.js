@@ -15,6 +15,7 @@ const style = {
   maxWidth: "600px",
   bgcolor: "#CECECE",
   color: "black",
+  borderRadius: "10px",
 };
 
 export default function ContactModal({ open, setOpen }) {
@@ -83,6 +84,11 @@ export default function ContactModal({ open, setOpen }) {
     <Modal
       open={open}
       onClose={handleClose}
+      BackdropProps={{
+        style: {
+          backdropFilter: "blur(4px)",
+        },
+      }}
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
@@ -101,6 +107,7 @@ export default function ContactModal({ open, setOpen }) {
               fontSize: 24,
               fontWeight: 300,
               marginBottom: { xs: 3.5, md: 4.5 },
+              fontFamily: "Avenir3 !important",
             }}
           >
             Feel free to connect with us...
