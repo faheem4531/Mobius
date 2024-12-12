@@ -57,7 +57,7 @@ export default function Home() {
       </Script>
 
       {/* Add tiktok-pixel*/}
-      <Script id="tiktok-pixel" strategy="afterInteractive">
+      {/* <Script id="tiktok-pixel" strategy="afterInteractive">
         {`
           !function (w, d, t) {
             w.TiktokAnalyticsObject = t;
@@ -97,7 +97,7 @@ export default function Home() {
             ttq.page();
           }(window, document, 'ttq');
         `}
-      </Script>
+      </Script> */}
       {/* Add Clarity script here */}
       <Script id="microsoft-clarity" strategy="afterInteractive">
         {`
