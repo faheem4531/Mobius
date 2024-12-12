@@ -14,7 +14,7 @@ import Step2Active from "@/app/_assets/svg/simulation-service-active.svg";
 import Step3 from "@/app/_assets/svg/video-service.svg";
 import Step3Active from "@/app/_assets/svg/video-service-active.svg";
 import Lense from "@/app/_assets/png/lense.png";
-import Model from "@/app/Model/Model";
+import LensViewer from "@/app/Model/Model";
 
 const Services = () => {
   const [modelStates, setModelState] = useState({
@@ -170,35 +170,7 @@ const Services = () => {
           </div>
         </div>
       </div>
-      <div className={styles.imageWraper}>
-        <div className={styles.index}>
-          <Model modelStates={modelStates} />
-        </div>
-        <Image src={Lense} alt="img" className={styles.lense} />
-      </div>
-
-      {/* <div className={styles.torus}>
-        <Canvas
-          camera={{
-            fov: 45,
-            near: 0.1,
-            far: 200,
-            position: [4, 2, 6]
-          }}
-        >
-          <OrbitControls enableZoom={false} />
-          <directionalLight castShadow position={[1, 2, 3]} intensity={1.5} />
-          <ambientLight intensity={0.5} />
-          <mesh
-            position={[0, -1.8, -7.6]}
-            rotation={[-3.4, -0.2, 0]}
-            scale={7}
-          >
-            <torusGeometry />
-            <meshStandardMaterial wireframe color="#ffffff" />
-          </mesh>
-        </Canvas>
-      </div> */}
+      <LensViewer modelStates={modelStates} />
     </div>
   );
 };

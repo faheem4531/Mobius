@@ -37,9 +37,9 @@
   align-items: center;
 }
 
-.lense {
+/* .lense {
   display: none;
-}
+} */
 
 .content {
   color: var(--text-primary);

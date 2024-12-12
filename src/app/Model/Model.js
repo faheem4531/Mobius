@@ -1,35 +1,20 @@
 "use client";
 
+import { Box } from "@mui/material";
+import Image from "next/image";
 import { OrbitControls } from "@react-three/drei";
-import { useControls } from "leva";
+import { useState } from "react";
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
+
 import { Lens } from "@/app/Model/Lens";
 import { LensClay } from "@/app/Model/LensClay";
 import { LensWireFrame } from "./LensWireFrame";
-import { Environment } from "@react-three/drei";
+import Lense from "@/app/_assets/png/lense.png";
+import MaskButton from "@/app/_components/button/MaskButton";
+import styles from "./styles.module.css";
 
-const Model = ({ modelStates, models }) => {
-  // const { positionT, rotationT, intensity1, intensity2, right } = useControls({
-  //   positionT: {
-  //     value: { x: -0.7, y: -2, z: 0 },
-  //     step: 0.1,
-  //     joystick: 'invertY'
-  //   },
-  //   intensity1: 2,
-  //   right: {
-  //     value: { x: -0.7, y: -2, z: 0 },
-  //     step: 0.1,
-  //     joystick: 'invertY'
-  //   },
-  //   intensity2: 2,
-  //   rotationT: {
-  //     value: { x: 0.9, y: 4, z: -5.6 },
-  //     step: 0.1,
-  //     joystick: 'invertY'
-  //   },
-  // })
-
+const Model = ({ modelStates }) => {
   function setModel() {
     if (modelStates.model) {
       return <Lens />;
@@ -43,28 +28,54 @@ const Model = ({ modelStates, models }) => {
   }
 
   return (
-    <>
-      <Canvas
-        camera={{
-          fov: 45,
-          near: 0.1,
-          far: 200,
-          position: [4, 2, 10],
-        }}
-      >
-        <Suspense fallback={null}>
-          <OrbitControls enableZoom={false} />
-          <directionalLight position={[-8, -0.9, -1.5]} intensity={10} />
-          <directionalLight position={[0.4, -1, -1.1]} intensity={10} />
-          <directionalLight position={[10, 1, 1.1]} intensity={10} />
-          <ambientLight intensity={0.5} />
-
-          {/* <Environment preset="sunset" /> */}
-          {setModel()}
-        </Suspense>
-      </Canvas>
-    </>
+    <Canvas
+      camera={{
+        fov: 45,
+        near: 0.1,
+        far: 200,
+        position: [4, 2, 10],
+      }}
+    >
+      <Suspense fallback={null}>
+        <OrbitControls enableZoom={false} />
+        <directionalLight position={[-8, -0.9, -1.5]} intensity={10} />
+        <directionalLight position={[0.4, -1, -1.1]} intensity={10} />
+        <directionalLight position={[10, 1, 1.1]} intensity={10} />
+        <ambientLight intensity={0.5} />
+        {setModel()}
+      </Suspense>
+    </Canvas>
   );
 };
 
-export default Model;
+export default function LensViewer({ modelStates }) {
+  const [showModel, setShowModel] = useState(false);
+
+  return (
+    <div className={styles.imageWraper}>
+      {!showModel && (
+        <Box
+          sx={{
+            position: "relative",
+          }}
+        >
+          <Box
+            sx={{
+              position: "absolute",
+              bottom: "-100px",
+              left: "50%",
+              transform: "translateX( -50%)",
+            }}
+          >
+            <MaskButton
+              text={"Interact with Model"}
+              onClick={() => setShowModel(true)}
+            />
+          </Box>
+          <Image src={Lense} alt="img" />
+        </Box>
+      )}
+      {showModel && <Model modelStates={modelStates} />}
+    </div>
+  );
+}
