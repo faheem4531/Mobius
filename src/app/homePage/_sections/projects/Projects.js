@@ -7,16 +7,16 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import styles from "./Projects.module.css";
-import Lense from "@/app/_assets/projects/lense.png";
-import PillPuncher from "@/app/_assets/projects/pill-puncher.png";
-import Elevate from "@/app/_assets/projects/elevate.png";
-import Fonestar from "@/app/_assets/projects/fonestar.png";
-import Avancus from "@/app/_assets/projects/avancus.png";
-import FormulaZ from "@/app/_assets/projects/formulaZ.png";
-import Luna from "@/app/_assets/projects/luna.png";
-import Metaleon from "@/app/_assets/projects/metaleon.png";
-import LightOne from "@/app/_assets/projects/light-one.png";
-import Houduo from "@/app/_assets/projects/houduo.png";
+import Lense from "@/app/_assets/projects/lense.webp";
+import PillPuncher from "@/app/_assets/projects/pill-puncher.webp";
+import Elevate from "@/app/_assets/projects/elevate.webp";
+import Fonestar from "@/app/_assets/projects/fonestar.webp";
+import Avancus from "@/app/_assets/projects/avancus.webp";
+import FormulaZ from "@/app/_assets/projects/formulaZ.webp";
+import Luna from "@/app/_assets/projects/luna.webp";
+import Metaleon from "@/app/_assets/projects/metaleon.webp";
+import LightOne from "@/app/_assets/projects/light-one.webp";
+import Houduo from "@/app/_assets/projects/houduo.webp";
 
 const project_dateils = [
   {
