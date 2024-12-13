@@ -22,7 +22,7 @@
 .introSection {
   height: 720px;
   width: 100%;
-  /* background-image: url(../../../_assets/png/hero-bg.png); */
+  /* background-image: url(../../../_assets/png/hero-bg.webp); */
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -110,7 +110,7 @@
 @media (max-width:550px) {
   .introSection {
     height: 500px;
-    /* background-image: url(../../../_assets/png/mobile-bg.png); */
+    /* background-image: url(../../../_assets/png/mobile-bg.webp); */
   }
 
   .setposition {

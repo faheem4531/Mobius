@@ -13,7 +13,7 @@ import Step2 from "@/app/_assets/svg/simulation-service.svg";
 import Step2Active from "@/app/_assets/svg/simulation-service-active.svg";
 import Step3 from "@/app/_assets/svg/video-service.svg";
 import Step3Active from "@/app/_assets/svg/video-service-active.svg";
-import Lense from "@/app/_assets/png/lense.png";
+import Lense from "@/app/_assets/png/lense.webp";
 import LensViewer from "@/app/Model/Model";
 
 const Services = () => {
