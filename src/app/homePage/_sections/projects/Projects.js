@@ -191,7 +191,7 @@ export default function CardSlider() {
                 >
                   <Image
                     src={card.image}
-                    alt="image"
+                    alt="3d models images"
                     className={styles.image}
                   />
                   <a href={card.url} target="_blank" className={styles.name}>

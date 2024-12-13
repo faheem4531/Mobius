@@ -72,7 +72,7 @@ export default function LensViewer({ modelStates }) {
               onClick={() => setShowModel(true)}
             />
           </Box>
-          <Image src={Lense} alt="img" />
+          <Image src={Lense} alt="3d Lens modal image" />
         </Box>
       )}
       {showModel && <Model modelStates={modelStates} />}

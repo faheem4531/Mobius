@@ -23,7 +23,7 @@ const Discover = () => {
       >
         <Image
           src={Background}
-          alt=""
+          alt="background image"
           style={{
             width: "100%",
             height: "100%",

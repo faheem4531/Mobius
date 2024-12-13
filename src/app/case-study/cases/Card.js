@@ -1,27 +1,21 @@
-'use client'
+"use client";
 
-import styles from "./Cases.module.css"
+import styles from "./Cases.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
 const Card = ({ img, name, url }) => {
   return (
     <div className={styles.card}>
-      <Image
-        src={img}
-        alt="img"
-        className={styles.image}
-      />
+      <Image src={img} alt="3d project image" className={styles.image} />
       <div className={styles.details}>
         <span>{name}</span>
-        <Link
-          href={url}
-          target="_blank">
+        <Link href={url} target="_blank">
           <p>View Details</p>
         </Link>
       </div>
     </div>
-  )
+  );
 };
 
 export default Card;

@@ -17,7 +17,11 @@ const JoinUs = () => {
     <>
       <div className={styles.joinUs}>
         <div className={styles.imagWrap}>
-          <Image alt="" src={BackGround} className={styles.background} />
+          <Image
+            alt="background image"
+            src={BackGround}
+            className={styles.background}
+          />
           <div className={styles.content}>
             <Typography
               sx={{
@@ -38,7 +42,11 @@ const JoinUs = () => {
             </Box>
           </div>
         </div>
-        <Image alt="" src={Model} className={styles.model} />
+        <Image
+          alt="Metaleon 3d character"
+          src={Model}
+          className={styles.model}
+        />
       </div>
 
       <ContactModal open={modal} setOpen={setModal} />

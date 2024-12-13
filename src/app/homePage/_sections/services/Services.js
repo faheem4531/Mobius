@@ -123,7 +123,7 @@ const Services = () => {
         </h2>
         <hr />
         <div className={styles.servicesSteps} ref={paragraphRef}>
-          <Image alt="" src={Steps} className={styles.steps} />
+          <Image alt="steps" src={Steps} className={styles.steps} />
           <div>
             <h2
               className={`${styles.heading} ${

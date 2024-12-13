@@ -88,7 +88,12 @@ const AboutUs = () => {
   return (
     <div className={styles.about}>
       <div className={styles.modelContainer}>
-        <Image src={Model} alt="" className={styles.model} ref={imageRef} />
+        <Image
+          src={Model}
+          alt="Metaleon 3d character"
+          className={styles.model}
+          ref={imageRef}
+        />
       </div>
       <div
         className={styles.content}
