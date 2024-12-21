@@ -1,13 +1,15 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
-export default function ClutchWidget() {
+const ClutchWidget = () => {
   useEffect(() => {
+    // Dynamically load the Clutch widget script
     const script = document.createElement("script");
     script.src = "https://widget.clutch.co/static/js/widget.js";
     script.async = true;
     document.body.appendChild(script);
 
     return () => {
+      // Clean up the script if necessary
       document.body.removeChild(script);
     };
   }, []);
@@ -30,4 +32,6 @@ export default function ClutchWidget() {
       }}
     />
   );
-}
+};
+
+export default ClutchWidget;
