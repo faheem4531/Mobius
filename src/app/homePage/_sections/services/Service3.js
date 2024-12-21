@@ -115,7 +115,7 @@ const Service3 = () => {
           alignItems: "center",
           padding: { lg: "140px 70px", sm: "170px 20px", xs: "140px 20px" },
           columnGap: { lg: "180px", md: "80px" },
-          backgroundImage: "url('/bg-services.png')",
+          backgroundImage: "url('/bg-services.webp')",
           backgroundSize: { md: "100% 100%", sm: "cover", xs: "cover" },
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",

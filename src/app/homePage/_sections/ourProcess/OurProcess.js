@@ -54,7 +54,7 @@ const OurProcess = () => {
   return (
     <Box
       sx={{
-        backgroundImage: "url('/process.png')",
+        backgroundImage: "url('/process.webp')",
         backgroundSize: { md: "100% 100%", sm: "cover", xs: "cover" },
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
