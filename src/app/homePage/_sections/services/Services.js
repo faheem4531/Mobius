@@ -6,13 +6,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 
 import styles from "./Services.module.css";
-import Steps from "@/app/_assets/svg/service-steps.svg";
-import Step1 from "@/app/_assets/svg/3d-service.svg";
-import Step1Active from "@/app/_assets/svg/3d-service-active.svg";
-import Step2 from "@/app/_assets/svg/simulation-service.svg";
-import Step2Active from "@/app/_assets/svg/simulation-service-active.svg";
-import Step3 from "@/app/_assets/svg/video-service.svg";
-import Step3Active from "@/app/_assets/svg/video-service-active.svg";
+import Steps from "@/app/_assets/svg/service-steps.webp";
+
+import Step1 from "@/app/_assets/svg/3d-service.webp";
+import Step1Active from "@/app/_assets/svg/3d-service-active.webp";
+import Step2 from "@/app/_assets/svg/simulation-service.webp";
+import Step2Active from "@/app/_assets/svg/simulation-service-active.webp";
+import Step3 from "@/app/_assets/svg/video-service.webp";
+import Step3Active from "@/app/_assets/svg/video-service-active.webp";
 import Lense from "@/app/_assets/png/lense.webp";
 import LensViewer from "@/app/Model/Model";
 

@@ -7,11 +7,11 @@ import Link from "next/link";
 import styles from "./Footer.module.css";
 
 import Button from "../button/Button";
-import LinkedIn from "@/app/_assets/svg/linkedIn.svg";
-import Behance from "@/app/_assets/svg/behance.svg";
-import Dribbble from "@/app/_assets/svg/dribbble.svg";
-import Facebook from "@/app/_assets/svg/facebook.svg";
-import Instagram from "@/app/_assets/svg/instagram.svg";
+import LinkedIn from "@/app/_assets/svg/linkedIn.webp";
+import Behance from "@/app/_assets/svg/behance.webp";
+import Dribbble from "@/app/_assets/svg/dribbble.webp";
+import Facebook from "@/app/_assets/svg/facebook.webp";
+import Instagram from "@/app/_assets/svg/instagram.webp";
 
 const Footer = () => {
   const [email, setEmail] = useState("");

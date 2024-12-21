@@ -16,6 +16,7 @@ import PillPuncher from "@/app/_assets/clients/pill-puncher.svg";
 import Sony from "@/app/_assets/clients/sony.svg";
 import Review from "./ReviewCard";
 import TrustpilotWidget from "@/app/_components/trustPilot/TrustPilot";
+import ClutchWidget from "@/app/_components/clutch/Clutch";
 
 const Clients_data = [
   {
@@ -68,7 +69,7 @@ const Clients = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        backgroundImage: "url('/_assets/png/clients-bg.png')",
+        backgroundImage: "url('/_assets/png/clients-bg.webp')",
         backgroundSize: "cover",
       }}
     >
@@ -184,7 +185,17 @@ const Clients = () => {
             <Review name="Hale Allon" />
           </Box>
         </Box>
-        <TrustpilotWidget />
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            gap: "20px",
+            alignItems: "center",
+          }}
+        >
+          <TrustpilotWidget />
+          <ClutchWidget />
+        </Box>
       </Box>
     </Box>
   );

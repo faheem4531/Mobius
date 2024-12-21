@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 
 import Step1 from "@/app/_assets/png/step1-icon.png";
-import Line from "@/app/_assets/svg/process-line.svg";
+import Line from "@/app/_assets/svg/process-line.webp";
 import Consultation from "@/app/_assets/svg/process/Consultation.svg";
 import Modal from "@/app/_assets/svg/process/3d-model.svg";
 import Storyboarding from "@/app/_assets/svg/process/Storyboarding.svg";
