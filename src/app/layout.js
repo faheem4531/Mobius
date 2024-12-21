@@ -9,6 +9,9 @@ export const metadata = {
   title: "Mobius Studios | 3d animation & CGI videos in USA",
   description:
     "Mobius Studios, a USA-based 3D animation & CGI video agency, creates stunning animations to enhance your brand’s social media, ads, and digital marketing presence",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }) {
