@@ -14,7 +14,6 @@ import Step2 from "@/app/_assets/svg/simulation-service.webp";
 import Step2Active from "@/app/_assets/svg/simulation-service-active.webp";
 import Step3 from "@/app/_assets/svg/video-service.webp";
 import Step3Active from "@/app/_assets/svg/video-service-active.webp";
-import Lense from "@/app/_assets/png/lense.webp";
 import LensViewer from "@/app/Model/Model";
 
 const Services = () => {
@@ -132,7 +131,6 @@ const Services = () => {
               }`}
               onClick={handlingModel}
             >
-              {/* 3D Modeling */}
               Textured Model
               <Image
                 alt="Textured Model icon"
@@ -146,7 +144,6 @@ const Services = () => {
               }`}
               onClick={handlingSimulation}
             >
-              {/* 3D Simulation */}
               Wireframes
               <Image
                 alt="Wireframes icon"
@@ -160,7 +157,6 @@ const Services = () => {
               }`}
               onClick={handlingClay}
             >
-              {/* Video Animation */}
               3d Clay Model
               <Image
                 alt="3d Clay Model icon"

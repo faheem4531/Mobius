@@ -9,10 +9,10 @@ import { Canvas } from "@react-three/fiber";
 
 import { Lens } from "@/app/Model/Lens";
 import { LensClay } from "@/app/Model/LensClay";
+import styles from "./styles.module.css";
 import { LensWireFrame } from "./LensWireFrame";
 import Lense from "@/app/_assets/png/lense.webp";
 import MaskButton from "@/app/_components/button/MaskButton";
-import styles from "./styles.module.css";
 
 const Model = ({ modelStates }) => {
   function setModel() {
