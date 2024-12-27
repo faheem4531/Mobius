@@ -17,7 +17,8 @@ import Sony from "@/app/_assets/clients/sony.svg";
 import Review from "./ReviewCard";
 import TrustpilotWidget from "@/app/_components/trustPilot/TrustPilot";
 import ClutchWidget from "@/app/_components/clutch/Clutch";
-
+import Link from "next/link";
+import VerifyLogo from "@/app/_assets/png/Verfifed-Agency-Round-v1.png";
 const Clients_data = [
   {
     id: "Sony",
@@ -195,6 +196,9 @@ const Clients = () => {
         >
           <TrustpilotWidget />
           <ClutchWidget />
+          <Link href={"https://www.designrush.com/"}>
+            <Image src={VerifyLogo} alt="DesignRush" width={100} />
+          </Link>
         </Box>
       </Box>
     </Box>
