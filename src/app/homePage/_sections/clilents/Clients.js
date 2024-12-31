@@ -19,6 +19,7 @@ import TrustpilotWidget from "@/app/_components/trustPilot/TrustPilot";
 import ClutchWidget from "@/app/_components/clutch/Clutch";
 import Link from "next/link";
 import VerifyLogo from "@/app/_assets/png/Verfifed-Agency-Round-v1.png";
+
 const Clients_data = [
   {
     id: "Sony",
