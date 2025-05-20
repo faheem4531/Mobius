@@ -20,7 +20,7 @@ const Footer = () => {
     setEmail("");
   }
 
-  const phoneNumber = "+1 (415) 800 3047";
+  const phoneNumber = "+1 760 284-7981";
   // const emailAddress = "hr@mobiusmotionstudio.com";
   const emailAddress = "info@mobiusstudios.co";
   const address = "30 N Gould St STE N, Sheridan, WY 82801";
