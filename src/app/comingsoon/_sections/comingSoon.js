@@ -2,8 +2,8 @@
 
 import { useEffect, useState, useRef } from "react";
 import { Box, Typography } from "@mui/material";
-import Image from "next/image";
-import Coming from "@/app/_assets/png/Coming-Soon.png";
+// import Image from "next/image";
+// import Coming from "@/app/_assets/png/Coming-Soon.png";
 
 export default function Hero() {
   const targetTimeRef = useRef(

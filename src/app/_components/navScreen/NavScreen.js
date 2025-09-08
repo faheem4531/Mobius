@@ -1,6 +1,5 @@
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
-import logo from "@/app/_assets/svg/logo.svg";
 import leftSide from "@/app/_assets/png/Trans.png";
 import rightSide from "@/app/_assets/png/Solid.png";
 import Link from "next/link";
