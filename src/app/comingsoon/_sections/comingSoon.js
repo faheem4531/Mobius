@@ -83,10 +83,10 @@ export default function Hero() {
     <Box
       sx={{
         width: "100%",
+        // maxWidth: "1440px",
         height: "90vh",
         backgroundImage: "url('/backgorund.png')",
         backgroundSize: "cover",
-
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         display: "flex",
@@ -94,16 +94,35 @@ export default function Hero() {
         // justifyContent: "center",
 
         alignItems: "center",
-        pt: { xs: 12, sm: 16, xl: 36 },
+        px: "8px",
+        pt: { xs: 32, sm: 31, md: 28, xl: 30 },
       }}
     >
       {/* Coming Soon Image */}
-      <Box sx={{ maxWidth: "700px", width: "100%" }}>
-        <Image
+      <Box
+        sx={{
+          // maxWidth: "700px",
+          width: "100%",
+          textAlign: "center",
+        }}
+      >
+        <Typography
+          sx={{
+            ml: "10px",
+            textAlign: "center",
+            fontSize: { xs: "30px", sm: "36px", md: "48px", lg: "56px" },
+            letterSpacing: { xs: "12px", sm: "24px", md: "32px" },
+            textTransform: "uppercase",
+            fontWeight: "300 !important",
+          }}
+        >
+          Coming Soon
+        </Typography>
+        {/* <Image
           src={Coming}
           alt="Coming Soon"
-          style={{ width: "100%", height: "auto", objectFit: "contain" }}
-        />
+          style={{ width: "100%", height: "100%", objectFit: "contain" }}
+        /> */}
       </Box>
 
       {/* Countdown Timer */}

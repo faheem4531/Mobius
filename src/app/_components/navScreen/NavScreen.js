@@ -1,9 +1,10 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import logo from "@/app/_assets/svg/logo.svg";
-import leftSide from "@/app/_assets/png/leftSide.png";
-import rightSide from "@/app/_assets/png/rightSide.png";
+import leftSide from "@/app/_assets/png/Trans.png";
+import rightSide from "@/app/_assets/png/Solid.png";
 import Link from "next/link";
+import NavBar from "../navBar/NavBar";
 
 export default function NavScreen() {
   return (
@@ -12,12 +13,14 @@ export default function NavScreen() {
         sx={{
           maxWidth: "1440px",
           width: "100%",
-          // p: { lg: "16px 80px" },
+
           m: "auto",
         }}
       >
         {/* nav */}
-        <Box
+        <NavBar />
+
+        {/* <Box
           sx={{
             width: "100%",
             p: { xs: "16px", sm: "16px 80px" },
@@ -38,18 +41,19 @@ export default function NavScreen() {
               style={{ width: "100%", height: "100%" }}
             />
           </Box>
-        </Box>
+        </Box> */}
 
         {/* hero */}
         <Box
           sx={{
             width: "100%",
-            p: { xs: "16px", sm: "16px 80px" },
+            p: { xs: " 16px ", md: "16px 80px" },
             bgcolor: "#000",
             m: "auto",
             display: "flex",
-            // gap: { xs: "20px", sm: "0px" },
-            justifyContent: { xs: "space-between", sm: "center" },
+            alignItems: "center",
+            height: { xs: "80vh", sm: "90vh" },
+            justifyContent: { xs: "center" },
           }}
         >
           <Box
@@ -57,7 +61,7 @@ export default function NavScreen() {
               display: { xs: "none", sm: "block" },
 
               maxWidth: { lg: "630px", sm: "450px", sm: "550px" },
-              minWidth: { lg: "550px", md: "420px", sm: "550px", xs: "100%" },
+              minWidth: { lg: "550px", md: "420px", sm: "250px", xs: "100%" },
               height: "auto",
             }}
           >
@@ -74,13 +78,31 @@ export default function NavScreen() {
                 muted
               />
             </Link>
+            <Typography
+              // variant="h2"
+              sx={{
+                fontSize: { sm: 28, md: 38, lg: 48 },
+                fontWeight: "400",
+                textTransform: "uppercase",
+
+                // bgcolor: "#4a4949ff",
+
+                width: "100%",
+                color: "#fff",
+                textAlign: "center",
+                // mt: "-10px",
+                mx: "auto",
+              }}
+            >
+              Product Design
+            </Typography>
           </Box>
 
           <Box
             sx={{
               display: { xs: "none", sm: "block" },
               maxWidth: { lg: "630px", sm: "450px", sm: "550px" },
-              minWidth: { lg: "550px", md: "420px", sm: "550px", xs: "100%" },
+              minWidth: { lg: "550px", md: "420px", sm: "250px", xs: "100%" },
               height: "auto",
             }}
           >
@@ -97,26 +119,57 @@ export default function NavScreen() {
                 muted
               />
             </Link>
+            <Typography
+              sx={{
+                fontSize: { sm: 28, md: 38, lg: 48 },
+                fontWeight: "400",
+                textTransform: "uppercase",
+
+                // bgcolor: "#4a4949ff",
+                width: "100%",
+                color: "#fff",
+                textAlign: "center",
+              }}
+            >
+              3D Visual Design
+            </Typography>
           </Box>
 
           <Box
             sx={{
+              // bgcolor: "#ccc",
               display: { xs: "block", sm: "none" },
-              width: "250px",
+              width: "100%",
+              maxWidth: "300px",
             }}
           >
             <Link href="/comingsoon">
               <Image
                 src={leftSide}
                 alt="logo"
-                style={{ width: "100%", height: "100%" }}
+                style={{ width: "100%", height: "100%", objectFit: "contain" }}
               />
             </Link>
+            <Typography
+              sx={{
+                fontSize: "20px",
+                // bgcolor: "#49494990",
+                pr: "3px",
+                width: "100%",
+                color: "#fff",
+                textAlign: "center",
+                textTransform: "uppercase",
+              }}
+            >
+              Product Design
+            </Typography>
           </Box>
           <Box
             sx={{
+              // bgcolor: "#ccc",
               display: { xs: "block", sm: "none" },
-              width: "250px",
+              width: "100%",
+              maxWidth: "300px",
             }}
           >
             <Link href="/homePage">
@@ -126,6 +179,20 @@ export default function NavScreen() {
                 style={{ width: "100%", height: "100%", objectFit: "contain" }}
               />
             </Link>
+            <Typography
+              sx={{
+                fontSize: "20px",
+
+                // bgcolor: "#49494990",
+                width: "100%",
+
+                color: "#fff",
+                textAlign: "center",
+                textTransform: "uppercase",
+              }}
+            >
+              3D Visual Design
+            </Typography>
           </Box>
         </Box>
       </Box>
