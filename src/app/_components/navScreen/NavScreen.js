@@ -1,46 +1,35 @@
+"use client";
+
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import leftSide from "@/app/_assets/png/Trans.png";
+
 import rightSide from "@/app/_assets/png/Solid.png";
 import Link from "next/link";
 import NavBar from "../navBar/NavBar";
-
+import { useState } from "react";
+import HomePage from "@/app/homePage/page";
 export default function NavScreen() {
+  const [showHomePage, setShowHomePage] = useState(false);
+
+  const handleClick = () => {
+    setShowHomePage(true);
+  };
+  if (showHomePage) {
+    return <HomePage />;
+  }
   return (
     <Box sx={{ bgcolor: "#000" }}>
       <Box
         sx={{
           maxWidth: "1440px",
           width: "100%",
-
           m: "auto",
         }}
       >
         {/* nav */}
         <NavBar />
-
-        {/* <Box
-          sx={{
-            width: "100%",
-            p: { xs: "16px", sm: "16px 80px" },
-            bgcolor: "#000",
-            m: "auto",
-            display: "flex",
-          }}
-        >
-          <Box
-            sx={{
-              width: "64px",
-              height: "64px",
-            }}
-          >
-            <Image
-              src={logo}
-              alt="logo"
-              style={{ width: "100%", height: "100%" }}
-            />
-          </Box>
-        </Box> */}
+        {/* <HomePage/> */}
 
         {/* hero */}
         <Box
@@ -64,7 +53,7 @@ export default function NavScreen() {
               height: "auto",
             }}
           >
-            <Link href="/comingsoon">
+            <Link href="/design">
               <video
                 src="/video/Product design _ left.webm"
                 alt="3d video consumer electronics"
@@ -105,7 +94,7 @@ export default function NavScreen() {
               height: "auto",
             }}
           >
-            <Link href="/homePage">
+            <Box sx={{ cursor: "pointer" }} onClick={handleClick}>
               <video
                 src="/video/3d Animation (2).webm"
                 alt="3d video consumer electronics"
@@ -117,7 +106,7 @@ export default function NavScreen() {
                 loop
                 muted
               />
-            </Link>
+            </Box>
             <Typography
               sx={{
                 fontSize: { sm: 28, md: 38, lg: 48 },
@@ -142,7 +131,7 @@ export default function NavScreen() {
               maxWidth: "300px",
             }}
           >
-            <Link href="/comingsoon">
+            <Link href="/design">
               <Image
                 src={leftSide}
                 alt="logo"
@@ -164,6 +153,7 @@ export default function NavScreen() {
             </Typography>
           </Box>
           <Box
+            onClick={handleClick}
             sx={{
               // bgcolor: "#ccc",
               display: { xs: "block", sm: "none" },
@@ -171,13 +161,13 @@ export default function NavScreen() {
               maxWidth: "300px",
             }}
           >
-            <Link href="/homePage">
-              <Image
-                src={rightSide}
-                alt="logo"
-                style={{ width: "100%", height: "100%", objectFit: "contain" }}
-              />
-            </Link>
+            {/* <Link href="/homePage"> */}
+            <Image
+              src={rightSide}
+              alt="logo"
+              style={{ width: "100%", height: "100%", objectFit: "contain" }}
+            />
+            {/* </Link> */}
             <Typography
               sx={{
                 fontSize: "20px",
