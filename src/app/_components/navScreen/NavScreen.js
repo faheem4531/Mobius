@@ -3,7 +3,11 @@
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import leftSide from "@/app/_assets/png/Trans.png";
-
+// import ArrowBackIos from "@mui/icons-material/ArrowBackIos";
+// import ArrowForwardIos from "@mui/icons-material/ArrowForwardIos";
+// import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import rightSide from "@/app/_assets/png/Solid.png";
 import Link from "next/link";
 import NavBar from "../navBar/NavBar";
@@ -26,6 +30,7 @@ export default function NavScreen() {
         sx={{
           maxWidth: "1440px",
           width: "100%",
+
           m: "auto",
         }}
       >
@@ -42,8 +47,10 @@ export default function NavScreen() {
             m: "auto",
             display: "flex",
             alignItems: "center",
-            height: { xs: "60vh", sm: "90vh" },
+            height: { xs: "60vh", sm: "100%" },
             justifyContent: { xs: "center" },
+            overflow: "hidden",
+            // height: "100%",
           }}
         >
           {/* sm screeen.... ================--------------------------------------- */}
@@ -53,13 +60,17 @@ export default function NavScreen() {
               display: { xs: "none", sm: "block" },
 
               // bgcolor: "#ccc",
+              // overflow: "hidden",
+              // height: "1700px",
               position: "relative",
               width: "100%",
               maxWidth: { xs: "300px", sm: "500px", md: "800px" },
-              height: "auto",
+              // height: "auto",
               cursor: "pointer",
               "&:hover .staticImg": { opacity: 0 }, // hide image on hover
               "&:hover .hoverVid": { opacity: 1 }, // show video on hover
+              "&:hover .hoverText": { transform: "translateX(30px)" }, // text thoda right slide
+              "&:hover .hoverArrow": { opacity: 1, transform: "translateX(0)" },
             }}
           >
             {/* Default Image */}
@@ -86,7 +97,9 @@ export default function NavScreen() {
               className="hoverVid"
               sx={{
                 position: "absolute",
-                top: { sm: -27, md: -35, lg: -42 },
+                // top: 0,
+                top: { sm: -25, md: -35, lg: -42 },
+                // mt: "-1%",
                 left: 0,
                 width: "100%",
                 height: "100%",
@@ -98,16 +111,31 @@ export default function NavScreen() {
 
             {/* Title */}
             <Typography
+              className="hoverText"
               sx={{
-                fontSize: { xs: 20, sm: 28, md: 38, lg: 48 },
-                width: "100%",
+                // bgcolor: "#ccc",
+                fontSize: { xs: 20, sm: 24, md: 34, lg: 48 },
                 color: "#fff",
                 textAlign: "center",
                 textTransform: "uppercase",
                 fontFamily: "Poppins, sans-serif !important",
                 mt: 1,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: { sm: 1, md: 2 },
+                transition: "transform 0.3s ease", // text move
               }}
             >
+              <ArrowBackIcon
+                className="hoverArrow"
+                sx={{
+                  opacity: 0,
+                  transform: "translateX(-10px)",
+                  transition: "all 0.3s ease",
+                  fontSize: { xs: 20, sm: 24, md: 34, lg: 48 },
+                }}
+              />
               Product Design
             </Typography>
           </Box>
@@ -117,6 +145,8 @@ export default function NavScreen() {
             sx={{
               display: { xs: "none", sm: "block" },
               // bgcolor: "#ccc",
+              // overflow: "hidden",
+              // height: "1700px",
               position: "relative",
               maxWidth: { xs: "300px", sm: "500px", md: "800px" },
               width: "100%",
@@ -124,6 +154,8 @@ export default function NavScreen() {
               cursor: "pointer",
               "&:hover .staticImg": { opacity: 0 },
               "&:hover .hoverVid": { opacity: 1 },
+              "&:hover .hoverText": { transform: "translateX(-30px)" }, // text thoda left slide
+              "&:hover .hoverArrow": { opacity: 1, transform: "translateX(0)" },
             }}
           >
             {/* Default Image */}
@@ -148,8 +180,9 @@ export default function NavScreen() {
               muted
               className="hoverVid"
               sx={{
+                // top: 0,
                 position: "absolute",
-                top: { sm: -27, md: -35, lg: -42 },
+                top: { sm: -25, md: -35, lg: -42 },
                 left: 0,
                 width: "100%",
                 height: "100%",
@@ -161,19 +194,32 @@ export default function NavScreen() {
 
             {/* Title */}
             <Typography
+              className="hoverText"
               sx={{
-                fontSize: { xs: 20, sm: 28, md: 38, lg: 48 },
-                fontWeight: "400",
-                textTransform: "uppercase",
-                fontFamily: "Poppins, sans-serif !important",
-                // bgcolor: "#4a4949ff",
-                width: "100%",
+                // bgcolor: "#ccc",
+                fontSize: { xs: 20, sm: 24, md: 34, lg: 48 },
                 color: "#fff",
                 textAlign: "center",
+                textTransform: "uppercase",
+                fontFamily: "Poppins, sans-serif !important",
                 mt: 1,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: { sm: 1, md: 2 },
+                transition: "transform 0.3s ease", // text move
               }}
             >
               3D Visual Design
+              <ArrowForwardIcon
+                className="hoverArrow"
+                sx={{
+                  opacity: 0,
+                  transform: "translateX(10px)",
+                  transition: "all 0.3s ease",
+                  fontSize: { xs: 20, sm: 24, md: 34, lg: 48 },
+                }}
+              />
             </Typography>
           </Box>
 
@@ -201,7 +247,7 @@ export default function NavScreen() {
             </Link>
             <Typography
               sx={{
-                fontSize: "20px",
+                fontSize: "18px",
                 // bgcolor: "#49494990",
                 pr: "3px",
                 width: "100%",
@@ -231,7 +277,7 @@ export default function NavScreen() {
 
             <Typography
               sx={{
-                fontSize: "20px",
+                fontSize: "18px",
                 // bgcolor: "#49494990",
                 width: "100%",
                 color: "#fff",
