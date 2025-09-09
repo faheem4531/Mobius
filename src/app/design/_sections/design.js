@@ -84,7 +84,7 @@ export default function Hero() {
       sx={{
         width: "100%",
         // maxWidth: "1440px",
-        height: "90vh",
+        height: { xs: "70vh", md: "90vh" },
         backgroundImage: "url('/backgorund.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -95,7 +95,7 @@ export default function Hero() {
 
         alignItems: "center",
         px: "8px",
-        pt: { xs: 32, sm: 31, md: 28, xl: 30 },
+        pt: { xs: 24, sm: 22, md: 24, lg: 26, xl: 30 },
       }}
     >
       {/* Coming Soon Image */}
