@@ -171,6 +171,7 @@ export default function NavScreen() {
               autoPlay
               loop
               muted
+              onClick={() => router.push("/design")}
               className="hoverVid"
               sx={{
                 position: "absolute",
