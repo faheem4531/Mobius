@@ -116,7 +116,7 @@ export default function NavScreen() {
                 fontWeight: 300,
                 fontFamily: "Avenir3 !important",
                 transition:
-                  "transform 0.3s ease-in-out, margin-left 0.3s ease-in-out",
+                  "transform 0.3s ease-in-out, margin-right 0.3s ease-in-out",
               }}
             >
               <Box
