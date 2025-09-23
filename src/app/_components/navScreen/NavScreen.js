@@ -26,7 +26,7 @@ export default function NavScreen() {
     return <HomePage />;
   }
   return (
-    <Box sx={{ bgcolor: "#000000" }}>
+    <Box sx={{ bgcolor: "#000000", height: "100vh", overflow: "hidden" }}>
       <Box
         sx={{
           maxWidth: "1440px",
@@ -40,13 +40,15 @@ export default function NavScreen() {
         {/* hero */}
         <Box
           sx={{
-            maxWidth: "1440px",
+            // maxWidth: "1440px",
             width: "100%",
             m: "auto",
+            p: { xs: 16, sm: "60px 20px", lg: "80px 25px" },
             display: "flex",
+            // bgcolor: "#fff",
             alignItems: "center",
-            mt: { sm: "-70px !important", xl: "1px" },
-            height: { xs: "90vh", sm: "auto" },
+            mt: { sm: "-9% !important", lg: "-6% !important", xl: "1px" },
+            height: { xs: "90vh", md: "100vh" },
             justifyContent: { xs: "center" },
             overflow: { sm: "hidden" },
             flexDirection: { xs: "row", sm: "row" },
@@ -55,10 +57,11 @@ export default function NavScreen() {
           }}
         >
           {/* sm screeen.... ================--------------------------------------- */}
+
+          {/*left */}
           <Box
             sx={{
               display: { xs: "none", sm: "block" },
-
               position: "relative",
               maxWidth: {
                 xs: "300px",
@@ -66,81 +69,94 @@ export default function NavScreen() {
                 md: "1000px",
                 xl: "1800px",
               },
-
-              minWidth: { xl: 900 },
+              // border: "1px solid orange",
+              minWidth: { xl: 700 },
+              // overflow: { sm: "hidden" },
               width: "100%",
-
               cursor: "pointer",
               "&:hover .staticImg": { opacity: 0 },
               "&:hover .hoverVid": { opacity: 1 },
-              "&:hover .hoverText": { transform: "translateX(30px)" },
-              "&:hover .hoverArrow": {
-                opacity: 1,
-                transform: "translateX(30px)",
+              "&:hover .hoverText": {
+                fontFamily: "Poppins, sans-serif !important",
+                fontWeight: 700,
+
+                transform: "translateX(8%)",
                 transition: "transform 0.3s  ease-in-out",
               },
-              mt: { sm: 1, md: -10, xl: 1 },
-
-              "&:hover .hoverText": {
-                ml: { md: -1, xl: 0 },
-                transform: "translateX(30px)",
-                justifyContent: { sm: "space-between", xl: "end" },
-                fontFamily: "Avenir5 !important",
-                fontWeight: 500,
-                gap: { sm: 4, md: 2, xl: "23%" },
+              "&:hover .hoverArrow": {
+                opacity: 1,
+                transform: "translateX(5px)",
                 transition: "transform 0.3s  ease-in-out",
               },
             }}
           >
-            <Typography
-              className="hoverText"
+            <Box
               sx={{
                 position: "absolute",
-                bgcolor: "#000000cb",
-                fontSize: { xs: 20, sm: 24, md: 34, lg: 48 },
-                color: "#fff",
-                top: { sm: "84%", xl: "90%" },
-                textAlign: "start",
-                textTransform: "uppercase",
-                ml: { md: -1, xl: 0 },
-
-                display: "flex",
-                justifyContent: { sm: "center", xl: "center" },
-                alignItems: "center",
-                gap: { sm: 5, md: 2, xl: "20%" },
-
-                maxWidth: { sm: "90%", md: "95%", xl: "850px" },
+                maxWidth: { sm: "720px", xl: "800px" },
                 width: "100%",
-                zIndex: 111,
-                overflow: "hidden",
-                fontWeight: 300,
-                fontFamily: "Avenir3 !important",
-                transition:
-                  "transform 0.3s ease-in-out, margin-right 0.3s ease-in-out",
+                bgcolor: "#000000",
+                display: "flex",
+                // height: 200,
+                left: 0,
+                textAlign: "center",
+                // p: "18px",
+                flexDirection: "row-reverse",
+                justifyContent: { sm: "space-between", sm: "center" },
+                // justifyContent: { sm: "center" },
+                gap: { xl: "12%" },
+                alignItems: "center",
+                top: { sm: "76%" },
               }}
             >
+              <Typography
+                className="hoverText"
+                sx={{
+                  // height: "150px",
+                  // border: "1px solid yellow",
+                  p: "18px",
+                  bgcolor: "#000000",
+                  fontSize: { xs: 20, sm: 24, md: 34, lg: 48 },
+                  color: "#fff",
+                  textAlign: { sm: "center" },
+                  textTransform: "uppercase",
+                  width: "100%",
+                  zIndex: 111,
+                  fontWeight: 300,
+                  maxWidth: { xl: "500px" },
+                  transition: "transform 0.3s  ease-in-out",
+                  fontFamily: "Poppins, sans-serif !important",
+                  fontWeight: 200,
+                  fontStyle: "normal",
+                }}
+              >
+                Product Design
+              </Typography>
               <Box
                 className="hoverArrow"
                 component="img"
                 src={Arrowleft.src}
                 alt="Arrow"
                 sx={{
+                  // transition: "font-weight 0.6s ease-in-out",
                   maxWidth: { xs: 20, sm: 24, md: 34, lg: 48 },
                   width: "100%",
                   height: "100%",
+                  zIndex: 111,
                   opacity: 0,
-                  transform: "translateX(-10px)",
-                  // transition: "transform 0.3s ease",
+                  // transform: "translateX(10px)",
+                  // transition: "transform 1s  ease-in-out",
                 }}
               />
-              Product Design
-            </Typography>
+            </Box>
+
             {/* Default Image */}
             <Image
               src={leftSide}
               alt="Product design"
               className="staticImg"
               style={{
+                overflow: "hidden",
                 width: "100%",
                 height: "100%",
                 objectFit: "contain",
@@ -155,13 +171,12 @@ export default function NavScreen() {
               autoPlay
               loop
               muted
-              onClick={() => router.push("/design")}
               className="hoverVid"
               sx={{
                 position: "absolute",
                 // top: 0,
-                top: { sm: -2, md: -3, lg: 0 },
-                // mt: "-1%",
+                top: { sm: -2, md: -3, lg: 0, xl: -1 },
+                overflow: { sm: "hidden" },
                 left: 0,
                 width: "100%",
 
@@ -171,9 +186,9 @@ export default function NavScreen() {
                 transition: "opacity 0.4s ease-in-out",
               }}
             />
-
-            {/* Title */}
           </Box>
+
+          {/* right */}
           <Box
             onClick={handleClick}
             sx={{
@@ -186,77 +201,82 @@ export default function NavScreen() {
                 md: "1000px",
                 xl: "1800px",
               },
-
-              minWidth: { xl: 900 },
+              // border: "1px solid orange",
+              minWidth: { xl: 700 },
 
               width: "100%",
               cursor: "pointer",
               "&:hover .staticImg": { opacity: 0 },
               "&:hover .hoverVid": { opacity: 1 },
-              "&:hover .hoverText": { transform: "translateX(-30px)" }, // text thoda left slide
-              "&:hover .hoverArrow": {
-                opacity: 1,
-                transform: "translateX(0)",
+              "&:hover .hoverText": {
+                // fontFamily: "Avenir8 !important",
+                fontFamily: "Poppins, sans-serif !important",
+                fontWeight: 700,
+
+                // transform: "translateX(-80px)",
+                transform: "translateX(-8%)",
                 transition: "transform 0.3s  ease-in-out",
               },
-
-              mt: { sm: 1, md: -10, xl: 1 },
-
-              "&:hover .hoverText": {
-                ml: { md: -3, xl: 0 },
-                // mr: { md: 4, xl: 0 },
-                transform: "translateX(30px)",
-                justifyContent: { sm: "start", lg: "space-between" },
-                // width: "100%",
-                fontFamily: "Avenir5 !important",
-                fontWeight: 500,
-                gap: { sm: "18%", lg: "26%", xl: "20%" },
+              "&:hover .hoverArrow": {
+                opacity: 1,
+                // transform: "translateX(-5px)",
+                transition: "transform 0.3s  ease-in-out",
               },
             }}
           >
-            <Typography
-              className="hoverText"
+            <Box
               sx={{
                 position: "absolute",
-                bgcolor: "#000000cb",
-                fontSize: { xs: 20, sm: 24, md: 34, lg: 48 },
-                color: "#fff",
-                top: { sm: "84%", xl: "90%" },
-                textAlign: "start",
-                textTransform: "uppercase",
-                ml: { md: -1, xl: 0 },
-
-                display: "flex",
-                justifyContent: { sm: "center", xl: "center" },
-                alignItems: "center",
-                gap: { sm: 5, md: 1, xl: "25%" },
-
-                maxWidth: { sm: "95%", xl: "850px" },
                 width: "100%",
-                zIndex: 111,
-                overflow: "hidden",
-                fontWeight: 300,
-                fontFamily: "Avenir3 !important",
-                transition:
-                  "transform 0.3s ease-in-out, margin-left 0.3s ease-in-out",
+                maxWidth: "720px",
+                bgcolor: "#000000",
+                display: "flex",
+                // height: 200,
+                justifyContent: { sm: "space-between" },
+                alignItems: "center",
+                top: { sm: "76%" },
               }}
             >
-              3D Visual Design
+              <Typography
+                className="hoverText"
+                sx={{
+                  // border: "1px solid yellow",
+                  p: "18px",
+                  bgcolor: "#000",
+                  fontSize: { xs: 20, sm: 24, md: 34, lg: 48 },
+                  color: "#fff",
+                  textAlign: "center",
+                  textTransform: "uppercase",
+                  // ml: 2,
+                  width: "100%",
+                  //
+                  zIndex: 111,
+
+                  transition: "transform 0.3s  ease-in-out",
+                  fontFamily: "Poppins, sans-serif !important",
+                  fontWeight: 200,
+                  fontStyle: "normal",
+                }}
+              >
+                3D Visual Design
+              </Typography>
               <Box
                 className="hoverArrow"
                 component="img"
                 src={rightArrow.src}
                 alt="Arrow"
                 sx={{
+                  // transition: "font-weight 0.6s ease-in-out",
                   maxWidth: { xs: 20, sm: 24, md: 34, lg: 48 },
                   width: "100%",
                   height: "100%",
+                  zIndex: 111,
                   opacity: 0,
-                  transform: "translateX(10px)",
-                  transition: "transform 0.3s  ease-in-out",
+                  // transform: "translateX(10px)",
+                  // transition: "transform 1s  ease-in-out",
                 }}
               />
-            </Typography>
+            </Box>
             {/* Default Image */}
             <Image
               src={rightSide}
@@ -265,8 +285,9 @@ export default function NavScreen() {
               style={{
                 width: "100%",
                 height: "100%",
+                overflow: "hidden",
                 objectFit: "contain",
-                transition: "opacity 0.4s ease-in-out",
+                transition: "opacity 1s ease-in-out",
               }}
             />
 
@@ -280,13 +301,14 @@ export default function NavScreen() {
               className="hoverVid"
               sx={{
                 position: "absolute",
-                top: { sm: -2, md: -3, lg: 0 },
+                top: { sm: -2, md: -3, lg: 0, xl: -1 },
                 left: 0,
                 width: "100%",
                 height: "100%",
                 objectFit: "contain",
+                overflow: { sm: "hidden" },
                 opacity: 0,
-                transition: "opacity 0.4s ease-in-out",
+                transition: "opacity 1s ease-in-out",
               }}
             />
 
@@ -298,7 +320,7 @@ export default function NavScreen() {
             sx={{
               display: { xs: "block", sm: "none" },
               maxWidth: "500px",
-              minWidth: 400,
+              minWidth: 360,
               width: "100%",
               // maxWidth: { lg: "630px", sm: "450px", sm: "550px" },
               // minWidth: { lg: "550px", md: "420px", sm: "250px", xs: "100%" },
@@ -327,7 +349,7 @@ export default function NavScreen() {
               display: { xs: "block", sm: "none" },
               // maxWidth: { lg: "630px", sm: "450px", sm: "550px" },
               maxWidth: "500px",
-              minWidth: 400,
+              minWidth: 360,
               width: "100%",
               height: "auto",
               position: "relative",
@@ -354,7 +376,7 @@ export default function NavScreen() {
             sx={{
               position: "absolute",
               // top: 90,
-              right: 360,
+              right: 260,
               display: { xs: "block", sm: "none" },
               // maxWidth: "500px",
               width: "100%",
@@ -391,7 +413,7 @@ export default function NavScreen() {
             sx={{
               position: "absolute",
               // top: 90,
-              left: 360,
+              left: 230,
               display: { xs: "block", sm: "none" },
               // maxWidth: "500px",
               width: "100%",

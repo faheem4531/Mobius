@@ -119,6 +119,7 @@ export default function Home() {
             gtag('config', 'G-DWT2N0FQWP');
           `}
       </Script>
+
       <NavScreen />
     </>
   );
