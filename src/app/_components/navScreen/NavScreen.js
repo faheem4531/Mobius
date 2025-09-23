@@ -46,7 +46,6 @@ export default function NavScreen() {
             display: "flex",
             alignItems: "center",
             mt: { sm: "-70px !important", xl: "1px" },
-            "@media (min-width:1200px) and (max-width:1400px)": {},
             height: { xs: "90vh", sm: "auto" },
             justifyContent: { xs: "center" },
             overflow: { sm: "hidden" },
@@ -116,6 +115,8 @@ export default function NavScreen() {
                 overflow: "hidden",
                 fontWeight: 300,
                 fontFamily: "Avenir3 !important",
+                transition:
+                  "transform 0.3s ease-in-out, margin-left 0.3s ease-in-out",
               }}
             >
               <Box
@@ -203,12 +204,13 @@ export default function NavScreen() {
 
               "&:hover .hoverText": {
                 ml: { md: -3, xl: 0 },
+                // mr: { md: 4, xl: 0 },
                 transform: "translateX(30px)",
-                justifyContent: { sm: "start" },
+                justifyContent: { sm: "start", lg: "space-between" },
                 // width: "100%",
                 fontFamily: "Avenir5 !important",
                 fontWeight: 500,
-                gap: { sm: "14%", xl: "20%" },
+                gap: { sm: "18%", lg: "26%", xl: "20%" },
               },
             }}
           >
@@ -235,6 +237,8 @@ export default function NavScreen() {
                 overflow: "hidden",
                 fontWeight: 300,
                 fontFamily: "Avenir3 !important",
+                transition:
+                  "transform 0.3s ease-in-out, margin-left 0.3s ease-in-out",
               }}
             >
               3D Visual Design
