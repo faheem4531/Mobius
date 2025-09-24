@@ -27,7 +27,7 @@ export default function NavScreen() {
     <Box
       sx={{
         bgcolor: "#000",
-        height: { xs: "100%", sm: "100vh" },
+        height: { xs: "90vh", sm: "100vh" },
         overflow: "hidden",
       }}
     >
