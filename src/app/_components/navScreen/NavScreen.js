@@ -2,6 +2,7 @@
 
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
+import HomePage from "@/app/homePage/page";
 import leftSide from "@/app/_assets/png/Trans.png";
 
 import rightSide from "@/app/_assets/png/Solid.png";
@@ -10,7 +11,6 @@ import Arrowleft from "@/app/_assets/png/Arrow left.png";
 
 import NavBar from "../navBar/NavBar";
 import { useState } from "react";
-import HomePage from "@/app/homePage/page";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 export default function NavScreen() {
