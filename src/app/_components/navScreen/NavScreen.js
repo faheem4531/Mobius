@@ -26,7 +26,7 @@ export default function NavScreen() {
   return (
     <Box
       sx={{
-        bgcolor: "#000",
+        bgcolor: "#9d4141ff",
         height: { xs: "90vh", sm: "100vh" },
         overflow: "hidden",
       }}
@@ -52,15 +52,15 @@ export default function NavScreen() {
             // bgcolor: "#fff",
             alignItems: "center",
             mt: {
-              xs: "-11% !important",
+              xs: "-10px !important",
               sm: "-9% !important",
               lg: "-6% !important",
               xl: "1px",
             },
-            height: { xs: "90vh", md: "100vh" },
+            height: { xs: "80vh", md: "100vh" },
             justifyContent: { xs: "center" },
             overflow: { sm: "hidden" },
-            flexDirection: { xs: "row", sm: "row" },
+            flexDirection: { xs: "row" },
             transform: { xs: "rotate(90deg)", sm: "unset" },
             position: "relative",
           }}
@@ -366,7 +366,6 @@ export default function NavScreen() {
               minWidth: 360,
               width: "100%",
               height: "auto",
-              position: "relative",
             }}
           >
             <Box sx={{ cursor: "pointer" }} onClick={handleClick}>
