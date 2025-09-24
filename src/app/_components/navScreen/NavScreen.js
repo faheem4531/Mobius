@@ -354,6 +354,7 @@ export default function NavScreen() {
                 autoPlay
                 loop
                 muted
+                playsInline
               />
             </Link>
           </Box>
@@ -380,6 +381,7 @@ export default function NavScreen() {
                 autoPlay
                 loop
                 muted
+                playsInline
               />
             </Box>
           </Box>
