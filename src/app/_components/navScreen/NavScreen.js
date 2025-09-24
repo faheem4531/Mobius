@@ -26,8 +26,8 @@ export default function NavScreen() {
   return (
     <Box
       sx={{
-        bgcolor: "#000000",
-        height: { xs: "90vh", sm: "100vh" },
+        bgcolor: "#984444ff",
+        height: { xs: "100vh", sm: "100vh" },
         overflow: "hidden",
       }}
     >
@@ -52,12 +52,12 @@ export default function NavScreen() {
             // bgcolor: "#fff",
             alignItems: "center",
             mt: {
-              xs: "-9% !important",
+              xs: "-14% !important",
               sm: "-9% !important",
               lg: "-6% !important",
               xl: "1px",
             },
-            height: { xs: "90vh", md: "100vh" },
+            height: { xs: "100vh", md: "100vh" },
             justifyContent: { xs: "center" },
             overflow: { sm: "hidden" },
             flexDirection: { xs: "row", sm: "row" },
