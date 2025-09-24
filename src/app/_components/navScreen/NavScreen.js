@@ -59,7 +59,7 @@ export default function NavScreen() {
             },
             height: { xs: "90vh", md: "100vh" },
             justifyContent: { xs: "center" },
-            overflow: { sm: "hidden" },
+            overflow: { xs: "hidden" },
             flexDirection: { xs: "row", sm: "row" },
             transform: { xs: "rotate(90deg)", sm: "unset" },
             position: "relative",
@@ -115,7 +115,7 @@ export default function NavScreen() {
                 // justifyContent: { sm: "center" },
                 gap: { xl: "12%" },
                 alignItems: "center",
-                top: { sm: "80%", xl: "83%" },
+                top: { sm: "82%", md: "82%", lg: "80%", xl: "90%" },
               }}
             >
               <Typography
@@ -246,7 +246,7 @@ export default function NavScreen() {
                 // height: 200,
                 justifyContent: { sm: "space-between" },
                 alignItems: "center",
-                top: { sm: "80%", xl: "83%" },
+                top: { sm: "82%", md: "81%", lg: "80%", xl: "90%" },
               }}
             >
               <Typography
@@ -427,7 +427,7 @@ export default function NavScreen() {
             sx={{
               position: "absolute",
               // top: 90,
-              left: 230,
+              left: 240,
               display: { xs: "block", sm: "none" },
               // maxWidth: "500px",
               width: "100%",
