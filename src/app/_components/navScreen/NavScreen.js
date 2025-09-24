@@ -52,7 +52,7 @@ export default function NavScreen() {
             // bgcolor: "#fff",
             alignItems: "center",
             mt: {
-              xs: "-1px !important",
+              xs: "-10px !important",
               sm: "-9% !important",
               lg: "-6% !important",
               xl: "1px",
