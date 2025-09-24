@@ -27,7 +27,7 @@ export default function NavScreen() {
     <Box
       sx={{
         bgcolor: "#000000",
-        height: { xs: "100vh" },
+        height: { xs: "90vh", sm: "100vh" },
         overflow: "hidden",
       }}
     >
@@ -386,7 +386,7 @@ export default function NavScreen() {
             sx={{
               position: "absolute",
               // top: 90,
-              right: 250,
+              right: 260,
               display: { xs: "block", sm: "none" },
               // maxWidth: "500px",
               width: "100%",
