@@ -4,7 +4,6 @@ import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import leftSide from "@/app/_assets/png/Trans.png";
 
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import rightSide from "@/app/_assets/png/Solid.png";
 import rightArrow from "@/app/_assets/png/Arrow.png";
 import Arrowleft from "@/app/_assets/png/Arrow left.png";
@@ -14,7 +13,6 @@ import { useState } from "react";
 import HomePage from "@/app/homePage/page";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import zIndex from "@mui/material/styles/zIndex";
 export default function NavScreen() {
   const [showHomePage, setShowHomePage] = useState(false);
   const router = useRouter();
@@ -26,7 +24,9 @@ export default function NavScreen() {
     return <HomePage />;
   }
   return (
-    <Box sx={{ bgcolor: "#000000", height: "100vh", overflow: "hidden" }}>
+    <Box
+      sx={{ bgcolor: "#000000", height: { sm: "100vh" }, overflow: "hidden" }}
+    >
       <Box
         sx={{
           maxWidth: "1440px",
