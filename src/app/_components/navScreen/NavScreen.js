@@ -254,6 +254,7 @@ export default function NavScreen() {
                 sx={{
                   // border: "1px solid yellow",
                   // p: "1px",
+                  lineHeight: 1.2,
 
                   bgcolor: "#000",
                   fontSize: { xs: 20, sm: 24, md: 34, lg: 48 },
