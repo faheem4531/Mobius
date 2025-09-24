@@ -59,7 +59,7 @@ export default function NavScreen() {
             },
             height: { xs: "90vh", md: "100vh" },
             justifyContent: { xs: "center" },
-            overflow: { xs: "hidden" },
+            overflow: { sm: "hidden" },
             flexDirection: { xs: "row", sm: "row" },
             transform: { xs: "rotate(90deg)", sm: "unset" },
             position: "relative",
