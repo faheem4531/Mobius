@@ -109,13 +109,13 @@ export default function NavScreen() {
                 // height: 200,
                 left: 0,
                 textAlign: "center",
-                // p: "18px",
+                // p: "1px",
                 flexDirection: "row-reverse",
                 justifyContent: { sm: "space-between", sm: "center" },
                 // justifyContent: { sm: "center" },
                 gap: { xl: "12%" },
                 alignItems: "center",
-                top: { sm: "76%" },
+                top: { sm: "80%" },
               }}
             >
               <Typography
@@ -123,7 +123,7 @@ export default function NavScreen() {
                 sx={{
                   // height: "150px",
                   // border: "1px solid yellow",
-                  p: "18px",
+                  p: "1px",
                   bgcolor: "#000000",
                   fontSize: { xs: 20, sm: 24, md: 34, lg: 48 },
                   color: "#fff",
@@ -239,19 +239,19 @@ export default function NavScreen() {
                 position: "absolute",
                 width: "100%",
                 maxWidth: "720px",
-                bgcolor: "#000000",
+                // bgcolor: "#000000",
                 display: "flex",
                 // height: 200,
                 justifyContent: { sm: "space-between" },
                 alignItems: "center",
-                top: { sm: "76%" },
+                top: { sm: "80%" },
               }}
             >
               <Typography
                 className="hoverText"
                 sx={{
                   // border: "1px solid yellow",
-                  p: "18px",
+                  p: "1px",
                   bgcolor: "#000",
                   fontSize: { xs: 20, sm: 24, md: 34, lg: 48 },
                   color: "#fff",
