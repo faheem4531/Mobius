@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import styles from "./AboutUs.module.css";
+
 import Model from "@/_assets/png/aboutUs-model.webp";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -104,8 +104,18 @@ const AboutUs = () => {
           md: "120px 90px 110px 50x",
           lg: "120px 90px 110px 215px",
         },
+        "&::before": {
+          content: '""',
+          position: "absolute",
+          left: 0,
+          width: "100%",
+          background: "linear-gradient(var(--bg-gradient))",
+          zIndex: 1,
+          bottom: { xs: "unset", sm: "-50px", md: "-100px" },
+          height: { xs: 0, sm: "50%", md: "50%" },
+          display: { xs: "none", sm: "block" },
+        },
       }}
-      className={styles.about}
     >
       <Box
         sx={{
