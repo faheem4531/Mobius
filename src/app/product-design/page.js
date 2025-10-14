@@ -1,6 +1,6 @@
 import HeroIntro from "@/_components/design-home/hero-intro";
 import IntroSection from "../homePage/_sections/introSection/IntroSection";
-// import AboutUs from "./_sections/aboutUs/AboutUs";
+import AboutUs from "../homePage/_sections/aboutUs/AboutUs";
 // import Services from "./_sections/services/Services";
 // import JoinUs from "./_sections/joinUs/JoinUs";
 // import Footer from "@/_components/footer/Footer";
@@ -26,8 +26,8 @@ const Page = () => {
       </Head>
       <div>
         <HeroIntro />
-        {/* <AboutUs />
-        <Services />
+        <AboutUs />
+        {/*  <Services />
         <Service1 />
         <Service2 />
         <Service3 />

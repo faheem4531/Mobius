@@ -2,10 +2,10 @@
 
 import React, { useEffect, useRef } from "react";
 import styles from "./AboutUs.module.css";
-import Image from "next/image";
 import Model from "@/_assets/png/aboutUs-model.webp";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Box, Typography } from "@mui/material";
 
 const AboutUs = () => {
   const textRef = useRef(null);
@@ -86,28 +86,109 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <div className={styles.about}>
-      <div className={styles.modelContainer}>
-        <Image
-          src={Model}
-          alt="Metaleon 3d character"
-          className={styles.model}
-          ref={imageRef}
-        />
-      </div>
-      <div
-        className={styles.content}
-        style={{ position: "relative", zIndex: 2 }}
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        position: "relative",
+        backgroundImage: "url(/aboutUs-bg.webp)",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: { xs: "100% 50%", sm: "100% 90%" },
+        backgroundPosition: { xs: "center top", sm: "center" },
+        flexDirection: { xs: "column", sm: "row" },
+        columnGap: { xs: 0, sm: "100px", md: "220px" },
+        padding: {
+          xs: "50px 0",
+          sm: "85px 0px 70px 50px",
+          md: "120px 90px 110px 50x",
+          lg: "120px 90px 110px 215px",
+        },
+      }}
+      className={styles.about}
+    >
+      <Box
+        sx={{
+          position: "relative",
+          overflow: "hidden",
+          "&::before": {
+            content: '""',
+            display: { xs: "block", sm: "none" },
+            position: "absolute",
+            bottom: "-35px",
+            left: 0,
+            width: "100%",
+            height: "20%",
+            background: "linear-gradient(var(--bg-gradient))",
+            zIndex: 1,
+          },
+        }}
       >
-        <h4 ref={textRef}>About Us</h4>
-        <h2
+        <Box
+          component="img"
+          src={Model.src}
+          alt="Metaleon 3D character"
+          ref={imageRef}
+          sx={{
+            width: { xs: "172px", sm: "160px", md: "289px" },
+            height: { xs: "308px", sm: "280px", md: "515px" },
+            zIndex: 2,
+          }}
+        />
+      </Box>
+      <Box
+        sx={{
+          color: "var(--text-primary)",
+          fontWeight: 300,
+          width: { xs: "100%", sm: "50%" },
+          maxWidth: { sm: "620px" },
+          padding: { xs: "0 55px 0 30px", sm: 0 },
+          marginTop: { xs: "25px", sm: 0 },
+          position: "relative",
+          zIndex: 2,
+        }}
+      >
+        <Typography
+          ref={textRef}
+          variant="h6"
+          sx={{
+            fontSize: { xs: "16px", sm: "16px", md: "20px" },
+            marginBottom: { xs: "20px", sm: "18px", md: "30px" },
+          }}
+        >
+          About Us
+        </Typography>
+        <Typography
           ref={headingRef}
-          style={{ color: "var(--text-main)", fontSize: "38px" }}
+          variant="h2"
+          sx={{
+            fontSize: { xs: "18px", sm: "20px", md: "38px" },
+            color: "var(--text-main)",
+            lineHeight: "120%",
+          }}
         >
           Impracticality To Reality
-        </h2>
-        <hr />
-        <p ref={paragraphRef}>
+        </Typography>
+        <Box
+          component="hr"
+          sx={{
+            margin: {
+              xs: "20px 0",
+              sm: "18px 0 30px",
+              md: "30px 0 40px",
+            },
+            width: { xs: "50px", sm: "50px", md: "100px" },
+          }}
+        />
+        <Typography
+          ref={paragraphRef}
+          sx={{
+            fontSize: { xs: "14px", sm: "16px", md: "19px" },
+            lineHeight: { xs: "130%", sm: "120%" },
+            position: "relative",
+            zIndex: 20,
+          }}
+        >
           At Mobius Studios, 3D animation is not just a job for us. It&apos;s
           our true passion. We&apos;re a team of passionate project managers,
           creative directors, 3D animators, CGI artists, and Simulation experts
@@ -118,9 +199,9 @@ const AboutUs = () => {
           message effectively. We believe in the power of simplicity and
           clarity, stripping away the unnecessary to deliver animations that are
           both impactful and memorable.
-        </p>
-      </div>
-    </div>
+        </Typography>
+      </Box>
+    </Box>
   );
 };
 
