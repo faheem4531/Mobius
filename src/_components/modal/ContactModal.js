@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
 
-import Button from "@/app/_components/button/Button";
+import Button from "@/_components/button/Button";
 
 const style = {
   position: "absolute",

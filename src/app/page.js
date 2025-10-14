@@ -1,7 +1,7 @@
 "use client";
 
 import Script from "next/script";
-import NavScreen from "./_components/navScreen/NavScreen";
+import NavScreen from "@/_components/navScreen/NavScreen";
 
 export default function Home() {
   return (

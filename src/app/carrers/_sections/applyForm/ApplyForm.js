@@ -2,8 +2,8 @@
 
 import React from "react";
 import styles from "./ApplyForm.module.css";
-import Input from "@/app/_components/input/Input";
-import Button from "@/app/_components/button/Button";
+import Input from "@/_components/input/Input";
+import Button from "@/_components/button/Button";
 import Pin from "@/_assets/svg/attachPin.webp";
 import Image from "next/image";
 

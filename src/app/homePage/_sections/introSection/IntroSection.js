@@ -5,11 +5,11 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import NavBar from "@/app/_components/navBar/NavBar";
+import NavBar from "@/_components/navBar/NavBar";
 import Title from "@/_assets/svg/heading.webp";
 import styles from "./IntroSection.module.css";
-import MaskButton from "@/app/_components/button/MaskButton";
-import ContactModal from "@/app/_components/modal/ContactModal";
+import MaskButton from "@/_components/button/MaskButton";
+import ContactModal from "@/_components/modal/ContactModal";
 
 const IntroSection = () => {
   const headingImgRef = useRef(null);

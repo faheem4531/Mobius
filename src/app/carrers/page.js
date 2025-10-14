@@ -2,8 +2,8 @@
 
 import Head from "next/head";
 
-import Footer from "../_components/footer/Footer";
-import IntroSection from "../_components/introSection/IntroSection";
+import Footer from "@/_components/footer/Footer";
+import IntroSection from "@/_components/introSection/IntroSection";
 import JoinUs from "./_sections/joinUS/JoinUs";
 
 const Carrers = () => {

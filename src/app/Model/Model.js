@@ -12,7 +12,7 @@ import { LensClay } from "@/app/Model/LensClay";
 import styles from "./styles.module.css";
 import { LensWireFrame } from "./LensWireFrame";
 import Lense from "@/_assets/png/lense.webp";
-import MaskButton from "@/app/_components/button/MaskButton";
+import MaskButton from "@/_components/button/MaskButton";
 
 const Model = ({ modelStates }) => {
   function setModel() {

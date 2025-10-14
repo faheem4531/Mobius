@@ -15,8 +15,8 @@ import Metaleon from "@/_assets/clients/metaleon-society.svg";
 import PillPuncher from "@/_assets/clients/pill-puncher.svg";
 import Sony from "@/_assets/clients/sony.svg";
 import Review from "./ReviewCard";
-import TrustpilotWidget from "@/app/_components/trustPilot/TrustPilot";
-import ClutchWidget from "@/app/_components/clutch/Clutch";
+import TrustpilotWidget from "@/_components/trustPilot/TrustPilot";
+import ClutchWidget from "@/_components/clutch/Clutch";
 import Link from "next/link";
 import VerifyLogo from "@/_assets/png/Verfifed-Agency-Round-v1.png";
 

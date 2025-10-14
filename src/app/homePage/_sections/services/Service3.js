@@ -7,8 +7,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 
 import Line from "@/_assets/svg/curve-line.webp";
-import MaskButton from "@/app/_components/button/MaskButton";
-import ContactModal from "@/app/_components/modal/ContactModal";
+import MaskButton from "@/_components/button/MaskButton";
+import ContactModal from "@/_components/modal/ContactModal";
 
 const Service3 = () => {
   const textRef = useRef(null);

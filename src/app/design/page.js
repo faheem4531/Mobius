@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import NavBar from "../_components/navBar/NavBar";
+import NavBar from "@/_components/navBar/NavBar";
 import Hero from "./_sections/design";
 
 export default function comingSoonpage() {

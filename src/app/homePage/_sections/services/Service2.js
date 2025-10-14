@@ -5,8 +5,8 @@ import { Box, Typography } from "@mui/material";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import MaskButton from "@/app/_components/button/MaskButton";
-import ContactModal from "@/app/_components/modal/ContactModal";
+import MaskButton from "@/_components/button/MaskButton";
+import ContactModal from "@/_components/modal/ContactModal";
 
 const Service2 = () => {
   const textRef = useRef(null);

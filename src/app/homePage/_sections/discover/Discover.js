@@ -5,8 +5,8 @@ import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 
 import Background from "@/_assets/png/discover-bg.webp";
-import MaskButton from "@/app/_components/button/MaskButton";
-import ContactModal from "@/app/_components/modal/ContactModal";
+import MaskButton from "@/_components/button/MaskButton";
+import ContactModal from "@/_components/modal/ContactModal";
 
 const Discover = () => {
   const [modal, setModal] = useState(false);

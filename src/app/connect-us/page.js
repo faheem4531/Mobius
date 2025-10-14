@@ -4,7 +4,7 @@ import React from "react";
 import Head from "next/head";
 
 import GetInTouch from "./getInTouch/GetInTouch";
-import Footer from "../_components/footer/Footer";
+import Footer from "@/_components/footer/Footer";
 
 const ConnectUs = () => {
   return (

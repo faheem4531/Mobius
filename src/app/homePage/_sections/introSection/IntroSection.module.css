@@ -110,7 +110,6 @@
 @media (max-width:550px) {
   .introSection {
     height: 500px;
-    /* background-image: url(../../../_assets/png/mobile-bg.webp); */
   }
 
   .setposition {
