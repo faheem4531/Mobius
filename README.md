@@ -9,6 +9,8 @@ haseeb1khawaja@gmail.com
 branch : Main
 github url
 https://github.com/Mr-StealyoGirl/mobius/tree/main
+old  useless remote as a backup : https://faheem4531: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@github.com/haseeb695/mobius.git
+current  mobius deployed remote : https://faheem4531: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@github.com/Mr-StealyoGirl/mobius.git
 ```
 
 ## Getting Started
