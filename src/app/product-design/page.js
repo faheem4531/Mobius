@@ -1,3 +1,4 @@
+import HeroIntro from "@/_components/design-home/hero-intro";
 import IntroSection from "../homePage/_sections/introSection/IntroSection";
 // import AboutUs from "./_sections/aboutUs/AboutUs";
 // import Services from "./_sections/services/Services";
@@ -24,7 +25,7 @@ const Page = () => {
         />
       </Head>
       <div>
-        <IntroSection />
+        <HeroIntro />
         {/* <AboutUs />
         <Services />
         <Service1 />

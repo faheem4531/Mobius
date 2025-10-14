@@ -10,7 +10,7 @@ import Title from "@/_assets/svg/heading.webp";
 import MaskButton from "@/_components/button/MaskButton";
 import ContactModal from "@/_components/modal/ContactModal";
 
-export default function IntroSection() {
+export default function HeroIntro() {
   const headingImgRef = useRef(null);
   const textRef = useRef(null);
   const btnRef = useRef(null);
@@ -121,10 +121,9 @@ export default function IntroSection() {
                 },
               }}
             >
-              We specialize in transforming your ideas into dynamic 3D
-              animations that captivate your audience. Through our cutting-edge
-              animation services, we bring your products to life in a way that
-              is visually striking and emotionally engaging.
+              Our team of design engineers help inventors turn ideas into a
+              sellable product that is visually striking and engineered to
+              perfection.
             </Typography>
 
             <Box ref={btnRef}>
