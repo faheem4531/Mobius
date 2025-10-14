@@ -14,6 +14,7 @@ import IntroSection from "../homePage/_sections/introSection/IntroSection";
 // import GotQuestions from "./_sections/gotQuestions/GotQuestions";
 import Head from "next/head";
 import AboutUs from "@/_components/design-home/about-us";
+import OurWork from "@/_components/design-home/our-work";
 
 const Page = () => {
   return (
@@ -29,6 +30,7 @@ const Page = () => {
         <HeroIntro />
         <AboutUs />
         <Clients />
+        <OurWork />
         {/*  <Services />
         <Service1 />
         <Service2 />
