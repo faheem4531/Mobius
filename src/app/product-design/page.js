@@ -1,6 +1,5 @@
 import HeroIntro from "@/_components/design-home/hero-intro";
 import IntroSection from "../homePage/_sections/introSection/IntroSection";
-import AboutUs from "../homePage/_sections/aboutUs/AboutUs";
 // import Services from "./_sections/services/Services";
 // import JoinUs from "./_sections/joinUs/JoinUs";
 // import Footer from "@/_components/footer/Footer";
@@ -13,6 +12,7 @@ import AboutUs from "../homePage/_sections/aboutUs/AboutUs";
 // import OurProcess from "./_sections/ourProcess/OurProcess";
 // import GotQuestions from "./_sections/gotQuestions/GotQuestions";
 import Head from "next/head";
+import AboutUs from "@/_components/design-home/about-us";
 
 const Page = () => {
   return (
