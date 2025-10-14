@@ -4,21 +4,21 @@ import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
-import Avancus from "@/app/_assets/clients/avancus.svg";
-import Elevant from "@/app/_assets/clients/elevant.svg";
-import Fonestar from "@/app/_assets/clients/fonestar.svg";
-import FormulaZ from "@/app/_assets/clients/formulaZ.svg";
-import Houduo from "@/app/_assets/clients/houduo.svg";
-import LightOne from "@/app/_assets/clients/light-one.svg";
-import Luna from "@/app/_assets/clients/luna.svg";
-import Metaleon from "@/app/_assets/clients/metaleon-society.svg";
-import PillPuncher from "@/app/_assets/clients/pill-puncher.svg";
-import Sony from "@/app/_assets/clients/sony.svg";
+import Avancus from "@/_assets/clients/avancus.svg";
+import Elevant from "@/_assets/clients/elevant.svg";
+import Fonestar from "@/_assets/clients/fonestar.svg";
+import FormulaZ from "@/_assets/clients/formulaZ.svg";
+import Houduo from "@/_assets/clients/houduo.svg";
+import LightOne from "@/_assets/clients/light-one.svg";
+import Luna from "@/_assets/clients/luna.svg";
+import Metaleon from "@/_assets/clients/metaleon-society.svg";
+import PillPuncher from "@/_assets/clients/pill-puncher.svg";
+import Sony from "@/_assets/clients/sony.svg";
 import Review from "./ReviewCard";
 import TrustpilotWidget from "@/app/_components/trustPilot/TrustPilot";
 import ClutchWidget from "@/app/_components/clutch/Clutch";
 import Link from "next/link";
-import VerifyLogo from "@/app/_assets/png/Verfifed-Agency-Round-v1.png";
+import VerifyLogo from "@/_assets/png/Verfifed-Agency-Round-v1.png";
 
 const Clients_data = [
   {
@@ -71,7 +71,7 @@ const Clients = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        backgroundImage: "url('/_assets/png/clients-bg.webp')",
+        backgroundImage: "url('../_assets/png/clients-bg.webp')",
         backgroundSize: "cover",
       }}
     >

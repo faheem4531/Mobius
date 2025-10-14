@@ -1,6 +1,6 @@
 "use client";
 
-import Icon from "@/app/_assets/svg/qs-list.svg";
+import Icon from "@/_assets/svg/qs-list.svg";
 import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";

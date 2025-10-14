@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 
-import Background from "@/app/_assets/png/discover-bg.webp";
+import Background from "@/_assets/png/discover-bg.webp";
 import MaskButton from "@/app/_components/button/MaskButton";
 import ContactModal from "@/app/_components/modal/ContactModal";
 

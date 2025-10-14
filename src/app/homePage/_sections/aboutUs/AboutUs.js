@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import styles from "./AboutUs.module.css";
 import Image from "next/image";
-import Model from "@/app/_assets/png/aboutUs-model.webp";
+import Model from "@/_assets/png/aboutUs-model.webp";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 

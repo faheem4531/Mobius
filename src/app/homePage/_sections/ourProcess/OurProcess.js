@@ -1,13 +1,13 @@
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 
-import Step1 from "@/app/_assets/png/step1-icon.png";
-import Line from "@/app/_assets/svg/process-line.webp";
-import Consultation from "@/app/_assets/svg/process/Consultation.svg";
-import Modal from "@/app/_assets/svg/process/3d-model.svg";
-import Storyboarding from "@/app/_assets/svg/process/Storyboarding.svg";
-import Rendering from "@/app/_assets/svg/process/rendering.svg";
-import Animation from "@/app/_assets/svg/process/animation.gif";
+import Step1 from "@/_assets/png/step1-icon.png";
+import Line from "@/_assets/svg/process-line.webp";
+import Consultation from "@/_assets/svg/process/Consultation.svg";
+import Modal from "@/_assets/svg/process/3d-model.svg";
+import Storyboarding from "@/_assets/svg/process/Storyboarding.svg";
+import Rendering from "@/_assets/svg/process/rendering.svg";
+import Animation from "@/_assets/svg/process/animation.gif";
 
 const OurProcess = () => {
   const processStepData = [

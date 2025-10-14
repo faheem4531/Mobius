@@ -5,8 +5,8 @@ import Image from "next/image";
 import { Typography, Box } from "@mui/material";
 
 import styles from "./JoinUs.module.css";
-import BackGround from "@/app/_assets/png/join-us-bg.webp";
-import Model from "@/app/_assets/svg/joinUs-model.webp";
+import BackGround from "@/_assets/png/join-us-bg.webp";
+import Model from "@/_assets/svg/joinUs-model.webp";
 import MaskButton from "@/app/_components/button/MaskButton";
 import ContactModal from "@/app/_components/modal/ContactModal";
 

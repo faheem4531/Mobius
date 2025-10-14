@@ -2,9 +2,9 @@
 
 import styles from "./NavBar.module.css";
 import Image from "next/image";
-import Logo from "@/app/_assets/svg/logo.svg";
-import Close from "@/app/_assets/svg/close.svg";
-import Menu from "@/app/_assets/svg/menu.webp";
+import Logo from "@/_assets/svg/logo.svg";
+import Close from "@/_assets/svg/close.svg";
+import Menu from "@/_assets/svg/menu.webp";
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

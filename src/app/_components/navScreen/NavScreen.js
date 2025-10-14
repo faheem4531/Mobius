@@ -7,10 +7,10 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 import HomePage from "@/app/homePage/page";
-import leftSide from "@/app/_assets/png/Trans.png";
-import rightSide from "@/app/_assets/png/Solid.png";
-import rightArrow from "@/app/_assets/png/Arrow.png";
-import Arrowleft from "@/app/_assets/png/Arrow left.png";
+import leftSide from "@/_assets/png/Trans.png";
+import rightSide from "@/_assets/png/Solid.png";
+import rightArrow from "@/_assets/png/Arrow.png";
+import Arrowleft from "@/_assets/png/Arrow left.png";
 import NavBar from "../navBar/NavBar";
 
 export default function NavScreen() {

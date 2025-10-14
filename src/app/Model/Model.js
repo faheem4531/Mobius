@@ -11,7 +11,7 @@ import { Lens } from "@/app/Model/Lens";
 import { LensClay } from "@/app/Model/LensClay";
 import styles from "./styles.module.css";
 import { LensWireFrame } from "./LensWireFrame";
-import Lense from "@/app/_assets/png/lense.webp";
+import Lense from "@/_assets/png/lense.webp";
 import MaskButton from "@/app/_components/button/MaskButton";
 
 const Model = ({ modelStates }) => {

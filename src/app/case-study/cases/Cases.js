@@ -2,19 +2,19 @@
 
 import Card from "./Card";
 import styles from "./Cases.module.css";
-import Formula from "@/app/_assets/png/formulaZ.webp";
-import Avancus from "@/app/_assets/png/avancus.webp";
-import Baraka from "@/app/_assets/png/baraka.webp";
-import Elevate from "@/app/_assets/png/elevate.webp";
-import Fonestar from "@/app/_assets/png/fonestar.webp";
-import Grana from "@/app/_assets/png/grana.webp";
-import Houduo from "@/app/_assets/png/houduo.webp";
-import PillPuncher from "@/app/_assets/png/pill-puncher.webp";
-import Metaleon from "@/app/_assets/png/metaleon.webp";
+import Formula from "@/_assets/png/formulaZ.webp";
+import Avancus from "@/_assets/png/avancus.webp";
+import Baraka from "@/_assets/png/baraka.webp";
+import Elevate from "@/_assets/png/elevate.webp";
+import Fonestar from "@/_assets/png/fonestar.webp";
+import Grana from "@/_assets/png/grana.webp";
+import Houduo from "@/_assets/png/houduo.webp";
+import PillPuncher from "@/_assets/png/pill-puncher.webp";
+import Metaleon from "@/_assets/png/metaleon.webp";
 
-import Light from "@/app/_assets/png/light-one.webp";
-import Luna from "@/app/_assets/png/luna.webp";
-import Sony from "@/app/_assets/png/sony.webp";
+import Light from "@/_assets/png/light-one.webp";
+import Luna from "@/_assets/png/luna.webp";
+import Sony from "@/_assets/png/sony.webp";
 
 const cases_data = [
   {

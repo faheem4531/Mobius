@@ -1,5 +1,5 @@
 .getInTouch {
-  background-image: url(../../_assets/png/hero-bg.webp);
+  background-image: url(../../../_assets/png/hero-bg.webp);
   background-repeat: no-repeat;
   background-size: 50% 100%;
 }
@@ -114,7 +114,7 @@
   }
 
   .block {
-    background-image: url(../../_assets/png/hero-bg.webp);
+    background-image: url(../../../_assets/png/hero-bg.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 530px;
