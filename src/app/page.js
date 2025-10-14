@@ -1,7 +1,6 @@
 "use client";
 
 import Script from "next/script";
-import HomePage from "./homePage/page";
 import NavScreen from "./_components/navScreen/NavScreen";
 
 export default function Home() {
@@ -119,7 +118,6 @@ export default function Home() {
             gtag('config', 'G-DWT2N0FQWP');
           `}
       </Script>
-
       <NavScreen />
     </>
   );
