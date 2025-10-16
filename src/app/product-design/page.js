@@ -16,6 +16,7 @@ import Head from "next/head";
 import AboutUs from "@/_components/design-home/about-us";
 import OurWork from "@/_components/design-home/our-work";
 import DesignVerticals from "@/_components/design-home/DesignVerticals";
+import Dividers from "@/_components/design-home/Dividers";
 
 const Page = () => {
   return (
@@ -32,7 +33,12 @@ const Page = () => {
         <AboutUs />
         <Clients />
         <OurWork />
+
+        <Dividers />
+
         <DesignVerticals />
+        <Dividers />
+
         {/*  <Services />
         <Service1 />
         <Service2 />
