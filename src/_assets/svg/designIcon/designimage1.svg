@@ -1,0 +1,19 @@
+<svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="0.5" width="48" height="48" rx="8" fill="url(#paint0_linear_11387_3344)" fill-opacity="0.2"/>
+<path d="M14.6667 17.8335V31.1668" stroke="#EDEDEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M33.3334 20.5002V17.8335" stroke="#EDEDEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 36.4998H13.3333C12.5973 36.4998 12 35.9025 12 35.1665V32.4998C12 31.7638 12.5973 31.1665 13.3333 31.1665H16C16.736 31.1665 17.3333 31.7638 17.3333 32.4998V35.1665C17.3333 35.9025 16.736 36.4998 16 36.4998Z" stroke="#EDEDEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 36.4998H13.3333C12.5973 36.4998 12 35.9025 12 35.1665V32.4998C12 31.7638 12.5973 31.1665 13.3333 31.1665H16C16.736 31.1665 17.3333 31.7638 17.3333 32.4998V35.1665C17.3333 35.9025 16.736 36.4998 16 36.4998Z" stroke="#EDEDEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M34.6667 17.8333H32C31.264 17.8333 30.6667 17.236 30.6667 16.5V13.8333C30.6667 13.0973 31.264 12.5 32 12.5H34.6667C35.4027 12.5 36 13.0973 36 13.8333V16.5C36 17.236 35.4027 17.8333 34.6667 17.8333Z" stroke="#EDEDEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 17.8333H13.3333C12.5973 17.8333 12 17.236 12 16.5V13.8333C12 13.0973 12.5973 12.5 13.3333 12.5H16C16.736 12.5 17.3333 13.0973 17.3333 13.8333V16.5C17.3333 17.236 16.736 17.8333 16 17.8333Z" stroke="#EDEDEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 17.8333H13.3333C12.5973 17.8333 12 17.236 12 16.5V13.8333C12 13.0973 12.5973 12.5 13.3333 12.5H16C16.736 12.5 17.3333 13.0973 17.3333 13.8333V16.5C17.3333 17.236 16.736 17.8333 16 17.8333Z" stroke="#EDEDEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17.3333 33.8332H21.3333" stroke="#EDEDEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M30.6666 15.1667H17.3333" stroke="#EDEDEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M26.6667 36.4995H30.4374L36.9427 29.9942C37.464 29.4729 37.464 28.6289 36.9427 28.1089L35.0574 26.2235C34.536 25.7022 33.692 25.7022 33.172 26.2235L26.6667 32.7289V36.4995H26.6667Z" stroke="#EDEDEF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_11387_3344" x1="0" y1="0.5" x2="48" y2="48.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#434245"/>
+<stop offset="1" stop-color="#A6A4AB"/>
+</linearGradient>
+</defs>
+</svg>

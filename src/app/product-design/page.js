@@ -15,6 +15,7 @@ import IntroSection from "../homePage/_sections/introSection/IntroSection";
 import Head from "next/head";
 import AboutUs from "@/_components/design-home/about-us";
 import OurWork from "@/_components/design-home/our-work";
+import DesignVerticals from "@/_components/design-home/DesignVerticals";
 
 const Page = () => {
   return (
@@ -31,6 +32,7 @@ const Page = () => {
         <AboutUs />
         <Clients />
         <OurWork />
+        <DesignVerticals />
         {/*  <Services />
         <Service1 />
         <Service2 />

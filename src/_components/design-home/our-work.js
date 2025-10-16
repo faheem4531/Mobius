@@ -3,7 +3,10 @@
 import { Box, Grid2, Typography } from "@mui/material";
 import Image from "next/image";
 import camera from "@/_assets/png/camera2.png";
+import workrow1 from "@/_assets/png/workrow1.png";
+import workrow2 from "@/_assets/png/workrow2.png";
 import { useEffect, useState } from "react";
+import zIndex from "@mui/material/styles/zIndex";
 
 const OurWork = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -42,10 +45,12 @@ const OurWork = () => {
     <Box
       sx={{
         bgcolor: "#000",
+        position: "relative",
       }}
     >
       <Box
         sx={{
+          zIndex: 3,
           maxWidth: "1440px",
           width: "100%",
           display: "flex",
@@ -59,6 +64,57 @@ const OurWork = () => {
           },
         }}
       >
+        <Box
+          sx={{
+            width: "100%",
+            maxWidth: "238px",
+            height: "238px",
+            position: "absolute",
+            zIndex: 1,
+            top: 0,
+            left: 0,
+            backgroundColor: "#EDEDEF",
+            borderRadius: "1000px",
+            filter: "blur(200px)",
+            overflow: "hidden",
+          }}
+        >
+          <Image
+            src={workrow1}
+            alt="logo"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
+            }}
+          />
+        </Box>
+        <Box
+          sx={{
+            width: "100%",
+            maxWidth: "238px",
+            height: "238px",
+            position: "absolute",
+            zIndex: 1,
+            bottom: 0,
+            right: 0,
+            backgroundColor: "#646268",
+            borderRadius: "1000px",
+            filter: "blur(100px)",
+            overflow: "hidden",
+          }}
+        >
+          <Image
+            src={workrow2}
+            alt="logo"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
+            }}
+          />
+        </Box>
+
         <Typography
           variant="h3"
           sx={{
