@@ -15,8 +15,8 @@ import IntroSection from "../homePage/_sections/introSection/IntroSection";
 import Head from "next/head";
 import AboutUs from "@/_components/design-home/about-us";
 import OurWork from "@/_components/design-home/our-work";
-import DesignVerticals from "@/_components/design-home/DesignVerticals";
-import Dividers from "@/_components/design-home/Dividers";
+import DesignVerticals from "@/_components/design-home/designVerticals";
+import Dividers from "@/_components/design-home/dividers";
 
 const Page = () => {
   return (
