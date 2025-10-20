@@ -169,11 +169,18 @@ export const Cards = ({ heading, des, image }) => {
       onClick={() => console.log(id)}
       sx={{
         width: "100%",
+
         // maxWidth: "400px",
         bgcolor: "#000",
         p: { xs: "4px" },
         borderRadius: { xs: "12px", sm: "16px" },
         border: "1px solid #434245",
+
+        "&:hover ": {
+          // bgcolor: "red",
+          background:
+            "linear-gradient(120deg, #434245 0%, #434245 70%, #636161ff 100%)",
+        },
       }}
     >
       <Box
