@@ -17,6 +17,7 @@ import AboutUs from "@/_components/design-home/about-us";
 import OurWork from "@/_components/design-home/our-work";
 import DesignVerticals from "@/_components/design-home/designVerticals";
 import Dividers from "@/_components/design-home/dividers";
+import OurProcess from "@/_components/design-home/our-process";
 
 const Page = () => {
   return (
@@ -38,6 +39,7 @@ const Page = () => {
 
         <DesignVerticals />
         <Dividers />
+        <OurProcess />
 
         {/*  <Services />
         <Service1 />
