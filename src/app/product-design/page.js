@@ -1,6 +1,5 @@
 import HeroIntro from "@/_components/design-home/hero-intro";
 import Clients from "@/_components/design-home/clients";
-import IntroSection from "../homePage/_sections/introSection/IntroSection";
 // import Services from "./_sections/services/Services";
 // import JoinUs from "./_sections/joinUs/JoinUs";
 // import Footer from "@/_components/footer/Footer";
