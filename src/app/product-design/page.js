@@ -17,6 +17,7 @@ import OurWork from "@/_components/design-home/our-work";
 import DesignVerticals from "@/_components/design-home/design-verticals";
 import Dividers from "@/_components/design-home/dividers";
 import OurProcess from "@/_components/design-home/our-process";
+import StatsSection from "@/_components/design-home/stats";
 
 const Page = () => {
   return (
@@ -33,13 +34,11 @@ const Page = () => {
         <AboutUs />
         <Clients />
         <OurWork />
-
         <Dividers />
-
         <DesignVerticals />
         <Dividers />
         <OurProcess />
-
+        <StatsSection />
         {/*  <Services />
         <Service1 />
         <Service2 />
