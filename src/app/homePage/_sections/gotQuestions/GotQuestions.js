@@ -52,7 +52,7 @@ const GotQuestions = ({ questions }) => {
           lineHeight: { sm: "45.6px", xs: "120%" },
           maxWidth: "1300px",
           textAlign: "center",
-          m: "25px 0",
+          m: "25px auto",
         }}
       >
         Got Questions? We have answers
