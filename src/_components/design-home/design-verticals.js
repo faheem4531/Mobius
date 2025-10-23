@@ -87,6 +87,7 @@ const DesignVerticals = () => {
           sx={{
             fontSize: { xs: "16px", md: "20px" },
             fontFamily: "Avenir3 !important",
+            textTransform: "capitalize",
           }}
         >
           Design Verticals
@@ -100,6 +101,7 @@ const DesignVerticals = () => {
             color: "var(--text-main)",
             margin: { xs: "20px 0", md: "30px 0", lg: "24px 0 48px" },
             fontFamily: "Avenir !important",
+            textTransform: "capitalize",
             textAlign: "center",
           }}
         >
