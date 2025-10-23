@@ -1,6 +1,8 @@
 "use client";
+import Review from "@/app/homePage/_sections/clilents/ReviewCard";
 import { Box, Typography, Grid, useTheme } from "@mui/material";
 import React, { useEffect, useRef, useState } from "react";
+import ReviewTestmonial from "./textimonial";
 
 const stats = [
   {
@@ -68,28 +70,58 @@ export default function StatsSection() {
     <Box
       ref={ref}
       sx={{
-        py: { xs: 10, md: 16 },
-        px: 3,
-        bgcolor: "#0e0e0e",
-        color: "#fff",
-        textAlign: "center",
+        maxWidth: "1440px",
+        width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        m: "auto",
+        padding: {
+          xs: "32px 20px",
+          md: "40px",
+          lg: "80px",
+        },
       }}
     >
+      <Typography
+        variant="h3"
+        sx={{
+          fontSize: { xs: "16px", md: "20px" },
+          fontFamily: "Avenir3 !important",
+        }}
+      >
+        Testimonials
+      </Typography>
+      <Typography
+        variant="h1"
+        sx={{
+          fontSize: { xs: "24px", md: "30px", lg: "32px" },
+
+          fontWeight: { xs: 400, md: 500, lg: 600 },
+          color: "var(--text-main)",
+          margin: { xs: "20px 0", md: "30px 0", lg: "24px 0 48px" },
+          fontFamily: "Avenir !important",
+          textAlign: "center",
+        }}
+      >
+        See what peoples say about us
+      </Typography>
       <Grid
         container
-        spacing={4}
+        spacing={{ xs: 5, md: 6 }}
+        // alignItems="\"
         justifyContent="center"
-        maxWidth="lg"
-        mx="auto"
+        py={{ xs: "16px", md: "48px" }}
       >
         {stats.map((item, index) => (
-          <Grid item xs={12} sm={6} md={3} key={index}>
-            <Box>
+          <Grid item xs={6} md={3} key={index}>
+            <Box textAlign="center">
               <Typography
                 variant="h3"
                 sx={{
                   fontWeight: 600,
-                  fontSize: { xs: "2.5rem", md: "56px" },
+                  color: "#FAFAFA",
+                  fontSize: { xs: "40px", md: "56px" },
                 }}
               >
                 {counts[index]}
@@ -99,18 +131,19 @@ export default function StatsSection() {
               <Box
                 sx={{
                   display: "inline-block",
-                  mt: 1.5,
+                  mt: { xs: "12px", md: "16px" },
                   px: 3,
-                  py: 0.5,
+                  py: { xs: "6px", md: "8px" },
                   borderRadius: "999px",
-                  backgroundColor: "rgba(255,255,255,0.08)",
+                  border: "1px solid #646268",
+                  backgroundColor: "#212123",
                 }}
               >
                 <Typography
                   variant="body2"
                   sx={{
-                    color: "rgba(255,255,255,0.8)",
-                    fontSize: "12px",
+                    color: "#A7A4AD",
+                    fontSize: { xs: "10px", md: "12px" },
                   }}
                 >
                   {item.label}
@@ -120,10 +153,11 @@ export default function StatsSection() {
               <Typography
                 variant="body2"
                 sx={{
-                  color: "rgba(255,255,255,0.6)",
-                  mt: 1.5,
+                  color: "#EDEDEF",
+                  mt: { xs: "12px", md: "16px" },
+
                   lineHeight: 1.6,
-                  fontSize: { xs: "0.9rem", md: "1rem" },
+                  fontSize: { xs: "12px", md: "18px" },
                 }}
               >
                 {item.subLabel}
@@ -132,6 +166,32 @@ export default function StatsSection() {
           </Grid>
         ))}
       </Grid>
+
+      <Box
+        sx={{
+          width: "100vw",
+          overflowX: "auto",
+          mt: 3,
+          "&::-webkit-scrollbar": {
+            width: 0,
+          },
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            gap: { xs: "20px", lg: "30px" },
+            width: { xs: "fit-content", lg: "100%" },
+            mb: { md: "40px", xs: "20px" },
+            ml: { xs: 3, md: 6, lg: 0 },
+          }}
+        >
+          <ReviewTestmonial name="Hale Allon" />
+          <ReviewTestmonial name="Hale Allon" />
+          <ReviewTestmonial name="Hale Allon" />
+        </Box>
+      </Box>
     </Box>
   );
 }
