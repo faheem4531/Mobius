@@ -7,6 +7,7 @@ import workrow1 from "@/_assets/png/workrow1.png";
 import workrow2 from "@/_assets/png/workrow2.png";
 import { useEffect, useState } from "react";
 import zIndex from "@mui/material/styles/zIndex";
+import { Opacity } from "@mui/icons-material";
 
 const OurWork = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -73,6 +74,7 @@ const OurWork = () => {
             zIndex: 1,
             top: 0,
             left: 0,
+            display: { xs: "none", sm: "none", md: "block" },
             backgroundColor: "#EDEDEF",
             borderRadius: "1000px",
             filter: "blur(200px)",
@@ -94,10 +96,12 @@ const OurWork = () => {
             width: "100%",
             maxWidth: "238px",
             height: "238px",
+            display: { xs: "none", sm: "none", md: "block" },
             position: "absolute",
             zIndex: 1,
             bottom: 0,
             right: 0,
+            opacity: 0.5,
             backgroundColor: "#646268",
             borderRadius: "1000px",
             filter: "blur(100px)",
