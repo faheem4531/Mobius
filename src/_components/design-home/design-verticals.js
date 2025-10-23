@@ -109,21 +109,23 @@ const DesignVerticals = () => {
         <Box
           sx={{
             width: "100%",
-            height: "400px",
+            height: { sm: "400px", xs: "240px" },
             my: { xs: "20px ", md: "30px ", lg: " 48px" },
           }}
         >
-          <video
+          <Box
+            component="video"
             src="/video/bidet-buddy-snip.mp4"
             alt="bidet-buddy-snip"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-            }}
             autoPlay
             loop
             muted
+            sx={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              borderRadius: { xs: "16px", sm: "16px", md: "32px" },
+            }}
           />
         </Box>
 
