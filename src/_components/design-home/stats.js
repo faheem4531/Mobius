@@ -88,6 +88,7 @@ export default function StatsSection() {
         sx={{
           fontSize: { xs: "16px", md: "20px" },
           fontFamily: "Avenir3 !important",
+          textTransform: "capitalize",
         }}
       >
         Testimonials
@@ -102,6 +103,7 @@ export default function StatsSection() {
           margin: { xs: "20px 0", md: "30px 0", lg: "24px 0 48px" },
           fontFamily: "Avenir !important",
           textAlign: "center",
+          textTransform: "capitalize",
         }}
       >
         See what peoples say about us
@@ -122,6 +124,7 @@ export default function StatsSection() {
                   fontWeight: 600,
                   color: "#FAFAFA",
                   fontSize: { xs: "40px", md: "56px" },
+                  textTransform: "capitalize",
                 }}
               >
                 {counts[index]}
@@ -144,6 +147,7 @@ export default function StatsSection() {
                   sx={{
                     color: "#A7A4AD",
                     fontSize: { xs: "10px", md: "12px" },
+                    textTransform: "capitalize",
                   }}
                 >
                   {item.label}
@@ -155,7 +159,7 @@ export default function StatsSection() {
                 sx={{
                   color: "#EDEDEF",
                   mt: { xs: "12px", md: "16px" },
-
+                  textTransform: "capitalize",
                   lineHeight: 1.6,
                   fontSize: { xs: "12px", md: "18px" },
                 }}

@@ -19,6 +19,8 @@ import Dividers from "@/_components/design-home/dividers";
 import OurProcess from "@/_components/design-home/our-process";
 import StatsSection from "@/_components/design-home/stats";
 import GotQuestions from "../homePage/_sections/gotQuestions/GotQuestions";
+import ProductIdea from "@/_components/design-home/product-idea";
+import Footer from "@/_components/footer/Footer";
 const questions = [
   {
     qs: "What services do you offer?",
@@ -88,8 +90,14 @@ const Page = () => {
         <DesignVerticals />
         <Dividers />
         <OurProcess />
+        <Dividers />
+
         <StatsSection />
+        <Dividers />
+
         <GotQuestions questions={questions} />
+        <ProductIdea />
+        <Footer />
         {/*  <Services />
         <Service1 />
         <Service2 />

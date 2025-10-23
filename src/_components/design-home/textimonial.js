@@ -44,6 +44,7 @@ const ReviewTestmonial = ({ name }) => {
                 fontWeight: 400,
                 color: "#EDEDEF",
                 fontFamily: "Avenir !important",
+                textTransform: "capitalize",
               }}
             >
               {name}
@@ -92,6 +93,7 @@ const ReviewTestmonial = ({ name }) => {
             fontSize: { xs: "14px", md: "18px" },
             color: "#EDEDEF",
             fontFamily: "Avenir3 !important",
+            textTransform: "capitalize",
           }}
         >
           coordinator at -{" "}
