@@ -132,12 +132,15 @@ const OurWork = () => {
         <Typography
           variant="h1"
           sx={{
+            px: 4,
+            width: "100%",
             fontSize: { xs: "24px", md: "30px", lg: "32px" },
             textTransform: "capitalize",
             fontWeight: { xs: 400, md: 500, lg: 600 },
             color: "var(--text-main)",
             margin: { xs: "20px 0", md: "30px 0", lg: "24px 0 48px" },
-            fontFamily: "Avenir !important",
+            fontFamily: "Avenir5 !important",
+            lineHeight: { xs: "32px", md: "48px" },
             textAlign: "center",
           }}
         >

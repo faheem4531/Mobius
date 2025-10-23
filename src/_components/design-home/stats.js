@@ -3,6 +3,7 @@ import Review from "@/app/homePage/_sections/clilents/ReviewCard";
 import { Box, Typography, Grid, useTheme } from "@mui/material";
 import React, { useEffect, useRef, useState } from "react";
 import ReviewTestmonial from "./textimonial";
+import HeadingSection from "./heading-section";
 
 const stats = [
   {
@@ -83,41 +84,27 @@ export default function StatsSection() {
         },
       }}
     >
-      <Typography
-        variant="h3"
-        sx={{
-          fontSize: { xs: "16px", md: "20px" },
-          fontFamily: "Avenir3 !important",
-          textTransform: "capitalize",
-        }}
-      >
-        Testimonials
-      </Typography>
-      <Typography
-        variant="h1"
-        sx={{
-          fontSize: { xs: "24px", md: "30px", lg: "32px" },
-
-          fontWeight: { xs: 400, md: 500, lg: 600 },
-          color: "var(--text-main)",
+      <HeadingSection
+        heading="Testimonials"
+        description="See what peoples say about us"
+        sxDescription={{
+          px: { xs: 7 },
           margin: { xs: "20px 0", md: "30px 0", lg: "24px 0 48px" },
-          fontFamily: "Avenir !important",
-          textAlign: "center",
-          textTransform: "capitalize",
         }}
-      >
-        See what peoples say about us
-      </Typography>
+      />
+
       <Grid
         container
         spacing={{ xs: 5, md: 6 }}
-        // alignItems="\"
         justifyContent="center"
         py={{ xs: "16px", md: "48px" }}
       >
         {stats.map((item, index) => (
           <Grid item xs={6} md={3} key={index}>
-            <Box textAlign="center">
+            <Box
+              textAlign="center"
+              sx={{ maxWidth: { lg: "260px" }, width: "100%" }}
+            >
               <Typography
                 variant="h3"
                 sx={{
@@ -134,6 +121,8 @@ export default function StatsSection() {
               <Box
                 sx={{
                   display: "inline-block",
+                  maxWidth: { xs: 172 },
+                  width: "100%",
                   mt: { xs: "12px", md: "16px" },
                   px: 3,
                   py: { xs: "6px", md: "8px" },
@@ -143,11 +132,11 @@ export default function StatsSection() {
                 }}
               >
                 <Typography
-                  variant="body2"
                   sx={{
                     color: "#A7A4AD",
                     fontSize: { xs: "10px", md: "12px" },
                     textTransform: "capitalize",
+                    lineHeight: { xs: "10px" },
                   }}
                 >
                   {item.label}
@@ -187,7 +176,7 @@ export default function StatsSection() {
             justifyContent: "center",
             gap: { xs: "20px", lg: "30px" },
             width: { xs: "fit-content", lg: "100%" },
-            mb: { md: "40px", xs: "20px" },
+            // mb: { md: "40px", xs: "20px" },
             ml: { xs: 3, md: 6, lg: 0 },
           }}
         >

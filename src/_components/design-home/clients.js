@@ -14,6 +14,7 @@ import Luna from "@/_assets/clients/luna.svg";
 import Metaleon from "@/_assets/clients/metaleon-society.svg";
 import PillPuncher from "@/_assets/clients/pill-puncher.svg";
 import Sony from "@/_assets/clients/sony.svg";
+import HeadingSection from "./heading-section";
 
 const Clients_data = [
   {
@@ -79,28 +80,15 @@ const Clients = () => {
           backgroundPosition: "contain",
         }}
       >
-        <Typography
-          variant="h3"
-          sx={{
-            fontSize: { xs: "16px", md: "20px" },
-            fontFamily: "Avenir3 !important",
-          }}
-        >
-          Clients
-        </Typography>
-        <Typography
-          variant="h1"
-          sx={{
-            fontSize: { xs: "24px", md: "30px", lg: "38px" },
-            fontWeight: { xs: 400, md: 500, lg: 600 },
-            color: "var(--text-main)",
+        <HeadingSection
+          heading="Clients"
+          description="Here are some of our Favorite Clients"
+          sxDescription={{
+            px: { xs: 4, lg: 6 },
             margin: { xs: "20px 0", md: "30px 0", lg: "35px 0 70px" },
-            fontFamily: "Avenir !important",
-            textAlign: "center",
           }}
-        >
-          Here are some of our Favorite Clients
-        </Typography>
+        />
+
         <Marquee
           style={{ overflow: "hidden" }}
           speed={30}

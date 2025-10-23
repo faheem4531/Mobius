@@ -175,6 +175,7 @@ const AboutUs = () => {
             fontSize: { xs: "18px", sm: "20px", md: "38px" },
             color: "var(--text-main)",
             lineHeight: "120%",
+            textTransform: "capitalize",
           }}
         >
           Who are we?

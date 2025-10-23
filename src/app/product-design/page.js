@@ -21,6 +21,7 @@ import StatsSection from "@/_components/design-home/stats";
 import GotQuestions from "../homePage/_sections/gotQuestions/GotQuestions";
 import ProductIdea from "@/_components/design-home/product-idea";
 import Footer from "@/_components/footer/Footer";
+import { Box } from "@mui/material";
 const questions = [
   {
     qs: "What services do you offer?",
@@ -94,8 +95,14 @@ const Page = () => {
 
         <StatsSection />
         <Dividers />
-
-        <GotQuestions questions={questions} />
+        <Box
+          sx={{
+            mt: { xs: "-88px", sm: "-110px", lg: 5 },
+            mb: { xs: "-48px", sm: "-110px", lg: -5 },
+          }}
+        >
+          <GotQuestions questions={questions} />
+        </Box>
         <ProductIdea />
         <Footer />
         {/*  <Services />

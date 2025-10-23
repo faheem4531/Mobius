@@ -11,6 +11,7 @@ import image6 from "@/_assets/png/numberImages/6.png";
 import image7 from "@/_assets/png/numberImages/7.png";
 import image8 from "@/_assets/png/numberImages/8.png";
 import designimage7 from "@/_assets/svg/designIcon/designIcon7.svg";
+import HeadingSection from "./heading-section";
 
 const OurProcess = () => {
   const designData = [
@@ -136,30 +137,21 @@ const OurProcess = () => {
           },
         }}
       >
-        <Typography
-          variant="h3"
-          sx={{
-            fontSize: { xs: "16px", md: "20px" },
-            fontFamily: "Avenir3 !important",
-          }}
-        >
-          Our process
-        </Typography>
-        <Typography
-          variant="h1"
-          sx={{
-            fontSize: { xs: "24px", md: "30px", lg: "32px" },
-
-            fontWeight: { xs: 400, md: 500, lg: 600 },
-            color: "var(--text-main)",
+        <HeadingSection
+          heading="Our process"
+          description=" Crystal clear process to help non-technical clients with the technical
+          workflow."
+          mobDes="Discover how we turn your product or even just an idea from you into appealing and meaningful animations."
+          sxDescription={{
+            px: { md: 20, lg: 24 },
+            display: { xs: "none", md: "block" },
             margin: { xs: "20px 0", md: "30px 0", lg: "24px 0 48px" },
-            fontFamily: "Avenir !important",
-            textAlign: "center",
           }}
-        >
-          Crystal clear process to help non-technical clients with the technical
-          workflow.
-        </Typography>
+          sxmobDes={{
+            margin: { xs: "20px 0", md: "30px 0", lg: "24px 0 48px" },
+          }}
+        />
+
         <Box
           sx={{
             width: "100%",

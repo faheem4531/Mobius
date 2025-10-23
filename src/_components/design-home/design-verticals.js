@@ -11,6 +11,7 @@ import designimage6 from "@/_assets/svg/designIcon/designIcon6.svg";
 import designimage7 from "@/_assets/svg/designIcon/designIcon7.svg";
 import designimage8 from "@/_assets/svg/designIcon/designIcon8.svg";
 import designimage9 from "@/_assets/svg/designIcon/designIcon9.svg";
+import HeadingSection from "./heading-section";
 
 const DesignVerticals = () => {
   const data = [
@@ -82,37 +83,20 @@ const DesignVerticals = () => {
           },
         }}
       >
-        <Typography
-          variant="h3"
-          sx={{
-            fontSize: { xs: "16px", md: "20px" },
-            fontFamily: "Avenir3 !important",
-            textTransform: "capitalize",
-          }}
-        >
-          Design Verticals
-        </Typography>
-        <Typography
-          variant="h1"
-          sx={{
-            fontSize: { xs: "24px", md: "30px", lg: "32px" },
-
-            fontWeight: { xs: 400, md: 500, lg: 600 },
-            color: "var(--text-main)",
+        <HeadingSection
+          heading=" Design Verticals"
+          description=" With the essence of design & aesthetics, we create products that are
+          symphonies in the noise."
+          sxDescription={{
             margin: { xs: "20px 0", md: "30px 0", lg: "24px 0 48px" },
-            fontFamily: "Avenir !important",
-            textTransform: "capitalize",
-            textAlign: "center",
           }}
-        >
-          With the essence of design & aesthetics, we create products that are
-          symphonies in the noise.
-        </Typography>
+        />
+
         <Box
           sx={{
             width: "100%",
             height: { sm: "400px", xs: "240px" },
-            my: { xs: "20px ", md: "30px ", lg: " 48px" },
+            mb: { xs: "20px ", md: "30px ", lg: " 48px" },
           }}
         >
           <Box
