@@ -124,6 +124,7 @@ const OurWork = () => {
           sx={{
             fontSize: { xs: "16px", md: "20px" },
             fontFamily: "Avenir3 !important",
+            textTransform: "capitalize",
           }}
         >
           our work
@@ -132,7 +133,7 @@ const OurWork = () => {
           variant="h1"
           sx={{
             fontSize: { xs: "24px", md: "30px", lg: "32px" },
-
+            textTransform: "capitalize",
             fontWeight: { xs: 400, md: 500, lg: 600 },
             color: "var(--text-main)",
             margin: { xs: "20px 0", md: "30px 0", lg: "24px 0 48px" },
