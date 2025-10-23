@@ -114,8 +114,8 @@ const DesignVerticals = () => {
           }}
         >
           <video
-            src="/video/Showreel-2024.webm"
-            alt="3d product animation cosmetics"
+            src="/video/bidet-buddy-snip.mp4"
+            alt="bidet-buddy-snip"
             style={{
               width: "100%",
               height: "100%",
