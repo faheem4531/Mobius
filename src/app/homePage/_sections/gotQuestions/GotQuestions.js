@@ -28,10 +28,10 @@ const GotQuestions = ({ questions }) => {
     <Box
       sx={{
         padding: {
-          lg: "20px 160px  120px 110px",
-          md: "150px 50px 150px",
-          sm: "150px 100px 150px",
-          xs: "120px 20px 80px",
+          lg: "20px 120px 110px",
+          md: "150px 50px ",
+          sm: "150px 100px ",
+          xs: "80px 20px ",
         },
       }}
     >
