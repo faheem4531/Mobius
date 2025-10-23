@@ -185,49 +185,49 @@ const OurWork = () => {
         <Grid2 container spacing={{ xs: 2, md: 4, lg: 5 }}>
           <Grid2 size={{ xs: 7, md: 5.45 }}>
             <Cards
-              ProName="Product Name"
-              indName="Industry"
-              image={camera}
+              ProName="KYS Norway"
+              indName="Appliances"
+              image={"/work/kys.jpeg"}
               id={1}
             />
           </Grid2>
           <Grid2 size={{ xs: 5, md: 3.27 }}>
             <Cards
-              ProName="Product Name"
-              indName="Industry"
-              image={camera}
+              ProName="Wosler"
+              indName="Medical Tech"
+              image={"/work/wosler.jpeg"}
               id={2}
             />
           </Grid2>
           <Grid2 size={{ xs: 6, md: 3.27 }}>
             <Cards
-              ProName="Product Name"
-              indName="Industry"
-              image={camera}
+              ProName="SmartFoil"
+              indName="Adventure sports"
+              image={"/work/smart-foil.jpeg"}
               id={3}
             />
           </Grid2>
           <Grid2 size={{ xs: 6, md: 3.27 }}>
             <Cards
-              ProName="Product Name"
+              ProName="Umbrella Mount"
               indName="Industry"
-              image={camera}
+              image={"/work/umbrella-mount.jpeg"}
               id={4}
             />
           </Grid2>
           <Grid2 size={{ xs: 5, md: 5.45 }}>
             <Cards
-              ProName="Product Name"
-              indName="Industry"
-              image={camera}
+              ProName="Moodieband"
+              indName="Toys"
+              image={"/work/moodieband.jpeg"}
               id={5}
             />
           </Grid2>
           <Grid2 size={{ xs: 7, md: 3.27 }}>
             <Cards
-              ProName="Product Name"
-              indName="Industry"
-              image={camera}
+              ProName="Acupressure Mask"
+              indName="Beauty"
+              image={"/work/mask.jpeg"}
               id={6}
             />
           </Grid2>
@@ -274,8 +274,10 @@ export const Cards = ({ ProName, indName, image, id }) => {
             width: "100%",
             height: "100%",
             borderRadius: 16,
-            objectFit: "contain",
+            objectFit: "cover",
           }}
+          width={1000}
+          height={1000}
         />
       </Box>
       <Box
