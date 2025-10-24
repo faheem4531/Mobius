@@ -1,6 +1,114 @@
 "use client";
 
 import { Box, Grid2, Typography } from "@mui/material";
+const products = [
+  {
+    id: 1,
+    ProName: "KYS Norway",
+    indName: "Appliances",
+    image: "/work/kys.jpeg",
+    size: { xs: 12, md: 6.5 },
+  },
+  {
+    id: 2,
+    ProName: "Wosler",
+    indName: "Medical Tech",
+    image: "/work/wosler.jpeg",
+    size: { xs: 6, md: 5.5 },
+  },
+  {
+    id: 3,
+    ProName: "SmartFoil",
+    indName: "Adventure sports",
+    image: "/work/smart-foil.jpeg",
+    size: { xs: 6, md: 3.1 },
+  },
+  {
+    id: 4,
+    ProName: "Umbrella Mount",
+    indName: "Industry",
+    image: "/work/umbrella-mount.jpeg",
+    size: { xs: 12, md: 4.65 },
+  },
+  {
+    id: 5,
+    ProName: "Moodieband",
+    indName: "Toys",
+    image: "/work/moodieband.jpeg",
+    size: { xs: 6, md: 4.25 },
+  },
+  {
+    id: 6,
+    ProName: "KYS Norway",
+    indName: "Appliances",
+    image: "/work/kys.jpeg",
+    size: { xs: 6, md: 6.5 },
+  },
+  {
+    id: 7,
+    ProName: "Wosler",
+    indName: "Medical Tech",
+    image: "/work/wosler.jpeg",
+    size: { xs: 12, md: 5.5 },
+  },
+  {
+    id: 8,
+    ProName: "SmartFoil",
+    indName: "Adventure sports",
+    image: "/work/smart-foil.jpeg",
+    size: { xs: 6, md: 3.15 },
+  },
+  {
+    id: 9,
+    ProName: "Umbrella Mount",
+    indName: "Industry",
+    image: "/work/umbrella-mount.jpeg",
+    size: { xs: 6, md: 5.7 },
+  },
+  {
+    id: 10,
+    ProName: "Moodieband",
+    indName: "Toys",
+    image: "/work/moodieband.jpeg",
+    size: { xs: 12, md: 3.15 },
+  },
+  {
+    id: 11,
+    ProName: "SmartFoil",
+    indName: "Adventure sports",
+    image: "/work/smart-foil.jpeg",
+    size: { xs: 6, md: 3.27 },
+  },
+  {
+    id: 12,
+    ProName: "Moodieband",
+    indName: "Toys",
+    image: "/work/moodieband.jpeg",
+    size: { xs: 6, md: 3.27 },
+  },
+  {
+    id: 13,
+    ProName: "Umbrella Mount",
+    indName: "Industry",
+    image: "/work/umbrella-mount.jpeg",
+    size: { xs: 12, md: 5.46 },
+  },
+  {
+    id: 14,
+    ProName: "KYS Norway",
+    indName: "Appliances",
+    image: "/work/kys.jpeg",
+    size: { xs: 6, md: 6.5 },
+  },
+  {
+    id: 15,
+    ProName: "Wosler",
+    indName: "Medical Tech",
+    image: "/work/wosler.jpeg",
+    size: { xs: 6, md: 5.5 },
+  },
+];
+
 import Image from "next/image";
 
 const CaseStudyProducts = () => {
@@ -31,113 +139,16 @@ const CaseStudyProducts = () => {
         }}
       >
         <Grid2 container spacing={{ xs: 2, md: 3 }}>
-          <Grid2 size={{ xs: 12, md: 6.5 }}>
-            <Cards
-              ProName="KYS Norway"
-              indName="Appliances"
-              image={"/work/kys.jpeg"}
-            />
-          </Grid2>
-          <Grid2 size={{ xs: 6, md: 5.5 }}>
-            <Cards
-              ProName="Wosler"
-              indName="Medical Tech"
-              image={"/work/wosler.jpeg"}
-            />
-          </Grid2>
-          <Grid2 size={{ xs: 6, md: 3.1 }}>
-            <Cards
-              ProName="SmartFoil"
-              indName="Adventure sports"
-              image={"/work/smart-foil.jpeg"}
-            />
-          </Grid2>
-          <Grid2 size={{ xs: 12, md: 4.65 }}>
-            <Cards
-              ProName="Umbrella Mount"
-              indName="Industry"
-              image={"/work/umbrella-mount.jpeg"}
-            />
-          </Grid2>
-          <Grid2 size={{ xs: 6, md: 4.25 }}>
-            <Cards
-              ProName="Moodieband"
-              indName="Toys"
-              image={"/work/moodieband.jpeg"}
-            />
-          </Grid2>
-          <Grid2 size={{ xs: 6, md: 6.5 }}>
-            <Cards
-              ProName="KYS Norway"
-              indName="Appliances"
-              image={"/work/kys.jpeg"}
-            />
-          </Grid2>
-          <Grid2 size={{ xs: 12, md: 5.5 }}>
-            <Cards
-              ProName="Wosler"
-              indName="Medical Tech"
-              image={"/work/wosler.jpeg"}
-            />
-          </Grid2>
-
-          <Grid2 size={{ xs: 6, md: 3.15 }}>
-            <Cards
-              ProName="SmartFoil"
-              indName="Adventure sports"
-              image={"/work/smart-foil.jpeg"}
-            />
-          </Grid2>
-          <Grid2 size={{ xs: 6, md: 5.7 }}>
-            <Cards
-              ProName="Umbrella Mount"
-              indName="Industry"
-              image={"/work/umbrella-mount.jpeg"}
-            />
-          </Grid2>
-          <Grid2 size={{ xs: 12, md: 3.15 }}>
-            <Cards
-              ProName="Moodieband"
-              indName="Toys"
-              image={"/work/moodieband.jpeg"}
-            />
-          </Grid2>
-          <Grid2 size={{ xs: 6, md: 3.27 }}>
-            <Cards
-              ProName="SmartFoil"
-              indName="Adventure sports"
-              image={"/work/smart-foil.jpeg"}
-            />
-          </Grid2>
-          <Grid2 size={{ xs: 6, md: 3.27 }}>
-            <Cards
-              ProName="Moodieband"
-              indName="Toys"
-              image={"/work/moodieband.jpeg"}
-            />
-          </Grid2>
-          <Grid2 size={{ xs: 12, md: 5.46 }}>
-            <Cards
-              ProName="Umbrella Mount"
-              indName="Industry"
-              image={"/work/umbrella-mount.jpeg"}
-            />
-          </Grid2>
-
-          <Grid2 size={{ xs: 6, md: 6.5 }}>
-            <Cards
-              ProName="KYS Norway"
-              indName="Appliances"
-              image={"/work/kys.jpeg"}
-            />
-          </Grid2>
-          <Grid2 size={{ xs: 6, md: 5.5 }}>
-            <Cards
-              ProName="Wosler"
-              indName="Medical Tech"
-              image={"/work/wosler.jpeg"}
-            />
-          </Grid2>
+          {products.map((item) => (
+            <Grid2 key={item.id} size={item.size}>
+              <Cards
+                ProName={item.ProName}
+                indName={item.indName}
+                image={item.image}
+                id={item.id}
+              />
+            </Grid2>
+          ))}
         </Grid2>
       </Box>
     </Box>
