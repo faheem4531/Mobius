@@ -22,6 +22,8 @@ import GotQuestions from "../homePage/_sections/gotQuestions/GotQuestions";
 import ProductIdea from "@/_components/design-home/product-idea";
 import Footer from "@/_components/footer/Footer";
 import { Box } from "@mui/material";
+import camera from "@/_assets/png/camera2.png";
+import GenericIdeaSection from "@/_components/design-home/product-idea";
 const questions = [
   {
     qs: "What services do you offer?",
@@ -103,7 +105,11 @@ const Page = () => {
         >
           <GotQuestions questions={questions} />
         </Box>
-        <ProductIdea />
+        <GenericIdeaSection
+          title="Got a product idea?"
+          buttonText="Talk to Our Expert"
+          imageSrc={camera}
+        />
         <Footer />
         {/*  <Services />
         <Service1 />

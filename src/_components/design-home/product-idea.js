@@ -1,14 +1,14 @@
 "use client";
 
-import { Box, Grid2, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Image from "next/image";
-import camera from "@/_assets/png/camera2.png";
-import workrow1 from "@/_assets/png/workrow1.png";
-import workrow2 from "@/_assets/png/workrow2.png";
-import { useEffect, useState } from "react";
 import MaskButton from "../button/MaskButton";
 
-const ProductIdea = () => {
+const GenericIdeaSection = ({
+  title = "Got a product idea?",
+  buttonText = "Talk to Our Expert",
+  imageSrc, // required image
+}) => {
   return (
     <Box
       sx={{
@@ -34,44 +34,48 @@ const ProductIdea = () => {
       >
         <Box
           sx={{
-            backgroundImage: { xs: "none", sm: `url(${camera.src})` },
+            backgroundImage: { xs: "none", sm: `url(${imageSrc?.src})` },
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "right",
             width: "100%",
             display: "flex",
             flexDirection: { xs: "column", sm: "row" },
-            // bgcolor: "#9999ff",
             alignItems: "center",
             borderRadius: "32px",
-
             p: { xs: "32px 24px", md: "80px 64px" },
             justifyContent: "space-between",
             border: "1px solid #434245 ",
           }}
         >
+          {/* Image for small screens */}
           <Box
             sx={{
               display: { xs: "block", sm: "none" },
               width: { xs: "338px", sm: "488px" },
               height: { xs: "200px", sm: "300px" },
-              // aspectRatio: "1/1 ",
             }}
           >
-            <Image
-              src={camera}
-              alt="camera"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "contain",
-              }}
-            />
+            {imageSrc && (
+              <Image
+                src={imageSrc}
+                alt="section image"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
+                }}
+              />
+            )}
           </Box>
-          <Box sx={{}}>
+
+          {/* Text and button */}
+          <Box sx={{ width: "100%", textAlign: "left" }}>
             <Typography
               variant="h1"
               sx={{
+                width: "100%",
+                maxWidth: { xs: "320px", md: "400px", lg: "640px" },
                 fontSize: { xs: "24px", md: "30px", lg: "40px" },
                 textTransform: "capitalize",
                 fontWeight: 500,
@@ -80,9 +84,9 @@ const ProductIdea = () => {
                 fontFamily: "Avenir5 !important",
               }}
             >
-              Got a product idea?
+              {title}
             </Typography>
-            <MaskButton text="Talk to Our Expert" />
+            <MaskButton text={buttonText} />
           </Box>
         </Box>
       </Box>
@@ -90,4 +94,4 @@ const ProductIdea = () => {
   );
 };
 
-export default ProductIdea;
+export default GenericIdeaSection;

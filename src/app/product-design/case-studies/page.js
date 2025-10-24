@@ -2,6 +2,10 @@ import Head from "next/head";
 import ProductIdea from "@/_components/design-home/product-idea";
 import Footer from "@/_components/footer/Footer";
 import ProductHero from "@/_components/design-home/product-hero";
+import CaseStudyProducts from "@/_components/design-home/case-studyProducts";
+import Dividers from "@/_components/design-home/dividers";
+import camera from "@/_assets/png/camera2.png";
+import GenericIdeaSection from "@/_components/design-home/product-idea";
 
 const Page = () => {
   return (
@@ -14,8 +18,16 @@ const Page = () => {
         />
       </Head>
       <div>
+        {/* <NavBar /> */}
         <ProductHero />
-        <ProductIdea />
+        <CaseStudyProducts />
+        <Dividers />
+        <GenericIdeaSection
+          title="Book a call? So we bring your idea to life!"
+          buttonText="Talk to Our Expert"
+          imageSrc={camera}
+        />
+
         <Footer />
       </div>
     </>
