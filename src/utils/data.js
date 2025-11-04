@@ -4,7 +4,7 @@ export const projectsData = [
     title: "Wosler - Gel Dispenser",
     industry: "Medical Tech",
     heroVideo:
-      "https://drive.google.com/file/d/1c1ibfUz6XeVKPPbse-9HGe5MFe-dMzXq/view?usp=drive_link",
+      "https://res.cloudinary.com/dz1s9xajm/image/upload/v1762264027/Wosler-Gel-Dispenser-hero_lyhlqx.jpg",
     about: {
       overview:
         "The project was to design a gel dispenser for an autonomous sonobot to do sonographs on patients. We worked on the  concept designs to achieve the desired results and also worked in parallel with Wosler engineering team to deliver DFM for the gel dispenser.",
@@ -15,31 +15,31 @@ export const projectsData = [
     },
     details: [
       {
-        url: "https://drive.google.com/file/d/1qC7AlMXg4Y84oF2EXqVZsKnJ6mVZs3UJ/view?usp=drive_link",
+        url: "https://res.cloudinary.com/dz1s9xajm/image/upload/v1762264029/Wosler-image-1_zvqoff.png",
         title: "Concept Sketches",
         description:
           "We took idea from Wosler team and put up detailed sketches before starting 3d CAD",
       },
       {
-        url: "https://drive.google.com/file/d/1r6qOE1jFizFkCi9Bi9ck9l36ZYqZ3zuS/view?usp=drive_link",
+        url: "https://res.cloudinary.com/dz1s9xajm/image/upload/v1762263884/Wosler-3_nhtrch.jpg",
         title: "3d CAD & Modelling",
         description:
           "We came up with a sleek yet functional product 3d CAD design that fits the existing sonobot like a mating part.",
       },
       {
-        url: "https://drive.google.com/file/d/1EnFHRcJ9At5g55MNB5lzydKp4IWFJkN0/view?usp=sharing",
+        url: "https://res.cloudinary.com/dz1s9xajm/video/upload/v1762263884/Gel-Dispensor-with-cover-2_fpuvvx.mp4",
         title: "Design for Manufacture",
         description:
           "Our design expertise enabled us to deliver a part to part 3d drawings and files for client to easily 3d print and test everything out.",
       },
       {
-        url: "https://drive.google.com/file/d/1i36qjV1lmMRPvUqr3rJQAr148ynFJYgO/view?usp=drive_link",
+        url: "https://res.cloudinary.com/dz1s9xajm/image/upload/v1762263915/Wosler-4_x2towp.jpg",
         title: "Prototyping",
         description:
           "Our design is made in a way that it is really easy to 3d print to show the technical application of your idea.",
       },
       {
-        url: "https://drive.google.com/file/d/1i36qjV1lmMRPvUqr3rJQAr148ynFJYgO/view?usp=drive_link",
+        url: "https://res.cloudinary.com/dz1s9xajm/image/upload/v1762264027/Wosler-5_owup9l.jpg",
         title: "Solution",
         description:
           "We went from mere sketches to a functional prototype, we build innovative products that stand out in the noise of ordinary products.",
