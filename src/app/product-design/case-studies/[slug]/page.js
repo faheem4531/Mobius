@@ -55,6 +55,20 @@ export function HeroSection({ industryName, proName }) {
           zIndex: 0,
         }}
       >
+        <Box
+          component="img"
+          src={AboutUsImage.src}
+          alt="Metaleon 3D character"
+          sx={{
+            display: "none",
+            width: "100%",
+            // height: "100%",
+            objectFit: "cover",
+            overflow: "hidden",
+            AspectRatio: "1/1",
+            zIndex: 2,
+          }}
+        />
         <video
           autoPlay
           muted
@@ -284,6 +298,23 @@ export function ConceptSketches() {
           }}
         >
           <Box
+            component="img"
+            src={AboutUsImage.src}
+            alt="Metaleon 3D character"
+            sx={{
+              display: "none",
+              width: "100%",
+              height: { xs: "240px", sm: "340px", md: "600px", lg: "720px" },
+              objectFit: "cover",
+              borderRadius: { xs: "8px" },
+              boder: "1px solid #434245",
+              objectFit: "cover",
+              overflow: "hidden",
+              AspectRatio: "1/1",
+              borderRadius: { xs: "8px" },
+            }}
+          />
+          <Box
             component="video"
             src="/video/bidet-buddy-snip.mp4"
             alt="bidet-buddy-snip"
@@ -386,6 +417,21 @@ export function AboutUsCArds() {
                   mb: { xs: " 24px" },
                 }}
               >
+                <Box
+                  component="img"
+                  src={AboutUsImage.src}
+                  alt="Metaleon 3D character"
+                  sx={{
+                    display: "none",
+                    width: "100%",
+                    // height: "100%",
+                    boder: "1px solid #434245",
+                    objectFit: "cover",
+                    overflow: "hidden",
+                    AspectRatio: "1/1",
+                    borderRadius: { xs: "8px" },
+                  }}
+                />
                 <Box
                   component="video"
                   src={items.video}
