@@ -178,7 +178,7 @@ export function HeroSection({ industryName, proName, heroVideo }) {
 
           bottom: 0,
           background:
-            " linear-gradient(180deg, rgba(0, 0, 0, 0) 80%, #000000 ) 100%",
+            " linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000 ) ",
         }}
       ></Box>
     </Box>
