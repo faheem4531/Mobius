@@ -9,6 +9,7 @@ import workrow1 from "@/_assets/png/workrow1.png";
 import workrow2 from "@/_assets/png/workrow2.png";
 import GenericIdeaSection from "@/_components/design-home/product-idea";
 import camera from "@/_assets/png/camera2.png";
+import Footer from "@/_components/footer/Footer";
 
 export async function generateStaticParams() {
   return projectsData.map((project) => ({ slug: project.slug }));
@@ -16,33 +17,47 @@ export async function generateStaticParams() {
 
 export default function ProjectDetailPage({ params }) {
   const project = projectsData.find((p) => p.slug === params.slug);
+  console.log(project);
 
   if (!project) return notFound();
+
   return (
     <>
       <NavBar />
       <main>
-        <HeroSection industryName={project.industry} proName={project.title} />
+        <HeroSection
+          industryName={project.industry}
+          proName={project.title}
+          heroVideo={project.heroVideo}
+        />
         <AboutUs
           industryName={project.industry}
           title={project.title}
           about={project.about}
+          heroVideo={project.heroVideo}
         />
-        <ConceptSketches />
-        <AboutUsCArds />
+        <ConceptSketches details={project.details} />
+        <AboutUsCArds details={project.details} />
         <GenericIdeaSection
           title="Book a call? So we bring your idea to life!"
           buttonText="Talk to Our Expert"
           imageSrc={camera}
         />
+        <Footer />
       </main>
     </>
   );
 }
 // hero section
-export function HeroSection({ industryName, proName }) {
+export function HeroSection({ industryName, proName, heroVideo }) {
   return (
-    <Box sx={{ position: "relative" }}>
+    <Box
+      sx={{
+        position: "relative",
+        background:
+          "linear-gradient(180deg, rgba(0, 0, 0, 0) 90.07%, #000000 100%)",
+      }}
+    >
       {/* Background Video */}
       <Box
         sx={{
@@ -57,15 +72,14 @@ export function HeroSection({ industryName, proName }) {
       >
         <Box
           component="img"
-          src={AboutUsImage.src}
+          src={heroVideo}
           alt="Metaleon 3D character"
           sx={{
-            display: "none",
             width: "100%",
-            // height: "100%",
+            height: "100%",
             objectFit: "cover",
             overflow: "hidden",
-            AspectRatio: "1/1",
+            // AspectRatio: "1/1",
             zIndex: 2,
           }}
         />
@@ -74,15 +88,17 @@ export function HeroSection({ industryName, proName }) {
           muted
           loop
           style={{
+            display: "none",
             width: "100%",
             // height: "100%",
             objectFit: "cover",
-            display: "block",
+            // display: "block",
             height: "100%",
             overflow: "hidden",
           }}
         >
           <source src="/video/Showreel-2024.webm" type="video/webm" />
+          {/* <source src={heroVideo} type="video/webm" /> */}
           Your browser does not support the video tag.
         </video>
       </Box>
@@ -142,7 +158,7 @@ export function HeroSection({ industryName, proName }) {
 }
 
 // about us
-export function AboutUs({ industryName, title, about }) {
+export function AboutUs({ industryName, title, about, heroVideo }) {
   return (
     <Box
       sx={{
@@ -220,15 +236,15 @@ export function AboutUs({ industryName, title, about }) {
           {[
             {
               title: "Project Overview",
-              des: "The project showcases a sleek camera with its various components on display, highlighting its features and functionality. With a modern and dynamic style, the camera is presented from multiple angles and the visuals are designed to emphasize its high-tech appeal.",
+              des: about.overview,
             },
             {
               title: "Challenge",
-              des: "The challenges in creating the camera animation were recreating intricate components, ensuring accurate representation of the camera's features, meeting the audience's expectations, balancing creativity with brand guidelines, all while completing the project within a limited time frame. Thorough research and understanding of the camera's capabilities were necessary to achieve a high-quality output.",
+              des: about.challenge,
             },
             {
               title: "Solution",
-              des: "Utilizing 3D modeling software to create detailed camera components and experimenting with different techniques to achieve desired aesthetic appeal. Conducting thorough research and collaborating with the product team to accurately represent the camera's features and capabilities.",
+              des: about.solution,
             },
           ].map((item, index) => (
             <Box key={index}>
@@ -260,7 +276,7 @@ export function AboutUs({ industryName, title, about }) {
   );
 }
 
-export function ConceptSketches() {
+export function ConceptSketches({ details }) {
   return (
     <>
       <Box
@@ -273,6 +289,9 @@ export function ConceptSketches() {
           backgroundPosition: { xs: "center top", sm: "right" },
           position: "relative",
           p: { xs: "32px 20px", md: "40px", lg: "40px 80px" },
+
+          background:
+            "linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 48.08%, rgba(0, 0, 0, 0.2) 100%)",
         }}
       >
         <Box
@@ -299,10 +318,10 @@ export function ConceptSketches() {
         >
           <Box
             component="img"
-            src={AboutUsImage.src}
+            src={details[0].url}
             alt="Metaleon 3D character"
             sx={{
-              display: "none",
+              // display: "none",
               width: "100%",
               height: { xs: "240px", sm: "340px", md: "600px", lg: "720px" },
               objectFit: "cover",
@@ -323,6 +342,7 @@ export function ConceptSketches() {
             muted
             sx={{
               width: "100%",
+              display: "none",
               height: { xs: "240px", sm: "340px", md: "600px", lg: "720px" },
               objectFit: "cover",
               borderRadius: { xs: "8px" },
@@ -337,7 +357,7 @@ export function ConceptSketches() {
                 textTransform: "capitalize",
               }}
             >
-              Concept Sketches
+              {details[0].title}
             </Typography>
             <Typography
               sx={{
@@ -350,8 +370,7 @@ export function ConceptSketches() {
                 color: "#B9B6BD",
               }}
             >
-              We take your product idea and sketch various concepts for
-              visualizing your idea
+              {details[0].description}
             </Typography>
           </Box>
         </Box>
@@ -360,7 +379,7 @@ export function ConceptSketches() {
   );
 }
 
-export function AboutUsCArds() {
+export function AboutUsCArds({ details }) {
   return (
     <Box
       sx={{
@@ -384,28 +403,11 @@ export function AboutUsCArds() {
           },
         }}
       >
-        {[
-          {
-            video: "/video/bidet-buddy-snip.mp4",
-            title: "3D CAD & Modelling",
-            des: "With our expert design team you get not only a functional product but an ergonomic aesthetic product that stands out in the noise.",
-          },
-          {
-            video: "/video/bidet-buddy-snip.mp4",
-            title: "Design for Manufacture",
-            des: "With attention to detail we craft each product defining minor engineering detail to ensure design is ready to manufacture.",
-          },
-          {
-            video: "/video/bidet-buddy-snip.mp4",
-            title: "Prototyping",
-            des: "With our prototyping techniques you get a one window solution for your product idea from concept to a working prototype.",
-          },
-          {
-            video: "/video/bidet-buddy-snip.mp4",
-            title: "Solution",
-            des: "Utilizing 3D modeling software to create detailed camera components and experimenting with different techniques to achieve.",
-          },
-        ].map((items, i) => {
+        {details.slice(1).map((items, i) => {
+          const isVideo =
+            items.url.endsWith(".mp4") ||
+            items.url.endsWith(".mov") ||
+            items.url.endsWith(".webm");
           return (
             <Box key={i} sx={{}}>
               <Box
@@ -417,36 +419,35 @@ export function AboutUsCArds() {
                   mb: { xs: " 24px" },
                 }}
               >
-                <Box
-                  component="img"
-                  src={AboutUsImage.src}
-                  alt="Metaleon 3D character"
-                  sx={{
-                    display: "none",
-                    width: "100%",
-                    // height: "100%",
-                    boder: "1px solid #434245",
-                    objectFit: "cover",
-                    overflow: "hidden",
-                    AspectRatio: "1/1",
-                    borderRadius: { xs: "8px" },
-                  }}
-                />
-                <Box
-                  component="video"
-                  src={items.video}
-                  alt="bidet-buddy-snip"
-                  autoPlay
-                  loop
-                  muted
-                  sx={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    boder: "1px solid #434245",
-                    borderRadius: { xs: "8px" },
-                  }}
-                />
+                {isVideo ? (
+                  <Box
+                    component="video"
+                    src={items.url}
+                    autoPlay
+                    loop
+                    muted
+                    sx={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      boder: "1px solid #434245",
+                      borderRadius: { xs: "8px" },
+                    }}
+                  />
+                ) : (
+                  <Box
+                    component="img"
+                    src={items.url}
+                    alt={items.title}
+                    sx={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      boder: "1px solid #434245",
+                      borderRadius: { xs: "8px" },
+                    }}
+                  />
+                )}
               </Box>
               <Typography
                 sx={{
@@ -467,7 +468,7 @@ export function AboutUsCArds() {
                   color: "#B9B6BD",
                 }}
               >
-                {items.des}
+                {items.description}
               </Typography>
             </Box>
           );
