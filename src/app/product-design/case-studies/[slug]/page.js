@@ -23,7 +23,7 @@ export default function ProjectDetailPage({ params }) {
 
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <main>
         <HeroSection
           industryName={project.industry}
@@ -51,106 +51,107 @@ export default function ProjectDetailPage({ params }) {
 // hero section
 export function HeroSection({ industryName, proName, heroVideo }) {
   return (
+    // <Box
+    //   sx={{
+    //     background:
+    //       "linear-gradient(180deg, rgba(0, 0, 0, 0) 90.07%, #000000 100%)",
+    //   }}
+    // >
     <Box
       sx={{
+        // background:
+        //   "linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 50.48%, #000000 100%)",
         position: "relative",
         background:
           "linear-gradient(180deg, rgba(0, 0, 0, 0) 90.07%, #000000 100%)",
+        backgroundImage: `url(${heroVideo})`,
+
+        // background: "#000",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: { xs: "200% 100%", sm: "150% 100%", sm: "100% 100%" },
+        backgroundPosition: { xs: "center ", sm: "center" },
       }}
     >
-      {/* Background Video */}
+      {/* <Box
+        sx={{
+          maxWidth: "1440px",
+          width: "100%",
+          display: "flex",
+          // backgroundColor: "#ffffff20",
+          flexDirection: "column",
+          // alignItems: "center",
+          m: "auto",
+        }}
+      > */}
+      <NavBar />
+      {/* </Box> */}
+
       <Box
         sx={{
-          position: "absolute",
-          top: 0,
-          left: 0,
+          maxWidth: "1440px",
           width: "100%",
-          height: { xs: "500px", sm: "530px", md: "720px" },
+          display: "flex",
 
-          zIndex: 0,
+          flexDirection: "column",
+          alignItems: "center",
+          m: "auto",
+
+          padding: {
+            xs: " 80px 16px ",
+            sm: " 100px 20px 80px",
+            md: "100px 40px 80px",
+            lg: "120px 80px 80px",
+          },
         }}
       >
+        {/* Section */}
         <Box
-          component="img"
-          src={heroVideo}
-          alt="Metaleon 3D character"
           sx={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            overflow: "hidden",
-            // AspectRatio: "1/1",
-            zIndex: 2,
-          }}
-        />
-        <video
-          autoPlay
-          muted
-          loop
-          style={{
-            display: "none",
-            width: "100%",
+            height: { xs: "340px", sm: "400px", md: "520px", lg: "600px" },
             // height: "100%",
-            objectFit: "cover",
-            // display: "block",
-            height: "100%",
-            overflow: "hidden",
-          }}
-        >
-          <source src="/video/Showreel-2024.webm" type="video/webm" />
-          {/* <source src={heroVideo} type="video/webm" /> */}
-          Your browser does not support the video tag.
-        </video>
-      </Box>
-
-      {/* Section */}
-      <Box
-        sx={{
-          // bgcolor: "red",
-          height: { xs: "500px", sm: "530px", md: "720px" },
-          width: "100%",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          position: "relative",
-        }}
-      >
-        {/* Content */}
-        <Box
-          sx={{
-            position: "absolute",
-            left: { xs: "30px", sm: "50px", md: "90px" },
-            bottom: { xs: "30px", sm: "70px", md: "120px" },
-            color: "var(--text-primary)",
-            fontWeight: 300,
             width: "100%",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            position: "relative",
           }}
         >
-          <Typography
+          {/* Content */}
+          <Box
             sx={{
-              width: { xs: "90%", sm: "80%", md: "50%" },
-              fontSize: { xs: "16px", md: "20px" },
-              textTransform: "capitalize",
-              fontFamily: {
-                xs: "Avenir3 !important",
-              },
-              textTransform: "capitalize",
+              position: "absolute",
+              bottom: { xs: "0px" },
+              color: "var(--text-primary)",
+              fontWeight: 300,
+              width: "100%",
             }}
           >
-            {industryName}
-          </Typography>
-          <Typography
-            sx={{
-              width: { xs: "90%", sm: "80%", md: "50%" },
-              fontWeight: 500,
-              fontSize: { xs: "24px", md: "30px", lg: "32px" },
-              color: "var(--text-main)",
-              fontFamily: "Avenir5 !important",
-              lineHeight: { xs: "32px", md: "48px" },
-              textTransform: "capitalize",
-            }}
-          >
-            {proName}
-          </Typography>
+            <Typography
+              sx={{
+                width: { xs: "90%", sm: "80%", md: "50%" },
+                fontSize: { xs: "16px", md: "20px" },
+                textTransform: "capitalize",
+                fontFamily: {
+                  xs: "Avenir3 !important",
+                },
+                textTransform: "capitalize",
+              }}
+            >
+              {industryName}
+            </Typography>
+            <Typography
+              sx={{
+                width: { xs: "90%", sm: "80%", md: "50%" },
+                fontWeight: 500,
+                fontSize: { xs: "24px", md: "30px", lg: "32px" },
+                color: "var(--text-main)",
+                fontFamily: "Avenir5 !important",
+                lineHeight: { xs: "32px", md: "48px" },
+                textTransform: "capitalize",
+              }}
+            >
+              {proName}
+            </Typography>
+          </Box>
         </Box>
       </Box>
     </Box>
