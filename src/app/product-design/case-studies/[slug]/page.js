@@ -10,6 +10,7 @@ import workrow2 from "@/_assets/png/workrow2.png";
 import GenericIdeaSection from "@/_components/design-home/product-idea";
 import camera from "@/_assets/png/camera2.png";
 import Footer from "@/_components/footer/Footer";
+import zIndex from "@mui/material/styles/zIndex";
 
 export async function generateStaticParams() {
   return projectsData.map((project) => ({ slug: project.slug }));
@@ -23,7 +24,7 @@ export default function ProjectDetailPage({ params }) {
 
   return (
     <>
-      {/* <NavBar /> */}
+      <NavBar />
       <main>
         <HeroSection
           industryName={project.industry}
@@ -51,41 +52,57 @@ export default function ProjectDetailPage({ params }) {
 // hero section
 export function HeroSection({ industryName, proName, heroVideo }) {
   return (
-    // <Box
-    //   sx={{
-    //     background:
-    //       "linear-gradient(180deg, rgba(0, 0, 0, 0) 90.07%, #000000 100%)",
-    //   }}
-    // >
     <Box
       sx={{
-        // background:
-        //   "linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 50.48%, #000000 100%)",
         position: "relative",
-        background:
-          "linear-gradient(180deg, rgba(0, 0, 0, 0) 90.07%, #000000 100%)",
-        backgroundImage: `url(${heroVideo})`,
-
-        // background: "#000",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: { xs: "200% 100%", sm: "150% 100%", sm: "100% 100%" },
-        backgroundPosition: { xs: "center ", sm: "center" },
       }}
     >
-      {/* <Box
+      {/* Background Video */}
+      <Box
         sx={{
-          maxWidth: "1440px",
+          // backgroundColor: "red",
+          position: "absolute",
+          top: 0,
+          left: 0,
           width: "100%",
-          display: "flex",
-          // backgroundColor: "#ffffff20",
-          flexDirection: "column",
-          // alignItems: "center",
-          m: "auto",
-        }}
-      > */}
-      <NavBar />
-      {/* </Box> */}
+          height: { xs: "500px", sm: "530px", md: "720px" },
 
+          zIndex: 0,
+        }}
+      >
+        <Box
+          component="img"
+          src={heroVideo}
+          alt="Metaleon 3D character"
+          sx={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            overflow: "hidden",
+            // AspectRatio: "1/1",
+            zIndex: 2,
+          }}
+        />
+        <video
+          autoPlay
+          muted
+          loop
+          style={{
+            display: "none",
+            width: "100%",
+            objectFit: "cover",
+            // display: "block",
+            height: "100%",
+            overflow: "hidden",
+          }}
+        >
+          <source src="/video/Showreel-2024.webm" type="video/webm" />
+          {/* <source src={heroVideo} type="video/webm" /> */}
+          Your browser does not support the video tag.
+        </video>
+      </Box>
+
+      {/* Section */}
       <Box
         sx={{
           maxWidth: "1440px",
@@ -95,31 +112,29 @@ export function HeroSection({ industryName, proName, heroVideo }) {
           flexDirection: "column",
           alignItems: "center",
           m: "auto",
-
-          padding: {
-            xs: " 80px 16px ",
-            sm: " 100px 20px 80px",
-            md: "100px 40px 80px",
-            lg: "120px 80px 80px",
-          },
         }}
       >
-        {/* Section */}
         <Box
           sx={{
-            height: { xs: "340px", sm: "400px", md: "520px", lg: "600px" },
-            // height: "100%",
+            height: { xs: "500px", sm: "530px", md: "720px" },
             width: "100%",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
-            position: "relative",
           }}
         >
           {/* Content */}
           <Box
             sx={{
               position: "absolute",
+
+              // left: { xs: "30px", sm: "50px", md: "90px" },
               bottom: { xs: "0px" },
+
+              padding: {
+                xs: "80px 16px",
+                md: " 80px  40px",
+                lg: "80px",
+              },
               color: "var(--text-primary)",
               fontWeight: 300,
               width: "100%",
@@ -154,6 +169,18 @@ export function HeroSection({ industryName, proName, heroVideo }) {
           </Box>
         </Box>
       </Box>
+      <Box
+        sx={{
+          width: "100%",
+          position: "absolute",
+          background: "red",
+          height: "50px",
+
+          bottom: 0,
+          background:
+            " linear-gradient(180deg, rgba(0, 0, 0, 0) 80%, #000000 ) 100%",
+        }}
+      ></Box>
     </Box>
   );
 }
