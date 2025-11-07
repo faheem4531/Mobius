@@ -1,117 +1,28 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Box, Grid2, Typography } from "@mui/material";
-const products = [
-  {
-    id: 1,
-    ProName: "KYS Norway",
-    indName: "Appliances",
-    image: "/work/kys.jpeg",
-    size: { xs: 12, md: 6.5 },
-  },
-  {
-    id: 2,
-    ProName: "Wosler",
-    indName: "Medical Tech",
-    image: "/work/wosler.jpeg",
-    size: { xs: 6, md: 5.5 },
-  },
-  {
-    id: 3,
-    ProName: "SmartFoil",
-    indName: "Adventure sports",
-    image: "/work/smart-foil.jpeg",
-    size: { xs: 6, md: 3.1 },
-  },
-  {
-    id: 4,
-    ProName: "Umbrella Mount",
-    indName: "Industry",
-    image: "/work/umbrella-mount.jpeg",
-    size: { xs: 12, md: 4.65 },
-  },
-  {
-    id: 5,
-    ProName: "Moodieband",
-    indName: "Toys",
-    image: "/work/moodieband.jpeg",
-    size: { xs: 6, md: 4.25 },
-  },
-  {
-    id: 6,
-    ProName: "KYS Norway",
-    indName: "Appliances",
-    image: "/work/kys.jpeg",
-    size: { xs: 6, md: 6.5 },
-  },
-  {
-    id: 7,
-    ProName: "Wosler",
-    indName: "Medical Tech",
-    image: "/work/wosler.jpeg",
-    size: { xs: 12, md: 5.5 },
-  },
-  {
-    id: 8,
-    ProName: "SmartFoil",
-    indName: "Adventure sports",
-    image: "/work/smart-foil.jpeg",
-    size: { xs: 6, md: 3.15 },
-  },
-  {
-    id: 9,
-    ProName: "Umbrella Mount",
-    indName: "Industry",
-    image: "/work/umbrella-mount.jpeg",
-    size: { xs: 6, md: 5.7 },
-  },
-  {
-    id: 10,
-    ProName: "Moodieband",
-    indName: "Toys",
-    image: "/work/moodieband.jpeg",
-    size: { xs: 12, md: 3.15 },
-  },
-  {
-    id: 11,
-    ProName: "SmartFoil",
-    indName: "Adventure sports",
-    image: "/work/smart-foil.jpeg",
-    size: { xs: 6, md: 3.27 },
-  },
-  {
-    id: 12,
-    ProName: "Moodieband",
-    indName: "Toys",
-    image: "/work/moodieband.jpeg",
-    size: { xs: 6, md: 3.27 },
-  },
-  {
-    id: 13,
-    ProName: "Umbrella Mount",
-    indName: "Industry",
-    image: "/work/umbrella-mount.jpeg",
-    size: { xs: 12, md: 5.46 },
-  },
-  {
-    id: 14,
-    ProName: "KYS Norway",
-    indName: "Appliances",
-    image: "/work/kys.jpeg",
-    size: { xs: 6, md: 6.5 },
-  },
-  {
-    id: 15,
-    ProName: "Wosler",
-    indName: "Medical Tech",
-    image: "/work/wosler.jpeg",
-    size: { xs: 6, md: 5.5 },
-  },
-];
-
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const CaseStudyProducts = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    async function fetchProducts() {
+      try {
+        const response = await fetch("/api/caseStudies");
+        const result = await response.json();
+        if (result.success) {
+          setProducts(result.data[0].caseStudies);
+        }
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    }
+    fetchProducts();
+  }, []);
+
   return (
     <Box
       sx={{
@@ -131,21 +42,17 @@ const CaseStudyProducts = () => {
           flexDirection: "column",
           alignItems: "center",
           m: "auto",
-          padding: {
-            xs: "32px 20px",
-            md: "40px",
-            lg: "80px",
-          },
+          padding: { xs: "32px 20px", md: "40px", lg: "80px" },
         }}
       >
         <Grid2 container spacing={{ xs: 2, md: 3 }}>
           {products.map((item) => (
             <Grid2 key={item.id} size={item.size}>
               <Cards
+                slug={item.slug}
                 ProName={item.ProName}
                 indName={item.indName}
                 image={item.image}
-                id={item.id}
               />
             </Grid2>
           ))}
@@ -155,10 +62,11 @@ const CaseStudyProducts = () => {
   );
 };
 
-export const Cards = ({ ProName, indName, image, id }) => {
+export const Cards = ({ ProName, indName, image, slug }) => {
+  const router = useRouter();
   return (
     <Box
-      onClick={() => console.log(id)}
+      onClick={() => router.push(`/product-design/case-studies/${slug}`)}
       sx={{
         width: "100%",
         borderRadius: { xs: "4px", sm: "8px" },
@@ -166,15 +74,10 @@ export const Cards = ({ ProName, indName, image, id }) => {
         height: { xs: "172px", sm: "300px", md: "340px", lg: "440px" },
       }}
     >
-      <Box
-        sx={{
-          width: "100%",
-          height: "100%",
-        }}
-      >
+      <Box sx={{ width: "100%", height: "100%" }}>
         <Image
           src={image}
-          alt="logo"
+          alt={ProName}
           style={{
             width: "100%",
             height: "100%",
@@ -191,15 +94,11 @@ export const Cards = ({ ProName, indName, image, id }) => {
           zIndex: 2,
           width: "100%",
           bgcolor: "rgba(0, 0, 0, 0.8)",
-
           display: "flex",
           alignItems: "center",
           justifyContent: { xs: "space-between" },
           height: { xs: "24px", sm: "43px" },
-          borderRadius: {
-            xs: "0px 0px 5px  5px ",
-            md: "0px 0px 12px  12px ",
-          },
+          borderRadius: { xs: "0 0 5px 5px", md: "0 0 12px 12px" },
           p: { xs: "8px", sm: "16px 8px" },
           mt: { xs: "-24px", sm: "-43px" },
         }}
@@ -231,4 +130,5 @@ export const Cards = ({ ProName, indName, image, id }) => {
     </Box>
   );
 };
+
 export default CaseStudyProducts;
