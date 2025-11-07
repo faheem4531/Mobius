@@ -9,6 +9,8 @@ import workrow1 from "@/_assets/png/workrow1.png";
 import workrow2 from "@/_assets/png/workrow2.png";
 import GenericIdeaSection from "@/_components/design-home/product-idea";
 import camera from "@/_assets/png/camera2.png";
+import Footer from "@/_components/footer/Footer";
+import zIndex from "@mui/material/styles/zIndex";
 
 export async function generateStaticParams() {
   return projectsData.map((project) => ({ slug: project.slug }));
@@ -16,33 +18,49 @@ export async function generateStaticParams() {
 
 export default function ProjectDetailPage({ params }) {
   const project = projectsData.find((p) => p.slug === params.slug);
+  console.log(project);
 
   if (!project) return notFound();
+
   return (
     <>
       <NavBar />
       <main>
-        <HeroSection industryName={project.industry} proName={project.title} />
+        <HeroSection
+          industryName={project.industry}
+          proName={project.title}
+          heroVideo={project.heroVideo}
+        />
         <AboutUs
           industryName={project.industry}
           title={project.title}
           about={project.about}
+          heroVideo={project.heroVideo}
         />
-        <ConceptSketches />
-        <AboutUsCArds />
+        <ConceptSketches details={project.details} />
+        <AboutUsCArds details={project.details} />
         <GenericIdeaSection
           title="Book a call? So we bring your idea to life!"
           buttonText="Talk to Our Expert"
           imageSrc={camera}
         />
+        <Footer />
       </main>
     </>
   );
 }
 // hero section
-export function HeroSection({ industryName, proName }) {
+export function HeroSection({ industryName, proName, heroVideo }) {
+  const isVideo =
+    heroVideo.endsWith(".mp4") ||
+    heroVideo.endsWith(".mov") ||
+    heroVideo.endsWith(".webm");
   return (
-    <Box sx={{ position: "relative" }}>
+    <Box
+      sx={{
+        position: "relative",
+      }}
+    >
       {/* Background Video */}
       <Box
         sx={{
@@ -50,99 +68,125 @@ export function HeroSection({ industryName, proName }) {
           top: 0,
           left: 0,
           width: "100%",
-          height: { xs: "500px", sm: "530px", md: "720px" },
+          height: { xs: "500px", sm: "530px", md: "720px", xl: "800px" },
 
           zIndex: 0,
         }}
       >
-        <Box
-          component="img"
-          src={AboutUsImage.src}
-          alt="Metaleon 3D character"
-          sx={{
-            display: "none",
-            width: "100%",
-            // height: "100%",
-            objectFit: "cover",
-            overflow: "hidden",
-            AspectRatio: "1/1",
-            zIndex: 2,
-          }}
-        />
-        <video
-          autoPlay
-          muted
-          loop
-          style={{
-            width: "100%",
-            // height: "100%",
-            objectFit: "cover",
-            display: "block",
-            height: "100%",
-            overflow: "hidden",
-          }}
-        >
-          <source src="/video/Showreel-2024.webm" type="video/webm" />
-          Your browser does not support the video tag.
-        </video>
+        {isVideo ? (
+          <video
+            autoPlay
+            muted
+            loop
+            style={{
+              width: "100%",
+              objectFit: "cover",
+              height: "100%",
+              overflow: "hidden",
+            }}
+          >
+            <source src={heroVideo} />
+            {/* <source src={heroVideo} type="video/webm" /> */}
+            Your browser does not support the video tag.
+          </video>
+        ) : (
+          <Box
+            component="img"
+            src={heroVideo}
+            alt="Metaleon 3D character"
+            sx={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              overflow: "hidden",
+              zIndex: 2,
+            }}
+          />
+        )}
       </Box>
 
       {/* Section */}
       <Box
         sx={{
-          // bgcolor: "red",
-          height: { xs: "500px", sm: "530px", md: "720px" },
+          maxWidth: "1440px",
           width: "100%",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          position: "relative",
+          display: "flex",
+
+          flexDirection: "column",
+          alignItems: "center",
+          m: "auto",
         }}
       >
-        {/* Content */}
         <Box
           sx={{
-            position: "absolute",
-            left: { xs: "30px", sm: "50px", md: "90px" },
-            bottom: { xs: "30px", sm: "70px", md: "120px" },
-            color: "var(--text-primary)",
-            fontWeight: 300,
+            height: { xs: "500px", sm: "530px", md: "720px", xl: "800px" },
             width: "100%",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
           }}
         >
-          <Typography
+          {/* Content */}
+          <Box
             sx={{
-              width: { xs: "90%", sm: "80%", md: "50%" },
-              fontSize: { xs: "16px", md: "20px" },
-              textTransform: "capitalize",
-              fontFamily: {
-                xs: "Avenir3 !important",
+              position: "absolute",
+              bottom: { xs: "0px" },
+              m: "auto",
+              padding: {
+                xs: "80px 16px",
+                md: " 80px  40px",
+                lg: "80px",
               },
-              textTransform: "capitalize",
+              color: "var(--text-primary)",
+              fontWeight: 300,
+              width: "100%",
             }}
           >
-            {industryName}
-          </Typography>
-          <Typography
-            sx={{
-              width: { xs: "90%", sm: "80%", md: "50%" },
-              fontWeight: 500,
-              fontSize: { xs: "24px", md: "30px", lg: "32px" },
-              color: "var(--text-main)",
-              fontFamily: "Avenir5 !important",
-              lineHeight: { xs: "32px", md: "48px" },
-              textTransform: "capitalize",
-            }}
-          >
-            {proName}
-          </Typography>
+            <Typography
+              sx={{
+                width: { xs: "90%", sm: "80%", md: "50%" },
+                fontSize: { xs: "16px", md: "20px" },
+                textTransform: "capitalize",
+                fontFamily: {
+                  xs: "Avenir3 !important",
+                },
+                textTransform: "capitalize",
+              }}
+            >
+              {industryName}
+            </Typography>
+            <Typography
+              sx={{
+                width: { xs: "90%", sm: "80%", md: "50%" },
+                fontWeight: 500,
+                fontSize: { xs: "24px", md: "30px", lg: "32px" },
+                color: "var(--text-main)",
+                fontFamily: "Avenir5 !important",
+                lineHeight: { xs: "32px", md: "48px" },
+                textTransform: "capitalize",
+              }}
+            >
+              {proName}
+            </Typography>
+          </Box>
         </Box>
       </Box>
+      <Box
+        sx={{
+          width: "100%",
+          position: "absolute",
+          height: "50px",
+          bottom: 0,
+          background:
+            " linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000 ) ",
+          // bgcolor: "red",
+        }}
+      ></Box>
     </Box>
   );
 }
 
 // about us
-export function AboutUs({ industryName, title, about }) {
+export function AboutUs({ industryName, title, about, heroVideo }) {
   return (
     <Box
       sx={{
@@ -220,15 +264,15 @@ export function AboutUs({ industryName, title, about }) {
           {[
             {
               title: "Project Overview",
-              des: "The project showcases a sleek camera with its various components on display, highlighting its features and functionality. With a modern and dynamic style, the camera is presented from multiple angles and the visuals are designed to emphasize its high-tech appeal.",
+              des: about.overview,
             },
             {
               title: "Challenge",
-              des: "The challenges in creating the camera animation were recreating intricate components, ensuring accurate representation of the camera's features, meeting the audience's expectations, balancing creativity with brand guidelines, all while completing the project within a limited time frame. Thorough research and understanding of the camera's capabilities were necessary to achieve a high-quality output.",
+              des: about.challenge,
             },
             {
               title: "Solution",
-              des: "Utilizing 3D modeling software to create detailed camera components and experimenting with different techniques to achieve desired aesthetic appeal. Conducting thorough research and collaborating with the product team to accurately represent the camera's features and capabilities.",
+              des: about.solution,
             },
           ].map((item, index) => (
             <Box key={index}>
@@ -260,7 +304,11 @@ export function AboutUs({ industryName, title, about }) {
   );
 }
 
-export function ConceptSketches() {
+export function ConceptSketches({ details }) {
+  const isVideo =
+    details[0].url.endsWith(".mp4") ||
+    details[0].url.endsWith(".mov") ||
+    details[0].url.endsWith(".webm");
   return (
     <>
       <Box
@@ -273,6 +321,9 @@ export function ConceptSketches() {
           backgroundPosition: { xs: "center top", sm: "right" },
           position: "relative",
           p: { xs: "32px 20px", md: "40px", lg: "40px 80px" },
+
+          background:
+            "linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 48.08%, rgba(0, 0, 0, 0.2) 100%)",
         }}
       >
         <Box
@@ -297,37 +348,42 @@ export function ConceptSketches() {
             px: { lg: "80px" },
           }}
         >
-          <Box
-            component="img"
-            src={AboutUsImage.src}
-            alt="Metaleon 3D character"
-            sx={{
-              display: "none",
-              width: "100%",
-              height: { xs: "240px", sm: "340px", md: "600px", lg: "720px" },
-              objectFit: "cover",
-              borderRadius: { xs: "8px" },
-              boder: "1px solid #434245",
-              objectFit: "cover",
-              overflow: "hidden",
-              AspectRatio: "1/1",
-              borderRadius: { xs: "8px" },
-            }}
-          />
-          <Box
-            component="video"
-            src="/video/bidet-buddy-snip.mp4"
-            alt="bidet-buddy-snip"
-            autoPlay
-            loop
-            muted
-            sx={{
-              width: "100%",
-              height: { xs: "240px", sm: "340px", md: "600px", lg: "720px" },
-              objectFit: "cover",
-              borderRadius: { xs: "8px" },
-            }}
-          />
+          {isVideo ? (
+            <Box
+              component="video"
+              src={details[0].url}
+              alt="bidet-buddy-snip"
+              autoPlay
+              loop
+              muted
+              sx={{
+                width: "100%",
+                // display: "none",
+                height: { xs: "240px", sm: "340px", md: "600px", lg: "720px" },
+                objectFit: "cover",
+                borderRadius: { xs: "8px" },
+              }}
+            />
+          ) : (
+            <Box
+              component="img"
+              src={details[0].url}
+              alt="Metaleon 3D character"
+              sx={{
+                // display: "none",
+                width: "100%",
+                height: { xs: "240px", sm: "340px", md: "600px", lg: "720px" },
+                objectFit: "cover",
+                borderRadius: { xs: "8px" },
+                boder: "1px solid #434245",
+                objectFit: "cover",
+                overflow: "hidden",
+                AspectRatio: "1/1",
+                borderRadius: { xs: "8px" },
+              }}
+            />
+          )}
+
           <Box sx={{ mt: { xs: "70px", md: "40px" } }}>
             <Typography
               sx={{
@@ -337,7 +393,7 @@ export function ConceptSketches() {
                 textTransform: "capitalize",
               }}
             >
-              Concept Sketches
+              {details[0].title}
             </Typography>
             <Typography
               sx={{
@@ -350,8 +406,7 @@ export function ConceptSketches() {
                 color: "#B9B6BD",
               }}
             >
-              We take your product idea and sketch various concepts for
-              visualizing your idea
+              {details[0].description}
             </Typography>
           </Box>
         </Box>
@@ -360,7 +415,7 @@ export function ConceptSketches() {
   );
 }
 
-export function AboutUsCArds() {
+export function AboutUsCArds({ details }) {
   return (
     <Box
       sx={{
@@ -384,28 +439,11 @@ export function AboutUsCArds() {
           },
         }}
       >
-        {[
-          {
-            video: "/video/bidet-buddy-snip.mp4",
-            title: "3D CAD & Modelling",
-            des: "With our expert design team you get not only a functional product but an ergonomic aesthetic product that stands out in the noise.",
-          },
-          {
-            video: "/video/bidet-buddy-snip.mp4",
-            title: "Design for Manufacture",
-            des: "With attention to detail we craft each product defining minor engineering detail to ensure design is ready to manufacture.",
-          },
-          {
-            video: "/video/bidet-buddy-snip.mp4",
-            title: "Prototyping",
-            des: "With our prototyping techniques you get a one window solution for your product idea from concept to a working prototype.",
-          },
-          {
-            video: "/video/bidet-buddy-snip.mp4",
-            title: "Solution",
-            des: "Utilizing 3D modeling software to create detailed camera components and experimenting with different techniques to achieve.",
-          },
-        ].map((items, i) => {
+        {details.slice(1).map((items, i) => {
+          const isVideo =
+            items.url.endsWith(".mp4") ||
+            items.url.endsWith(".mov") ||
+            items.url.endsWith(".webm");
           return (
             <Box key={i} sx={{}}>
               <Box
@@ -417,36 +455,35 @@ export function AboutUsCArds() {
                   mb: { xs: " 24px" },
                 }}
               >
-                <Box
-                  component="img"
-                  src={AboutUsImage.src}
-                  alt="Metaleon 3D character"
-                  sx={{
-                    display: "none",
-                    width: "100%",
-                    // height: "100%",
-                    boder: "1px solid #434245",
-                    objectFit: "cover",
-                    overflow: "hidden",
-                    AspectRatio: "1/1",
-                    borderRadius: { xs: "8px" },
-                  }}
-                />
-                <Box
-                  component="video"
-                  src={items.video}
-                  alt="bidet-buddy-snip"
-                  autoPlay
-                  loop
-                  muted
-                  sx={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    boder: "1px solid #434245",
-                    borderRadius: { xs: "8px" },
-                  }}
-                />
+                {isVideo ? (
+                  <Box
+                    component="video"
+                    src={items.url}
+                    autoPlay
+                    loop
+                    muted
+                    sx={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      boder: "1px solid #434245",
+                      borderRadius: { xs: "8px" },
+                    }}
+                  />
+                ) : (
+                  <Box
+                    component="img"
+                    src={items.url}
+                    alt={items.title}
+                    sx={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      boder: "1px solid #434245",
+                      borderRadius: { xs: "8px" },
+                    }}
+                  />
+                )}
               </Box>
               <Typography
                 sx={{
@@ -467,7 +504,7 @@ export function AboutUsCArds() {
                   color: "#B9B6BD",
                 }}
               >
-                {items.des}
+                {items.description}
               </Typography>
             </Box>
           );
