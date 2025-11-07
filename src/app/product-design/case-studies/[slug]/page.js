@@ -51,6 +51,10 @@ export default function ProjectDetailPage({ params }) {
 }
 // hero section
 export function HeroSection({ industryName, proName, heroVideo }) {
+  const isVideo =
+    heroVideo.endsWith(".mp4") ||
+    heroVideo.endsWith(".mov") ||
+    heroVideo.endsWith(".webm");
   return (
     <Box
       sx={{
@@ -60,46 +64,45 @@ export function HeroSection({ industryName, proName, heroVideo }) {
       {/* Background Video */}
       <Box
         sx={{
-          // backgroundColor: "red",
           position: "absolute",
           top: 0,
           left: 0,
           width: "100%",
-          height: { xs: "500px", sm: "530px", md: "720px" },
+          height: { xs: "500px", sm: "530px", md: "720px", xl: "800px" },
 
           zIndex: 0,
         }}
       >
-        <Box
-          component="img"
-          src={heroVideo}
-          alt="Metaleon 3D character"
-          sx={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            overflow: "hidden",
-            // AspectRatio: "1/1",
-            zIndex: 2,
-          }}
-        />
-        <video
-          autoPlay
-          muted
-          loop
-          style={{
-            display: "none",
-            width: "100%",
-            objectFit: "cover",
-            // display: "block",
-            height: "100%",
-            overflow: "hidden",
-          }}
-        >
-          <source src="/video/Showreel-2024.webm" type="video/webm" />
-          {/* <source src={heroVideo} type="video/webm" /> */}
-          Your browser does not support the video tag.
-        </video>
+        {isVideo ? (
+          <video
+            autoPlay
+            muted
+            loop
+            style={{
+              width: "100%",
+              objectFit: "cover",
+              height: "100%",
+              overflow: "hidden",
+            }}
+          >
+            <source src={heroVideo} />
+            {/* <source src={heroVideo} type="video/webm" /> */}
+            Your browser does not support the video tag.
+          </video>
+        ) : (
+          <Box
+            component="img"
+            src={heroVideo}
+            alt="Metaleon 3D character"
+            sx={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              overflow: "hidden",
+              zIndex: 2,
+            }}
+          />
+        )}
       </Box>
 
       {/* Section */}
@@ -116,7 +119,7 @@ export function HeroSection({ industryName, proName, heroVideo }) {
       >
         <Box
           sx={{
-            height: { xs: "500px", sm: "530px", md: "720px" },
+            height: { xs: "500px", sm: "530px", md: "720px", xl: "800px" },
             width: "100%",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
@@ -126,10 +129,8 @@ export function HeroSection({ industryName, proName, heroVideo }) {
           <Box
             sx={{
               position: "absolute",
-
-              // left: { xs: "30px", sm: "50px", md: "90px" },
               bottom: { xs: "0px" },
-
+              m: "auto",
               padding: {
                 xs: "80px 16px",
                 md: " 80px  40px",
@@ -173,12 +174,11 @@ export function HeroSection({ industryName, proName, heroVideo }) {
         sx={{
           width: "100%",
           position: "absolute",
-          background: "red",
           height: "50px",
-
           bottom: 0,
           background:
             " linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000 ) ",
+          // bgcolor: "red",
         }}
       ></Box>
     </Box>
@@ -305,6 +305,10 @@ export function AboutUs({ industryName, title, about, heroVideo }) {
 }
 
 export function ConceptSketches({ details }) {
+  const isVideo =
+    details[0].url.endsWith(".mp4") ||
+    details[0].url.endsWith(".mov") ||
+    details[0].url.endsWith(".webm");
   return (
     <>
       <Box
@@ -344,38 +348,42 @@ export function ConceptSketches({ details }) {
             px: { lg: "80px" },
           }}
         >
-          <Box
-            component="img"
-            src={details[0].url}
-            alt="Metaleon 3D character"
-            sx={{
-              // display: "none",
-              width: "100%",
-              height: { xs: "240px", sm: "340px", md: "600px", lg: "720px" },
-              objectFit: "cover",
-              borderRadius: { xs: "8px" },
-              boder: "1px solid #434245",
-              objectFit: "cover",
-              overflow: "hidden",
-              AspectRatio: "1/1",
-              borderRadius: { xs: "8px" },
-            }}
-          />
-          <Box
-            component="video"
-            src="/video/bidet-buddy-snip.mp4"
-            alt="bidet-buddy-snip"
-            autoPlay
-            loop
-            muted
-            sx={{
-              width: "100%",
-              display: "none",
-              height: { xs: "240px", sm: "340px", md: "600px", lg: "720px" },
-              objectFit: "cover",
-              borderRadius: { xs: "8px" },
-            }}
-          />
+          {isVideo ? (
+            <Box
+              component="video"
+              src={details[0].url}
+              alt="bidet-buddy-snip"
+              autoPlay
+              loop
+              muted
+              sx={{
+                width: "100%",
+                // display: "none",
+                height: { xs: "240px", sm: "340px", md: "600px", lg: "720px" },
+                objectFit: "cover",
+                borderRadius: { xs: "8px" },
+              }}
+            />
+          ) : (
+            <Box
+              component="img"
+              src={details[0].url}
+              alt="Metaleon 3D character"
+              sx={{
+                // display: "none",
+                width: "100%",
+                height: { xs: "240px", sm: "340px", md: "600px", lg: "720px" },
+                objectFit: "cover",
+                borderRadius: { xs: "8px" },
+                boder: "1px solid #434245",
+                objectFit: "cover",
+                overflow: "hidden",
+                AspectRatio: "1/1",
+                borderRadius: { xs: "8px" },
+              }}
+            />
+          )}
+
           <Box sx={{ mt: { xs: "70px", md: "40px" } }}>
             <Typography
               sx={{
