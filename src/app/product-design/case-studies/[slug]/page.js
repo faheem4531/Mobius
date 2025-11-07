@@ -1,26 +1,73 @@
-import { notFound } from "next/navigation";
-import { projectsData } from "@/utils/data";
-import { Box, Typography } from "@mui/material";
+"use client";
+
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import { CircularProgress, Box, Typography } from "@mui/material";
+
 import NavBar from "@/_components/navBar/NavBar";
 import AboutUsImage from "@/_assets/png/about-us.png";
 import Toolsweuse from "@/_assets/png/Tools we use.png";
-import Image from "next/image";
 import workrow1 from "@/_assets/png/workrow1.png";
 import workrow2 from "@/_assets/png/workrow2.png";
 import GenericIdeaSection from "@/_components/design-home/product-idea";
 import camera from "@/_assets/png/camera2.png";
 import Footer from "@/_components/footer/Footer";
-import zIndex from "@mui/material/styles/zIndex";
-
-export async function generateStaticParams() {
-  return projectsData.map((project) => ({ slug: project.slug }));
-}
 
 export default function ProjectDetailPage({ params }) {
-  const project = projectsData.find((p) => p.slug === params.slug);
-  console.log(project);
+  const router = useRouter();
+  const { slug } = params;
 
-  if (!project) return notFound();
+  const [project, setProject] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchProject() {
+      try {
+        const res = await fetch("/api/projectDetails");
+        const result = await res.json();
+        console.log(result, "result");
+
+        if (result.success) {
+          const found = result.data.find((p) => p.slug === slug);
+          if (!found) {
+            router.push("/404");
+            return;
+          }
+          setProject(found);
+        }
+      } catch (error) {
+        console.error("Error fetching project data:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchProject();
+  }, [slug, router]);
+
+  // ✅ Loader while data is fetching
+  if (loading) {
+    return (
+      <Box
+        sx={{
+          height: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <CircularProgress sx={{ color: "white" }} />
+      </Box>
+    );
+  }
+
+  // ✅ If no project found
+  if (!project) {
+    return (
+      <p style={{ color: "white", textAlign: "center" }}>Project not found</p>
+    );
+  }
 
   return (
     <>
@@ -31,24 +78,29 @@ export default function ProjectDetailPage({ params }) {
           proName={project.title}
           heroVideo={project.heroVideo}
         />
+
         <AboutUs
           industryName={project.industry}
           title={project.title}
           about={project.about}
           heroVideo={project.heroVideo}
         />
+
         <ConceptSketches details={project.details} />
         <AboutUsCArds details={project.details} />
+
         <GenericIdeaSection
           title="Book a call? So we bring your idea to life!"
           buttonText="Talk to Our Expert"
           imageSrc={camera}
         />
+
         <Footer />
       </main>
     </>
   );
 }
+
 // hero section
 export function HeroSection({ industryName, proName, heroVideo }) {
   const isVideo =

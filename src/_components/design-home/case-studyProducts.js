@@ -1,12 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Box, Grid2, Typography } from "@mui/material";
+import { Box, Grid2, Typography, CircularProgress } from "@mui/material";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 const CaseStudyProducts = () => {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchProducts() {
@@ -18,11 +19,27 @@ const CaseStudyProducts = () => {
         }
       } catch (error) {
         console.error("Error fetching products:", error);
+      } finally {
+        setLoading(false);
       }
     }
     fetchProducts();
   }, []);
-
+  // ✅ Loader while data is fetching
+  if (loading) {
+    return (
+      <Box
+        sx={{
+          height: "40vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <CircularProgress sx={{ color: "white" }} />
+      </Box>
+    );
+  }
   return (
     <Box
       sx={{
