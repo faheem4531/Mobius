@@ -161,7 +161,7 @@ export default function NavScreen() {
               autoPlay
               loop
               muted
-              onClick={() => router.push("/design")}
+              onClick={() => router.push("/product-design")}
               className="hoverVid"
               sx={{
                 position: "absolute",
@@ -295,7 +295,7 @@ export default function NavScreen() {
               height: "auto",
             }}
           >
-            <Link href="/design">
+            <Link href="/product-design">
               <video
                 src="/video/Product design _ left.webm"
                 alt="3d video consumer electronics"
