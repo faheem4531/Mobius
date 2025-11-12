@@ -4,6 +4,8 @@ import { Box, Typography, Grid, useTheme } from "@mui/material";
 import React, { useEffect, useRef, useState } from "react";
 import ReviewTestmonial from "./textimonial";
 import HeadingSection from "./heading-section";
+import ImageReview from "@/_assets/png/ImageReview.png";
+import ReviewTestimonial from "./textimonial";
 
 const stats = [
   {
@@ -30,6 +32,44 @@ const stats = [
     value: 99,
     suffix: "%",
   },
+];
+const testimonials = [
+  {
+    name: "Marco Gallone",
+    role: "CTO",
+    company: "Wosler Corp",
+    review:
+      "The end to end design version 1 of our gel dispenser system. It's key function is to deposit ultrasound gel robotically, Mobius helped us make a functional prototype. In short, they did good work and moved fast as we expected.",
+    rating: 5,
+    imageSrc: "/review-Marco-Gallone.jpg",
+  },
+  {
+    name: "Christian Blaha",
+    role: "CEO",
+    company: "Zpaftech LLC",
+    review:
+      "We wanted to make an acupressure mask that was unique as an idea. Mobius team was very professional and understanding of your vision. I believe communication is key to realizing your ideas and they definitely came through on that one.",
+    rating: 5,
+    imageSrc: "/review-Christian-Blaha.jpg",
+  },
+  {
+    name: "Brandon Fullington",
+    role: "CEO",
+    company: "HVAC Mount LLC",
+    review:
+      "Haseeb and his team hit the ball out the park on our project and went above and beyond. They did a great job of communicating throughout the process and in the end came up with a great solution in a timely manner. Nothing more you could ask for.",
+    rating: 5,
+    imageSrc: "/review-Brandon-Fullington.jpg",
+  },
+  // {
+  //   name: "Moshe Chazon",
+  //   role: "CEO",
+  //   company: "ULYL LLC",
+  //   review:
+  //     "I had an outstanding experience working with Mobius on my project! They are incredibly communicative, always keeping me updated every step of the way. What really stood out was their exceptional attention to detail—they caught things I hadn't even thought of and ensured everything was polished to perfection. If you're looking for a reliable and talented design agency, I highly recommend them.",
+  //   rating: 5,
+  //   imageSrc: "/review-Brandon-Fullington.jpg",
+  // },
 ];
 
 export default function StatsSection() {
@@ -176,13 +216,14 @@ export default function StatsSection() {
             justifyContent: "center",
             gap: { xs: "20px", lg: "30px" },
             width: { xs: "fit-content", lg: "100%" },
+            // maxWidth: "1440px",
             // mb: { md: "40px", xs: "20px" },
             ml: { xs: 3, md: 6, lg: 0 },
           }}
         >
-          <ReviewTestmonial name="Hale Allon" />
-          <ReviewTestmonial name="Hale Allon" />
-          <ReviewTestmonial name="Hale Allon" />
+          {testimonials.map((item, index) => (
+            <ReviewTestimonial key={index} {...item} />
+          ))}
         </Box>
       </Box>
     </Box>
