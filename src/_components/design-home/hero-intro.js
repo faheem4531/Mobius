@@ -70,7 +70,7 @@ export default function HeroIntro() {
               objectFit: "cover",
             }}
           >
-            <source src="video/Showreel-2024.webm" type="video/webm" />
+            <source src="video/Product-landing-page.webm" type="video/webm" />
           </video>
         </Box>
 
@@ -111,7 +111,7 @@ export default function HeroIntro() {
             <Typography
               ref={textRef}
               sx={{
-                width: { xs: "90%", sm: "80%", md: "50%" },
+                width: { xs: "90%", sm: "80%", md: "50%", lg: "620px" },
                 fontSize: { xs: "16px", sm: "16px", md: "19px" },
                 lineHeight: { xs: "100%", md: "120%" },
                 margin: {
