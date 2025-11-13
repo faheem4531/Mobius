@@ -99,7 +99,7 @@ const Page = () => {
         <Dividers />
         <Box
           sx={{
-            mt: { xs: "-88px", sm: "-110px", lg: 5 },
+            mt: { xs: "-40px", sm: "-110px", lg: 5 },
             mb: { xs: "-48px", sm: "-110px", lg: -5 },
           }}
         >

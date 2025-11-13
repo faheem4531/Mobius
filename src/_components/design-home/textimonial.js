@@ -28,6 +28,7 @@ const ReviewTestimonial = ({
           width: { xs: "300px", md: "400px" },
           p: { xs: 2, md: 3 },
           textAlign: "start",
+          // height: "300px",
           borderRadius: "24px",
           border: "var(--border-lite-3)",
           background: "linear-gradient(var(--bg-gradient-1))",
@@ -86,13 +87,21 @@ const ReviewTestimonial = ({
           variant="body1"
           sx={{
             fontSize: { xs: "12px", md: "16px" },
-            py: 4,
+            my: 2,
+
             color: "#EDEDEF",
-            lineHeight: "120%",
+            lineHeight: "24px",
             fontFamily: "Avenir3 !important",
+            display: "-webkit-box",
+            WebkitLineClamp: 6,
+            WebkitBoxOrient: "vertical",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            whiteSpace: "normal",
+            wordBreak: "break-word",
           }}
         >
-          “{review}”
+          {`"${review}"`}
         </Typography>
 
         <Typography

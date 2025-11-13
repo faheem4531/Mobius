@@ -61,15 +61,15 @@ const testimonials = [
     rating: 5,
     imageSrc: "/review-Brandon-Fullington.jpg",
   },
-  // {
-  //   name: "Moshe Chazon",
-  //   role: "CEO",
-  //   company: "ULYL LLC",
-  //   review:
-  //     "I had an outstanding experience working with Mobius on my project! They are incredibly communicative, always keeping me updated every step of the way. What really stood out was their exceptional attention to detail—they caught things I hadn't even thought of and ensured everything was polished to perfection. If you're looking for a reliable and talented design agency, I highly recommend them.",
-  //   rating: 5,
-  //   imageSrc: "/review-Brandon-Fullington.jpg",
-  // },
+  {
+    name: "Moshe Chazon",
+    role: "CEO",
+    company: "ULYL LLC",
+    review:
+      "I had an outstanding experience working with Mobius on my project! They are incredibly communicative, always keeping me updated every step of the way. What really stood out was their exceptional attention to detail—they caught things I hadn't even thought of and ensured everything was polished to perfection. If you're looking for a reliable and talented design agency, I highly recommend them.",
+    rating: 5,
+    imageSrc: "/review-Brandon-Fullington.jpg",
+  },
 ];
 
 export default function StatsSection() {
@@ -215,7 +215,7 @@ export default function StatsSection() {
             display: "flex",
             justifyContent: "center",
             gap: { xs: "20px", lg: "30px" },
-            width: { xs: "fit-content", lg: "100%" },
+            width: { xs: "fit-content" },
             // maxWidth: "1440px",
             // mb: { md: "40px", xs: "20px" },
             ml: { xs: 3, md: 6, lg: 0 },
