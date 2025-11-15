@@ -13,6 +13,13 @@ const NavBar = () => {
   const [mobileState, setMobileState] = useState(false);
   const pathname = usePathname();
 
+  const hrefCaseStudy = pathname?.includes("/product-design")
+    ? "/product-design/case-studies"
+    : "/case-study";
+
+  const hrefHome = pathname?.includes("/product-design")
+    ? "/product-design"
+    : "/";
   return (
     <div className={`${styles.navBar} ${mobileState && styles.responsiveNAv}`}>
       {!mobileState && <Image src={Logo} alt="Logo" className={styles.logo} />}
@@ -39,21 +46,24 @@ const NavBar = () => {
         }`}
       >
         <Link
-          href="/"
+          href={hrefHome}
           className={`
-        ${pathname === "/" ? styles.active : ""} 
-        ${styles.link} 
-        `}
+        ${pathname === hrefHome ? styles.active : ""} 
+        ${styles.link}
+      `}
         >
           <li className={mobileState && styles.borderBottom}>Home</li>
         </Link>
         <Link
-          href="/case-study"
+          href={hrefCaseStudy}
           className={`
-        ${pathname === "/case-study" ? styles.active : ""} 
-        ${styles.link} `}
+        ${pathname === hrefCaseStudy ? styles.active : ""} 
+        ${styles.link}
+      `}
         >
-          <li className={mobileState && styles.borderBottom}>Case Studies</li>
+          <li className={mobileState ? styles.borderBottom : undefined}>
+            Case Studies
+          </li>
         </Link>
         <Link
           href="/carrers"
