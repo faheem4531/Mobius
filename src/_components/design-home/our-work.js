@@ -2,12 +2,62 @@
 
 import { Box, Grid2, Typography } from "@mui/material";
 import Image from "next/image";
-import camera from "@/_assets/png/camera2.png";
+import { useEffect, useState } from "react";
+import Link from "next/link";
+
 import workrow1 from "@/_assets/png/workrow1.png";
 import workrow2 from "@/_assets/png/workrow2.png";
-import { useEffect, useState } from "react";
-import zIndex from "@mui/material/styles/zIndex";
-import { Opacity } from "@mui/icons-material";
+
+const cardsData = [
+  {
+    id: 1,
+    ProName: "KYS Norway",
+    indName: "Appliances",
+    image: "/work/kys.jpeg",
+    slug: "kys-norway",
+    gridSize: { xs: 7, md: 5.45 },
+  },
+  {
+    id: 2,
+    ProName: "Wosler",
+    indName: "Medical Tech",
+    image: "/work/wosler.jpeg",
+    slug: "wosler-gel-dispenser",
+    gridSize: { xs: 5, md: 3.27 },
+  },
+  {
+    id: 3,
+    ProName: "SmartFoil",
+    indName: "Adventure Sports",
+    image: "/work/smart-foil.jpeg",
+    slug: "smart-foil",
+    gridSize: { xs: 6, md: 3.27 },
+  },
+  {
+    id: 4,
+    ProName: "Umbrella Mount",
+    indName: "Industry",
+    image: "/work/umbrella-mount.jpeg",
+    slug: "hvac-umbrella-mount",
+    gridSize: { xs: 6, md: 3.27 },
+  },
+  {
+    id: 5,
+    ProName: "Moodieband",
+    indName: "Toys",
+    image: "/work/moodieband.jpeg",
+    slug: "moodieband",
+    gridSize: { xs: 5, md: 5.45 },
+  },
+  {
+    id: 6,
+    ProName: "Acupressure Mask",
+    indName: "Beauty",
+    image: "/work/mask.jpeg",
+    slug: "acupressure-mask",
+    gridSize: { xs: 7, md: 3.27 },
+  },
+];
 
 const OurWork = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -191,68 +241,33 @@ const OurWork = () => {
         </Typography>
 
         <Grid2 container spacing={{ xs: 2, md: 4, lg: 5 }}>
-          <Grid2 size={{ xs: 7, md: 5.45 }}>
-            <Cards
-              ProName="KYS Norway"
-              indName="Appliances"
-              image={"/work/kys.jpeg"}
-              id={1}
-            />
-          </Grid2>
-          <Grid2 size={{ xs: 5, md: 3.27 }}>
-            <Cards
-              ProName="Wosler"
-              indName="Medical Tech"
-              image={"/work/wosler.jpeg"}
-              id={2}
-            />
-          </Grid2>
-          <Grid2 size={{ xs: 6, md: 3.27 }}>
-            <Cards
-              ProName="SmartFoil"
-              indName="Adventure sports"
-              image={"/work/smart-foil.jpeg"}
-              id={3}
-            />
-          </Grid2>
-          <Grid2 size={{ xs: 6, md: 3.27 }}>
-            <Cards
-              ProName="Umbrella Mount"
-              indName="Industry"
-              image={"/work/umbrella-mount.jpeg"}
-              id={4}
-            />
-          </Grid2>
-          <Grid2 size={{ xs: 5, md: 5.45 }}>
-            <Cards
-              ProName="Moodieband"
-              indName="Toys"
-              image={"/work/moodieband.jpeg"}
-              id={5}
-            />
-          </Grid2>
-          <Grid2 size={{ xs: 7, md: 3.27 }}>
-            <Cards
-              ProName="Acupressure Mask"
-              indName="Beauty"
-              image={"/work/mask.jpeg"}
-              id={6}
-            />
-          </Grid2>
+          {cardsData.map((card) => (
+            <Grid2 key={card.id} size={card.gridSize}>
+              <Link href={`/product/${card.slug}`}>
+                <Cards
+                  ProName={card.ProName}
+                  indName={card.indName}
+                  image={card.image}
+                  id={1}
+                />
+              </Link>
+            </Grid2>
+          ))}
         </Grid2>
-
-        <Typography
-          sx={{
-            fontSize: { xs: "16px", md: "18px", lg: "20px" },
-            fontWeight: { xs: 400 },
-            color: "#EDEDEF",
-            mt: { xs: "20px ", md: "30px ", lg: " 48px" },
-            fontFamily: "Avenir !important",
-            textAlign: "center",
-          }}
-        >
-          View More
-        </Typography>
+        <Link href="/product-design/case-studies">
+          <Typography
+            sx={{
+              fontSize: { xs: "16px", md: "18px", lg: "20px" },
+              fontWeight: { xs: 400 },
+              color: "#EDEDEF",
+              mt: { xs: "20px ", md: "30px ", lg: " 48px" },
+              fontFamily: "Avenir !important",
+              textAlign: "center",
+            }}
+          >
+            View More
+          </Typography>
+        </Link>
       </Box>
     </Box>
   );
@@ -264,6 +279,7 @@ export const Cards = ({ ProName, indName, image, id }) => {
       onClick={() => console.log(id)}
       sx={{
         width: "100%",
+        cursor: "pointer",
         borderRadius: { xs: "12px", sm: "16px" },
         border: "1px solid #434245",
         height: { xs: "148px", sm: "200px", md: "280px", lg: "320px" },
